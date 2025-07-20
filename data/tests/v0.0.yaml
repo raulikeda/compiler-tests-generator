@@ -1,0 +1,110 @@
+- description: Valid Input
+  code: "  1   -   22+333   +4  "
+  input: ''
+  exception: false
+  output: '316'
+  languages:
+  - All
+- description: Starting with Operator +
+  code: |-
+    +$
+  input: ''
+  exception: true
+  output: Unexpected token PLUS (expected INT)
+  languages:
+  - All
+- description: Starting with Operator -
+  code: |-
+    -$
+  input: ''
+  exception: true
+  output: Unexpected token MINUS (expected INT)
+  languages:
+  - All
+- description: Missing Number After +
+  code: |-
+    $+
+  input: ''
+  exception: true
+  output: Unexpected token EOF (expected INT)
+  languages:
+  - All
+- description: Missing Number After -
+  code: |-
+    $-
+  input: ''
+  exception: true
+  output: Unexpected token EOF (expected INT)
+  languages:
+  - All
+- description: Two Consecultives Operators ++
+  code: |-
+    $++$
+  input: ''
+  exception: true
+  output: Unexpected token PLUS (expected INT)
+  languages:
+  - All
+- description: Two Consecultives Operators +-
+  code: |-
+    $+-$
+  input: ''
+  exception: true
+  output: Unexpected token MINUS (expected INT)
+  languages:
+  - All
+- description: Two Consecultives Operators -+
+  code: |-
+    $-+$
+  input: ''
+  exception: true
+  output: Unexpected token PLUS (expected INT)
+  languages:
+  - All
+- description: Two Consecultives Operators --
+  code: |-
+    $--$
+  input: ''
+  exception: true
+  output: Unexpected token MINUS (expected INT)
+  languages:
+  - All
+- description: Empty Input
+  code: ""
+  input: ''
+  exception: true
+  output: Unexpected token EOF (expected INT)
+  languages:
+  - All
+- description: Only Operator +
+  code: |-
+    +
+  input: ''
+  exception: true
+  output: Unexpected token PLUS (expected INT)
+  languages:
+  - All
+- description: Only Operator -
+  code: |-
+    -
+  input: ''
+  exception: true
+  output: Unexpected token MINUS (expected INT)
+  languages:
+  - All
+- description: No Operator
+  code: |-
+    $ $
+  input: ''
+  exception: true
+  output: Unexpected token INT (expected EOF)
+  languages:
+  - All
+- description: Invalid Token
+  code: |-
+    ,
+  input: ''
+  exception: true
+  output: Invalid token ,
+  languages:
+  - All
