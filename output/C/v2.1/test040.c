@@ -1,4 +1,4 @@
 {
   // Unexpected token INT
-  3 = 5 + 5;
+  3 = 1 + 3;
 }

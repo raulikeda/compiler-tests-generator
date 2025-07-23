@@ -1,6 +1,6 @@
-func main() void{
+void main() {
   // Unexpected token OPEN_BRA (expected EOF)
-  b = 4;
+  int x = 3;
 }
 {
 }

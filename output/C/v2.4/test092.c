@@ -1,4 +1,5 @@
-func main() void{
+void main() {
   // Incompatible Types
-   k bool = !3;
+  if (1+1) {
+  }
 }

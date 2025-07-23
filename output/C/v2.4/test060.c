@@ -1,6 +1,4 @@
-func main() void{
-  // Unexpected token NEWLINE
-  while (1 == 1) 
-  { 
-  }
+void main() {
+  // Incompatible types
+  bool i = 4;
 }

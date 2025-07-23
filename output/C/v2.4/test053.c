@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Missing OPEN_PAR
-  p = scanf;
+  int a = scanf;
 }

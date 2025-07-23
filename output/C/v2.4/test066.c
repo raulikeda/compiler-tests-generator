@@ -1,4 +1,5 @@
-func main() void{
-  // COLON not found
-   x1 = 2;
+void main() {
+  // Variable Already Declared
+  int d;
+  str d;
 }

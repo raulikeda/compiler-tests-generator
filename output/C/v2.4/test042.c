@@ -1,7 +1,7 @@
-func main() void{
+void main() {
   // Missing OPEN_BRA
-  k = 1;
-  if (q == 1)
-    t = 2;
+  int f = 1;
+  if (f == 1)
+    f = 2;
   }
 }

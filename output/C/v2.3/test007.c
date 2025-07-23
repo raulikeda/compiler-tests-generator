@@ -1,4 +1,4 @@
 {
   // Unexpected token INT (expected EOL)
-  int p = 8 4;
+  int k = 8 6;
 }

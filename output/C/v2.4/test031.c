@@ -1,3 +1,3 @@
-func main() void{
+void main() {
   // Unexpected token EOF (expected CLOSE_BRA)
-   q int = 9;
+  int b = 2;

@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Incompatible Types
-   h bool = "a"&&9;
+  str t = 4+3;
 }

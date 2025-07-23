@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Unexpected token DIV
-   i int = 6*/6;
+  int u = 2*/4;
 }

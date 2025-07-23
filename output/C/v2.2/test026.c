@@ -1,5 +1,5 @@
 {
   // Unexpected token IDEN
   X = 1;
-  q = 5 X;
+  d = 3 X;
 }

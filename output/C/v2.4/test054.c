@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Missing CLOSE_PAR
-  k = scanf(;
+  int q = scanf(;
 }

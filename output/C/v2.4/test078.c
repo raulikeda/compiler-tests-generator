@@ -1,5 +1,4 @@
-func main() void{
-  // Variable Already Declared
-   r int;
-   w str;
+void main() {
+  // Incompatible Types
+  bool c = "a"&&8;
 }

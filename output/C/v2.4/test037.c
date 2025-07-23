@@ -1,5 +1,5 @@
-func main() void{
+void main() {
   // Unexpected token IDEN
-  1x = 9;
+  int 1x = 9;
   printf(1x);
 }

@@ -1,5 +1,5 @@
-func main() void{
+void main() {
   // Unexpected token CLOSE_BRA (expected EOF)
-  n = 7;
+  int f = 3;
 }
 }

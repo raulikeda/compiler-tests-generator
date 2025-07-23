@@ -1,6 +1,4 @@
-func main() void{
-  // Missing OPEN_PAR
-  if 1 == 1 {
-    y = 4;
-  }
+void main() {
+  // Incompatible types
+  str w = false;
 }

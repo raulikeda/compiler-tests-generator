@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  str o = 8+5;
+  str g = 4+7;
 }

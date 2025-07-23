@@ -1,4 +1,4 @@
 {
   // Incompatible types
-  str c = scanf();
+  str y = scanf();
 }

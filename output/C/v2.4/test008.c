@@ -1,4 +1,4 @@
-func main() void{
-  // Invalid token ^
-   p int = ^;
+void main() {
+  // Invalid token @
+  int j = @;
 }

@@ -1,6 +1,6 @@
-func main() void{
-  // Unexpected token NEWLINE
-  if (1 == 1)
-  {
+void main() {
+  // Missing OPEN_PAR
+  if 1 == 1 {
+    int g = 7;
   }
 }

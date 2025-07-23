@@ -1,4 +1,4 @@
 {
   // Unexpected Identifier
-  imt x1 = 5;
+  imt x1 = 2;
 }

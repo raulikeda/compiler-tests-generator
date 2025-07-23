@@ -1,6 +1,6 @@
 {
   {
     // Unexpected token OPEN_BRA
-    h = 3;
+    c = 3;
   }
 }

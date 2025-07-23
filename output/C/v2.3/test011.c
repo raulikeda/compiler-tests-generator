@@ -1,4 +1,4 @@
 {
   // Unexpected token EOL
-  int f = 7*;
+  int m = 6*;
 }

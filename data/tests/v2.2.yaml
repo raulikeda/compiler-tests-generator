@@ -38,7 +38,8 @@
       &PRINT&FLPz__+1&FRP&LF
       
     &RBRA
-  input: ''
+  input: |-
+    3
   exception: false
   output: |-
     3
@@ -660,7 +661,8 @@
       &COM Missing OPEN_PAR
       ? &ASSIGN &SCAN&LF
     &RBRA
-  input: ''
+  input: |-
+    1
   exception: true
   output: Missing OPEN_PAR
   languages:
@@ -671,7 +673,8 @@
       &COM Missing CLOSE_PAR
       ? &ASSIGN &SCAN&FLP&LF
     &RBRA
-  input: ''
+  input: |-
+    1
   exception: true
   output: Missing CLOSE_PAR
   languages:

@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Unexpected token CLOSE_PAR
-   w int = (1));
+  int y = (3));
 }

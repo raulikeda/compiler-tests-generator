@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Missing CLOSE_PAR
-   t int = (1;
+  int z = (6;
 }

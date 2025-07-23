@@ -1,4 +1,5 @@
 {
-  // Unexpected token CLOSE_BRA
-  if (1 == 1) { }
+  // Missing OPEN_PAR
+  while 1 == 1
+    f = 5;
 }

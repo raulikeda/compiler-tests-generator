@@ -1,5 +1,5 @@
-func main() void{
+void main() {
   // Identifier not found
-   x1 int = 3;
+  int x1 = 2;
   printf(X1);
 }

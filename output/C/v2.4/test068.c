@@ -1,4 +1,4 @@
-func main() void{
-  // TYPE not found
-   x1 = 4;
+void main() {
+  // Variable not found
+  bool j = True;
 }

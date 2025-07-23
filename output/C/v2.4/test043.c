@@ -1,8 +1,8 @@
-func main() void{
+void main() {
   // Unexpected EOF (Missing CLOSE_BRA)
-  e = 1;
-  if (w == 1) {
-    s = 2;
+  int f = 1;
+  if (f == 1) {
+    f = 2;
   } else {
-    h = 3;
+    f = 3;
 }

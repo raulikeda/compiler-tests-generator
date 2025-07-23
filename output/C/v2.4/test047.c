@@ -1,10 +1,10 @@
-func main() void{
+void main() {
   // Unexpected OPEN_BRA
-  r = 1;
-  if (o == 1) {
-    o = 2;
+  int m = 1;
+  if (m == 1) {
+    m = 2;
   }
   {
-    v = 3;
+    m = 3;
   }
 }

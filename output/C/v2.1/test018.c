@@ -1,4 +1,4 @@
 {
   // Unexpected token CLOSE_BRA
-  g = //8;
+  e = //7;
 }

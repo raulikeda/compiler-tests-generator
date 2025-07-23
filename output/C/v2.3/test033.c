@@ -1,6 +1,6 @@
 {
   {
     // Unexpected token OPEN_BRA
-    int p = 5;
+    int k = 7;
   }
 }

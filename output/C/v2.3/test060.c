@@ -1,4 +1,4 @@
 {
   // Incompatible types
-  bool k = 5;
+  bool n = 7;
 }

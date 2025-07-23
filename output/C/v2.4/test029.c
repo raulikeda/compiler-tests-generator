@@ -1,5 +1,5 @@
-func main() void{
+void main() {
   // Author: Rafael Dourado @rafaeldbo - Mar/2025
   // Unexpected token INT (expected OPEN_PAR)
-  printf 8;
+  printf 4;
 }

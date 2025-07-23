@@ -1,6 +1,6 @@
-func main() void{
-  func main() void{
-    // Unexpected token FUNC
-    t = 6;
+void main() {
+  void main() {
+    // Unexpected token FUNC or OPEN_PAR
+    int o = 9;
   }
 }

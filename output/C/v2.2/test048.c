@@ -1,11 +1,11 @@
 {
   // Unexpected ELSE
-  o = 1;
-  if (d == 1) {
-    e = 2;
+  f = 1;
+  if (f == 1) {
+    f = 2;
   } else {
-    c = 3;
+    f = 3;
   } else {
-    h = 4;
+    f = 4;
   }
 }

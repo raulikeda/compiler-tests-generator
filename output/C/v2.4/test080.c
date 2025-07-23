@@ -1,4 +1,4 @@
-func main() void{
-  // Variable not found
-   m bool = True;
+void main() {
+  // Incompatible Types
+  bool h = !3;
 }

@@ -1,30 +1,30 @@
- A int = 2;
-func myprint(text str) void{
+int A = 2;
+void myprint(str text) {
   printf(text);
 }
 
-func fac(x int) int {
+int fac(int x) {
   if (x == 1) {
     return 1;
   }
   return x * fac(x-1);
 }
-func sum(x int, y int) int {
+int sum(int x, int y) {
   return x + y;
 }
 
-func tautology() bool {
+bool tautology() {
   return true;
 }
 
-func main() void{
-   x_1 int;
+void main() {
+  int x_1;
   x_1 = scanf();
-   x_2 int = fac(4);
+  int x_2 = fac(4);
   printf(A); 
   printf(x_2);
   {
-     x_2 int = 7;
+    int x_2 = 7;
     x_1 = 9;
     A = 8;
     printf(x_2);
@@ -36,10 +36,10 @@ func main() void{
     x_1 = 2;
   }
   
-   x int = 3+6/3   *  2 -+-  +  2*4/2 + 0/1 -((6+ ((4)))/(2)); // Teste // Teste 2
-   y_1 int = 3;
+  int x = 3+6/3   *  2 -+-  +  2*4/2 + 0/1 -((6+ ((4)))/(2)); // Teste // Teste 2
+  int y_1 = 3;
   y_1 = sum(y_1, x_1);
-   z__ int;
+  int z__;
   z__ = x + y_1;
   
   if (x_1 == 2) {
@@ -66,8 +66,8 @@ func main() void{
   printf(z__+1);
   
   // All int operations
-   y int = 2;
-   z int;
+  int y = 2;
+  int z;
   z = (y - 1);
   printf(y+z);
   printf(y-z);
@@ -78,8 +78,8 @@ func main() void{
   printf(y > z);
   
   // All str operations 
-   a str;
-   b str;
+  str a;
+  str b;
   
   x_1 = 1;
   y = 1; 

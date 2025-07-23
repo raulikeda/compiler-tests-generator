@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Unexpected token CLOSE_BRA
-   i int = //8;
+  int d = //5;
 }

@@ -1,11 +1,11 @@
-func main() void{
+void main() {
   // Unexpected ELSE
-  k = 1;
-  if (d == 1) {
-    s = 2;
+  int a = 1;
+  if (a == 1) {
+    a = 2;
   } else {
-    n = 3;
+    a = 3;
   } else {
-    n = 4;
+    a = 4;
   }
 }

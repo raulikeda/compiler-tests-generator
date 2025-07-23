@@ -1,7 +1,4 @@
-func main() void{
-  // Unexpected token NEWLINE
-  if (1 == 1) { 
-  }
-  else { 
-  }
+void main() {
+  // Unexpected Identifier
+  imt x1 = 3;
 }

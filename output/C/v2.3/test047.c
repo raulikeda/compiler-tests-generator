@@ -1,10 +1,10 @@
 {
   // Unexpected OPEN_BRA
-  int i = 1;
-  if (i == 1) {
-    i = 2;
+  int c = 1;
+  if (c == 1) {
+    c = 2;
   }
   {
-    i = 3;
+    c = 3;
   }
 }

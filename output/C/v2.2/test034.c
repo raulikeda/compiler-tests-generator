@@ -1,5 +1,5 @@
 {
   // Unexpected token CLOSE_BRA (expected EOF)
-  d = 5;
+  g = 7;
 }
 }

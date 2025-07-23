@@ -1,5 +1,5 @@
-func main() void{
+void main() {
   // Unexpected EOF (Missing CLOSE_BRA)
-  q = 1;
-  if (x == 1) {
+  int i = 1;
+  if (i == 1) {
 }

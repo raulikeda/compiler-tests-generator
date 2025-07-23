@@ -1,4 +1,6 @@
-func main() void{
-  // Unexpected token CLOSE_BRA
-  if (1 == 1) { }
+void main() {
+  // Missing OPEN_PAR
+  while 1 == 1 {
+    int v = 5;
+  }
 }

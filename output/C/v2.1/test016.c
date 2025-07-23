@@ -1,4 +1,4 @@
 {
   // Unexpected token DIV
-  s = 3+/7;
+  d = 5+/5;
 }

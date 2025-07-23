@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Unexpected token ASSIGN (expected OPEN_PAR)
-  printf = z;
+  printf = a;
 }

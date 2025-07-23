@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  int b = 1+true;
+  int t = 1+true;
 }

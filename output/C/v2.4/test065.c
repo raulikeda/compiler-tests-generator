@@ -1,6 +1,4 @@
-func main() void{
-  // Missing OPEN_PAR
-  while 1 == 1 {
-    r = 7;
-  }
+void main() {
+  // Incompatible types
+  str t = scanf();
 }

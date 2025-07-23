@@ -1,5 +1,5 @@
-func main() void{
+void main() {
   // Unexpected token IDEN
-   X int = 1;
-   o int = 6 X;
+  int L = 1;
+  int m = 4 L;
 }

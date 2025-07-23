@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  bool w = "a"<true;
+  bool b = "a"<true;
 }

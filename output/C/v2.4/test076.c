@@ -1,4 +1,4 @@
-func main() void{
-  // Incompatible types
-   q str = false;
+void main() {
+  // Incompatible Types
+  bool y = true<5;
 }

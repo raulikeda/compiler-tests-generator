@@ -1,5 +1,7 @@
-func main() void{
-  // Incompatible Types
-  if (1+1) {
+void main() {
+  // Var out of scope
+  {
+    int d = 6;
   }
+  d = 6;
 }

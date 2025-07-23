@@ -1,4 +1,4 @@
-func main() void{
-  // COLON not found
-   x1 int = 9;
+void main() {
+  // Unexpected EOF
+  str i = "a;
 }

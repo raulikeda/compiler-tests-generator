@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Incompatible Types
-   m bool = "a"||8;
+  bool a = "a"."b";
 }

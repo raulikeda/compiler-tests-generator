@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Unexpected token MULT
-   b int = 1+*7;
+  int j = 3+*9;
 }

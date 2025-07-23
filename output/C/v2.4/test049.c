@@ -1,7 +1,7 @@
-func main() void{
+void main() {
   // Missing Right Expression
-  k = 1;
-  if (x ==) {
-    n = 2;
+  int v = 1;
+  if (v ==) {
+    v = 2;
   }
 }

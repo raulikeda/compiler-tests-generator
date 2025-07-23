@@ -1,11 +1,11 @@
 {
   // Unexpected ELSE
-  int x = 1;
-  if (x == 1) {
-    x = 2;
+  int s = 1;
+  if (s == 1) {
+    s = 2;
   } else {
-    x = 3;
+    s = 3;
   } else {
-    x = 4;
+    s = 4;
   }
 }

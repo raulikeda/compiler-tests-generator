@@ -1,4 +1,4 @@
-func main() void{
-  // Incompatible types
-   o str = scanf();
+void main() {
+  // Incompatible Types
+  bool c = "a"<true;
 }

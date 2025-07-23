@@ -1,5 +1,4 @@
-func main() void{
-  // Missing OPEN_BRA
-  while (1 == 1)
-    j = 2;
+void main() {
+  // Incompatible types
+  str g = 9;
 }

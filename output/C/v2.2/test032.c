@@ -1,6 +1,6 @@
 {
   // Unexpected token OPEN_BRA (expected EOF)
-  m = 2;
+  x = 8;
 }
 {
 }

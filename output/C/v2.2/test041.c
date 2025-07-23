@@ -1,5 +1,5 @@
 {
   // Unexpected EOF (Missing CLOSE_BRA)
-  r = 1;
-  if (x == 1) {
+  e = 1;
+  if (e == 1) {
 }

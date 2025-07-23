@@ -1,4 +1,3 @@
-func main() void{
-  // Incompatible Types
-   t int = 1-true;
+void Main() {
+  // Missing function main
 }

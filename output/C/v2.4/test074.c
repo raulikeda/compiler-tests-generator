@@ -1,4 +1,4 @@
-func main() void{
-  // Incompatible types
-   b bool = 3;
+void main() {
+  // Incompatible Types
+  bool s = "a"<true;
 }

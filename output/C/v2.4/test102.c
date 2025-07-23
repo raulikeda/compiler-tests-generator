@@ -1,4 +1,7 @@
-func main() void{
-  // Incompatible Types
-   c str = 4+2;
+int test(int x) {
+  return x;
+}
+void main() {
+  // Function not found
+  printf(Test(1));
 }

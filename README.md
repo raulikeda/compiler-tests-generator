@@ -75,6 +75,3 @@ python generate.py v2.3 C
 
 ## License
 MIT License
-
-## TODO
-Fix 2.4 for C tests. Compare with 2.3

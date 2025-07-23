@@ -1,9 +1,9 @@
 {
   // Missing OPEN_BRA
-  r = 1;
-  if (m == 1) {
-    h = 2;
+  k = 1;
+  if (k == 1) {
+    k = 2;
   } else
-    v = 3;
+    k = 3;
   }
 }

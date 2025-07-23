@@ -1,7 +1,4 @@
-func main() void{
-  // Unexpected token NEWLINE
-  if (1 == 1) { 
-  } else 
-  {
-  }
+void main() {
+  // Incompatible types
+  int w = "a";
 }

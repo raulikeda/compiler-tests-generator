@@ -1,4 +1,4 @@
 {
   // Incompatible types
-  int c = true;
+  int j = true;
 }

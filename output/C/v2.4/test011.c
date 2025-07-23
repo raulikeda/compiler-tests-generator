@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Unexpected token EOL
-   w int = 7*;
+  int p = 9*;
 }

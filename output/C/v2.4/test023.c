@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Missing CLOSE_PAR
-   m int = ((3);
+  int d = ((8);
 }

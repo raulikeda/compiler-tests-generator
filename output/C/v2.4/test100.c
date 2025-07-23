@@ -1,4 +1,7 @@
-func main() void{
-  // Incompatible Types
-   u int = true/1;
+bool test(bool x) {
+  return x;
+}
+void main() {
+  // Wrong arg type
+  printf(test(3));
 }

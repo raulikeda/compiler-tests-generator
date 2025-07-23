@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Incompatible Types
-   p bool = 1==true;
+  int k = true+1;
 }

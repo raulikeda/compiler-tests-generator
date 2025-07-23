@@ -1,4 +1,4 @@
 {
   // Unexpected token DIV
-  w = /;
+  p = /;
 }

@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  bool x = "a"||2;
+  bool c = "a"||4;
 }

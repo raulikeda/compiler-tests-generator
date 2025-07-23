@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  bool m = 8>"a";
+  bool p = 8>"a";
 }

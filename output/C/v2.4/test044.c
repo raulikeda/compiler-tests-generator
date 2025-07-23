@@ -1,9 +1,9 @@
-func main() void{
+void main() {
   // Missing OPEN_BRA
-  j = 1;
-  if (e == 1) {
-    u = 2;
+  int p = 1;
+  if (p == 1) {
+    p = 2;
   } else
-    x = 3;
+    p = 3;
   }
 }

@@ -1,4 +1,4 @@
-func main() void{
-  // Unexpected Identifier
-   x1 imt = 5;
+void main() {
+  // Incompatible Types
+  bool q = 6=="a";
 }

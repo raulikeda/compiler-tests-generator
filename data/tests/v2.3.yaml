@@ -68,7 +68,8 @@
       &PRINT(a &LT b)&LF
       &PRINT(a &GT b)&LF
     &RBRA
-  input: ''
+  input: |-
+    3
   exception: false
   output: |-
     3
@@ -702,9 +703,10 @@
   code: |-
     &LBRA
       &COM Missing OPEN_PAR
-      &PSTR&VAR ?&TSEP&STR &ASSIGN &SCAN&LF
+      &PINT&VAR ?&TSEP&INT &ASSIGN &SCAN&LF
     &RBRA
-  input: ''
+  input: |-
+    1
   exception: true
   output: Missing OPEN_PAR
   languages:
@@ -713,9 +715,10 @@
   code: |-
     &LBRA
       &COM Missing CLOSE_PAR
-      &PSTR&VAR ?&TSEP&STR &ASSIGN &SCAN&FLP&LF
+      &PINT&VAR ?&TSEP&INT &ASSIGN &SCAN&FLP&LF
     &RBRA
-  input: ''
+  input: |-
+    1
   exception: true
   output: Missing CLOSE_PAR
   languages:
@@ -990,7 +993,8 @@
       &COM Incompatible types
       &PSTR&VAR ?&TSEP&STR &ASSIGN &SCAN&FLP&FRP&LF
     &RBRA
-  input: ''
+  input: |-
+    1
   exception: true
   output: Incompatible types
   languages:
@@ -1294,10 +1298,10 @@
   output: Incompatible Type
   languages:
   - All
-- description: Incompatible Types
+- description: Incompatible Types 2
   code: |-
     &LBRA
-      &COM Incompatible Types
+      &COM Incompatible Types 2
       &WHILE &ELP0+0&ERP &LBRA
       &RBRA
     &RBRA

@@ -1,2 +1,2 @@
 // Unexpected token IDEN (expected OPEN_BRA)
-x = 6;
+void main() 

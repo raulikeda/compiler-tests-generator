@@ -55,9 +55,12 @@ for i, test in enumerate(filtered_tests, 1):
     # Translate code using aliases
     for k, v in aliases.items():
         if k == "&NL" and v == "\\n":
-            code = code.replace(k, "\n")
+            code = code.replace(k, "\n")            
         else:
             code = code.replace(k, v)
+
+        output_val = output_val.replace(k, v)
+        
 
     # Replace $ with random int between 1 and 9
     while '$' in code:
@@ -74,6 +77,9 @@ for i, test in enumerate(filtered_tests, 1):
     with open(os.path.join(dir_base, code_filename), 'w') as f:
         f.write(code)
 
+    input_val = [] if input_val == '' else input_val.split('\n')
+    output_val = output_val.split('\n')
+
     # Collect metadata
     meta_tests.append({
         'index': idx,
@@ -83,6 +89,7 @@ for i, test in enumerate(filtered_tests, 1):
         'output': output_val,
         'exception': exception_val
     })
+
 
 # Write metadata YAML
 meta_yaml = {'tests': meta_tests}

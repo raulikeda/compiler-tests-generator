@@ -1,4 +1,4 @@
-func main() void{
+void main() {
   // Unexpected token EOL
-   u int = -;
+  int h = -;
 }

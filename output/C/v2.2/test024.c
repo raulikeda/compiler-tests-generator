@@ -1,4 +1,4 @@
 {
   // Unexpected token CLOSE_PAR
-  f = (5));
+  h = (5));
 }

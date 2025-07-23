@@ -1,4 +1,4 @@
 {
   // Unexpected token MULT
-  int i = *7;
+  int z = *4;
 }

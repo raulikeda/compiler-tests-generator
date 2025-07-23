@@ -1,4 +1,4 @@
-func main() void{
-  // Unexpected token CLOSE_BRA
-  while (1 == 1) { }
+void main() {
+  // Incompatible types
+  bool k = "a";
 }

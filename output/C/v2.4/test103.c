@@ -1,4 +1,5 @@
-func main() void{
-  // Incompatible Types
-   p bool = "a"."b";
+int p = 2;
+void main() {
+  // Function not found
+  printf(p(3));
 }
