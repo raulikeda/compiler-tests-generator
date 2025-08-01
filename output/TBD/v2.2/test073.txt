@@ -1,4 +1,0 @@
-{
-  // Incompatible Types
-  bool c = 2<"a";
-}

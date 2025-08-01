@@ -1,4 +1,0 @@
-{
-  // Incompatible Types
-  int b = 4/true;
-}

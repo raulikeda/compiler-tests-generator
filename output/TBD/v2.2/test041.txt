@@ -1,5 +1,0 @@
-{
-  // Unexpected EOF (Missing CLOSE_BRA)
-  int e = 1;
-  if (e == 1) {
-}

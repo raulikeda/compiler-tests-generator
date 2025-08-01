@@ -1,4 +1,0 @@
-{
-  // Variable not found
-  bool b = True;
-}

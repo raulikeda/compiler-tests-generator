@@ -1,4 +1,0 @@
-{
-  // Incompatible Types
-  bool f = 1==true;
-}

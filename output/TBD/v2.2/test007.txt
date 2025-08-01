@@ -1,4 +1,0 @@
-{
-  // Unexpected token INT (expected EOL)
-  int b = 5 9;
-}

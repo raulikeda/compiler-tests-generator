@@ -1,4 +1,0 @@
-{
-  // Unexpected token MULT
-  p = 4/*5;
-}

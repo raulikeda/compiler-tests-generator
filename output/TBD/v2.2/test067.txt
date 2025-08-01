@@ -1,4 +1,0 @@
-{
-  // Incompatible Types
-  bool g = 7=="a";
-}

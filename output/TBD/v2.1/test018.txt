@@ -1,4 +1,0 @@
-{
-  // Unexpected token CLOSE_BRA
-  h = //2;
-}

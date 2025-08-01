@@ -1,3 +1,0 @@
-{
-  // Unexpected token EOF (expected CLOSE_BRA)
-  v = 3;

@@ -1,5 +1,0 @@
-{
-  // Unexpected token IDEN
-  X = 1;
-  k = 6 X;
-}

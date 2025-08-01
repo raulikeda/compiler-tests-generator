@@ -1,5 +1,0 @@
-{
-  // Identifier not found
-  int x1 = 8;
-  printf(X1);
-}

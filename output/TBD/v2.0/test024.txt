@@ -1,4 +1,0 @@
-{
-  // Unexpected token CLOSE_PAR
-  e = (6));
-}

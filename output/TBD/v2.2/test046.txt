@@ -1,7 +1,0 @@
-{
-  // Missing OPEN_BRA
-  int v = 1;
-  while (v == 1)
-    v = 2;
-  }
-}

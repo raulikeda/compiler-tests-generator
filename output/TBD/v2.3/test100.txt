@@ -1,5 +1,0 @@
-int r = 9;
-void main() {
-  // Function not found
-  printf(r(2));
-}

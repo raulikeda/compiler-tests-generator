@@ -1,4 +1,0 @@
-{
-  // Unexpected EOF
-  str i = "a;
-}

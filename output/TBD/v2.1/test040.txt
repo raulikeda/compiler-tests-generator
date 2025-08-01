@@ -1,4 +1,0 @@
-{
-  // Unexpected token INT
-  3 = 6 + 8;
-}

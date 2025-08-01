@@ -1,4 +1,0 @@
-{
-  // Incompatible types
-  bool n = 2;
-}
