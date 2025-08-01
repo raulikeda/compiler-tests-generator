@@ -1,0 +1,7 @@
+void main() {
+  // Var out of scope
+  {
+    int k = 3;
+  }
+  k = 5;
+}

@@ -1,0 +1,5 @@
+{
+  // Variable Already Declared
+  int h;
+  str h;
+}

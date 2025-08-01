@@ -1,0 +1,190 @@
+- description: Valid Input
+  code: "   3+6/3   *  2 -+-  +  2*4/2 + 0/1 -((6+ ((4)))/(2))  "
+  input: ''
+  exception: false
+  output: '6'
+  languages:
+  - All
+- description: Missing Number After +
+  code: |-
+    $+
+  input: ''
+  exception: true
+  output: Unexpected token EOF
+  languages:
+  - All
+- description: Missing Number After -
+  code: |-
+    $-
+  input: ''
+  exception: true
+  output: Unexpected token EOF
+  languages:
+  - All
+- description: Empty Input
+  code: ""
+  input: ''
+  exception: true
+  output: Unexpected token EOF
+  languages:
+  - All
+- description: Only Operator +
+  code: |-
+    +
+  input: ''
+  exception: true
+  output: Unexpected token PLUS
+  languages:
+  - All
+- description: Only Operator -
+  code: |-
+    -
+  input: ''
+  exception: true
+  output: Unexpected token MINUS
+  languages:
+  - All
+- description: No Operator
+  code: |-
+    $ $
+  input: ''
+  exception: true
+  output: Unexpected token INT
+  languages:
+  - All
+- description: Invalid Token
+  code: |-
+    ,
+  input: ''
+  exception: true
+  output: Invalid token ,
+  languages:
+  - All
+- description: Starting with Operator *
+  code: |-
+    *$
+  input: ''
+  exception: true
+  output: Unexpected token MULT
+  languages:
+  - All
+- description: Starting with Operator /
+  code: |-
+    /$
+  input: ''
+  exception: true
+  output: Unexpected token DIV
+  languages:
+  - All
+- description: Missing Number After *
+  code: |-
+    $*
+  input: ''
+  exception: true
+  output: Unexpected token EOF
+  languages:
+  - All
+- description: Missing Number After /
+  code: |-
+    $/
+  input: ''
+  exception: true
+  output: Unexpected token EOF
+  languages:
+  - All
+- description: Only Operator *
+  code: |-
+    *
+  input: ''
+  exception: true
+  output: Unexpected token MULT
+  languages:
+  - All
+- description: Only Operator /
+  code: |-
+    /
+  input: ''
+  exception: true
+  output: Unexpected token DIV
+  languages:
+  - All
+- description: Two Consecultives Operators +*
+  code: |-
+    $+*$
+  input: ''
+  exception: true
+  output: Unexpected token MULT
+  languages:
+  - All
+- description: Two Consecultives Operators +/
+  code: |-
+    $+/$
+  input: ''
+  exception: true
+  output: Unexpected token DIV
+  languages:
+  - All
+- description: Two Consecultives Operators **
+  code: |-
+    $**$
+  input: ''
+  exception: true
+  output: Unexpected token MULT
+  languages:
+  - All
+- description: Two Consecultives Operators //
+  code: |-
+    $//$
+  input: ''
+  exception: true
+  output: Unexpected token DIV
+  languages:
+  - All
+- description: Two Consecultives Operators */
+  code: |-
+    $*/$
+  input: ''
+  exception: true
+  output: Unexpected token DIV
+  languages:
+  - All
+- description: Two Consecultives Operators /*
+  code: |-
+    $/*$
+  input: ''
+  exception: true
+  output: Unexpected token MULT
+  languages:
+  - All
+- description: Missing )
+  code: |-
+    ($
+  input: ''
+  exception: true
+  output: Unexpected token EOF
+  languages:
+  - All
+- description: Missing (
+  code: |-
+    $)
+  input: ''
+  exception: true
+  output: Unexpected token CLOSE_PAR
+  languages:
+  - All
+- description: Missing )
+  code: |-
+    (($)
+  input: ''
+  exception: true
+  output: Unexpected token EOF
+  languages:
+  - All
+- description: Missing (
+  code: |-
+    ($))
+  input: ''
+  exception: true
+  output: Unexpected token CLOSE_PAR
+  languages:
+  - All

@@ -1,0 +1,4 @@
+void main() {
+  // Incompatible Types
+  str e = 3+2;
+}

@@ -1,0 +1,4 @@
+{
+  // Incompatible Types
+  str h = 4+1;
+}

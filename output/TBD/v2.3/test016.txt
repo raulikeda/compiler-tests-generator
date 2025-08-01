@@ -1,0 +1,4 @@
+void main() {
+  // Unexpected token DIV
+  int a = 2+/5;
+}

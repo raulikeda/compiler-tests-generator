@@ -1,0 +1,10 @@
+{
+  // Unexpected OPEN_BRA
+  int h = 1;
+  if (h == 1) {
+    h = 2;
+  }
+  {
+    h = 3;
+  }
+}

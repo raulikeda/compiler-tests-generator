@@ -1,0 +1,4 @@
+void main() {
+  // Incompatible Types
+  int i = 1*true;
+}

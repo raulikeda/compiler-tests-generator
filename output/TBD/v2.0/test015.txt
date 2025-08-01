@@ -1,0 +1,4 @@
+{
+  // Unexpected token MULT
+  s = 7+*9;
+}

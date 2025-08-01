@@ -1,0 +1,4 @@
+{
+  // Incompatible Types
+  bool z = "a"||2;
+}

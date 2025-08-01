@@ -1,0 +1,4 @@
+{
+  // Unexpected token INT (expected EOL)
+  s = 1 1;
+}

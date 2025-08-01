@@ -1,0 +1,4 @@
+{
+  // Unexpected token MULT
+  b = 4**6;
+}

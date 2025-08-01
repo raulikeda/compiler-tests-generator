@@ -1,0 +1,10 @@
+void main() {
+  // Unexpected OPEN_BRA
+  int g = 1;
+  if (g == 1) {
+    g = 2;
+  }
+  {
+    g = 3;
+  }
+}

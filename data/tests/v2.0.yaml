@@ -1,52 +1,89 @@
 - description: Valid Input
-  code: "   3+6/3   *  2 -+-  +  2*4/2 + 0/1 -((6+ ((4)))/(2))  "
+  code: |-
+    &LBRA
+      
+      &PRINT&FLP1&FRP&LF
+      x &ASSIGN 3+6/3   *  2 -+-  +  2*4/2 + 0/1 -((6+ ((4)))/(2))&LF &COM Teste &COM Teste 2&LF
+      y_1 &ASSIGN 3&LF
+      y_1 &ASSIGN y_1 + 2&LF  
+      
+      z__ &ASSIGN x + y_1&LF
+      
+      
+      &COM Saida final
+      &PRINT&FLPx&FRP&LF
+      &PRINT&FLPz__+1&FRP&LF
+      &LF&LF&LF
+    &RBRA
   input: ''
   exception: false
-  output: '6'
+  output: |-
+    1
+    6
+    12
   languages:
   - All
-- description: Missing Number After +
+- description: Missing Expression After +
   code: |-
-    $+
+    &LBRA
+      &COM Unexpected token EOL
+      ? &ASSIGN $+&LF
+    &RBRA
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: Unexpected token EOL
   languages:
   - All
-- description: Missing Number After -
+- description: Missing Expression After -
   code: |-
-    $-
+    &LBRA
+      &COM Unexpected token EOL
+      ? &ASSIGN $-&LF
+    &RBRA
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: Unexpected token EOL
   languages:
   - All
-- description: Empty Input
-  code: ""
-  input: ''
-  exception: true
-  output: Unexpected token EOF
-  languages:
-  - All
-- description: Only Operator +
+- description: Empty Expression
   code: |-
-    +
+    &LBRA
+      &COM Unexpected token EOL
+      ? &ASSIGN &LF
+    &RBRA
   input: ''
   exception: true
-  output: Unexpected token PLUS
+  output: Unexpected token EOL
   languages:
   - All
-- description: Only Operator -
+- description: Missing Expression After +
   code: |-
-    -
+    &LBRA
+      &COM Unexpected token EOL
+      ? &ASSIGN +&LF
+    &RBRA
   input: ''
   exception: true
-  output: Unexpected token MINUS
+  output: Unexpected token EOL
+  languages:
+  - All
+- description: Missing Expression After -
+  code: |-
+    &LBRA
+      &COM Unexpected token EOL
+      ? &ASSIGN -&LF
+    &RBRA
+  input: ''
+  exception: true
+  output: Unexpected token EOL
   languages:
   - All
 - description: No Operator
   code: |-
-    $ $
+    &LBRA
+      &COM Unexpected token INT (expected EOL)
+      ? &ASSIGN $ $&LF
+    &RBRA
   input: ''
   exception: true
   output: Unexpected token INT
@@ -54,7 +91,10 @@
   - All
 - description: Invalid Token
   code: |-
-    ,
+    &LBRA
+      &COM Invalid token ,
+      ? &ASSIGN ,&LF
+    &RBRA
   input: ''
   exception: true
   output: Invalid token ,
@@ -62,7 +102,10 @@
   - All
 - description: Starting with Operator *
   code: |-
-    *$
+    &LBRA
+      &COM Unexpected token MULT
+      ? &ASSIGN *$&LF
+    &RBRA
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -70,7 +113,10 @@
   - All
 - description: Starting with Operator /
   code: |-
-    /$
+    &LBRA
+      &COM Unexpected token DIV
+      ? &ASSIGN /$&LF
+    &RBRA
   input: ''
   exception: true
   output: Unexpected token DIV
@@ -78,23 +124,32 @@
   - All
 - description: Missing Number After *
   code: |-
-    $*
+    &LBRA
+      &COM Unexpected token EOL
+      ? &ASSIGN $*&LF
+    &RBRA
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: Unexpected token EOL
   languages:
   - All
 - description: Missing Number After /
   code: |-
-    $/
+    &LBRA
+      &COM Unexpected token EOL
+      ? &ASSIGN $/&LF
+    &RBRA
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: Unexpected token EOL
   languages:
   - All
 - description: Only Operator *
   code: |-
-    *
+    &LBRA
+      &COM Unexpected token MULT
+      ? &ASSIGN *&LF
+    &RBRA
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -102,7 +157,10 @@
   - All
 - description: Only Operator /
   code: |-
-    /
+    &LBRA
+      &COM Unexpected token DIV
+      ? &ASSIGN /&LF
+    &RBRA
   input: ''
   exception: true
   output: Unexpected token DIV
@@ -110,7 +168,10 @@
   - All
 - description: Two Consecultives Operators +*
   code: |-
-    $+*$
+    &LBRA
+      &COM Unexpected token MULT
+      ? &ASSIGN $+*$&LF
+    &RBRA
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -118,7 +179,10 @@
   - All
 - description: Two Consecultives Operators +/
   code: |-
-    $+/$
+    &LBRA
+      &COM Unexpected token DIV
+      ? &ASSIGN $+/$&LF
+    &RBRA
   input: ''
   exception: true
   output: Unexpected token DIV
@@ -126,23 +190,32 @@
   - All
 - description: Two Consecultives Operators **
   code: |-
-    $**$
+    &LBRA
+      &COM Unexpected token MULT
+      ? &ASSIGN $**$&LF
+    &RBRA
   input: ''
   exception: true
   output: Unexpected token MULT
   languages:
   - All
-- description: Two Consecultives Operators //
+- description: Wrong Comment
   code: |-
-    $//$
+    &LBRA
+      &COM Unexpected token CLOSE_BRA
+      ? &ASSIGN &COM$&LF
+    &RBRA
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: Unexpected token CLOSE_BRA
   languages:
   - All
 - description: Two Consecultives Operators */
   code: |-
-    $*/$
+    &LBRA
+      &COM Unexpected token DIV
+      ? &ASSIGN $*/$&LF
+    &RBRA
   input: ''
   exception: true
   output: Unexpected token DIV
@@ -150,7 +223,10 @@
   - All
 - description: Two Consecultives Operators /*
   code: |-
-    $/*$
+    &LBRA
+      &COM Unexpected token MULT
+      ? &ASSIGN $/*$&LF
+    &RBRA
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -158,15 +234,21 @@
   - All
 - description: Missing )
   code: |-
-    ($
+    &LBRA
+      &COM Missing CLOSE_PAR
+      ? &ASSIGN ($&LF
+    &RBRA
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: Missing CLOSE_PAR
   languages:
   - All
 - description: Missing (
   code: |-
-    $)
+    &LBRA
+      &COM Unexpected token CLOSE_PAR
+      ? &ASSIGN $)&LF
+    &RBRA
   input: ''
   exception: true
   output: Unexpected token CLOSE_PAR
@@ -174,17 +256,201 @@
   - All
 - description: Missing )
   code: |-
-    (($)
+    &LBRA
+      &COM Missing CLOSE_PAR
+      ? &ASSIGN (($)&LF
+    &RBRA
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: Missing CLOSE_PAR
   languages:
   - All
 - description: Missing (
   code: |-
-    ($))
+    &LBRA
+      &COM Unexpected token CLOSE_PAR
+      ? &ASSIGN ($))&LF
+    &RBRA
   input: ''
   exception: true
   output: Unexpected token CLOSE_PAR
+  languages:
+  - All
+- description: Wrong Print
+  code: |-
+    &LBRA
+      &COM Unexpected token OPEN_PAR (wrong print token)
+      &WPRINT&FLP$&FRP&LF
+    &RBRA
+  input: ''
+  exception: true
+  output: Unexpected token OPEN_PAR
+  languages:
+  - All
+- description: No Operator
+  code: |-
+    &LBRA
+      &COM Unexpected token IDEN
+      X &ASSIGN 1&LF
+      ? &ASSIGN $ X&LF
+    &RBRA
+  input: ''
+  exception: true
+  output: Unexpected token IDEN
+  languages:
+  - All
+- description: Missing (
+  code: |-
+    &LBRA
+      &COM Unexpected token INT (expected OPEN_PAR)
+      &PRINT $&FRP&LF
+    &RBRA
+  input: ''
+  exception: true
+  output: Unexpected token INT (expected OPEN_PAR)
+  languages:
+  - All
+- description: Missing )
+  code: |-
+    &LBRA
+      &COM Unexpected token EOL (expected CLOSE_PAR)
+      &PRINT&FLP$&LF
+    &RBRA
+  input: ''
+  exception: true
+  output: Unexpected token EOL (expected CLOSE_PAR)
+  languages:
+  - All
+- description: Missing ()
+  code: |-
+    &LBRA
+      &COM Author: Rafael Dourado @rafaeldbo - Mar/2025
+      &COM Unexpected token INT (expected OPEN_PAR)
+      &PRINT $&LF
+    &RBRA
+  input: ''
+  exception: true
+  output: Unexpected token INT (expected OPEN_PAR)
+  languages:
+  - All
+- description: Missing Identifier
+  code: |-
+    &LBRA
+      &COM Identifier not found
+      x1 &ASSIGN $&LF
+      &PRINT&FLPX1&FRP&LF
+    &RBRA
+  input: ''
+  exception: true
+  output: Identifier not found
+  languages:
+  - All
+- description: Missing }
+  code: |-
+    &LBRA
+      &COM Unexpected token EOF (expected CLOSE_BRA)
+      ? &ASSIGN $&LF
+  input: ''
+  exception: true
+  output: Unexpected token EOF (expected CLOSE_BRA)
+  languages:
+  - All
+- description: Extra {}
+  code: |-
+    &LBRA
+      &COM Unexpected token OPEN_BRA (expected EOF)
+      ? &ASSIGN $&LF
+    &RBRA
+    &LBRA
+    &RBRA
+  input: ''
+  exception: true
+  output: '&COM Unexpected token OPEN_BRA (expected EOF)'
+  languages:
+  - All
+- description: Extra nested {}
+  code: |-
+    &LBRA
+      &LBRA
+        &COM Unexpected token OPEN_BRA
+        ? &ASSIGN $&LF
+      &RBRA
+    &RBRA
+  input: ''
+  exception: true
+  output: '&COM Unexpected token OPEN_BRA'
+  languages:
+  - All
+- description: Extra }
+  code: |-
+    &LBRA
+      &COM Unexpected token CLOSE_BRA (expected EOF)
+      ? &ASSIGN $&LF
+    &RBRA
+    &RBRA
+  input: ''
+  exception: true
+  output: Unexpected token CLOSE_BRA (expected EOF)
+  languages:
+  - All
+- description: Missing {}
+  code: |-
+    &COM Unexpected token IDEN (expected OPEN_BRA)
+    ? &ASSIGN $&LF
+  input: ''
+  exception: true
+  output: Unexpected token IDEN (expected OPEN_BRA)
+  languages:
+  - All
+- description: Missing {}
+  code: ""
+  input: ''
+  exception: true
+  output: Unexpected token EOF (expected OPEN_BRA)
+  languages:
+  - All
+- description: Invalid Identifier Name
+  code: |-
+    &LBRA
+      &COM Unexpected token IDEN
+      1x &ASSIGN $&LF
+      &PRINT&FLP1x&FRP&LF
+    &RBRA
+  input: ''
+  exception: true
+  output: Unexpected token IDEN
+  languages:
+  - All
+- description: Use Print as Identifier
+  code: |-
+    &LBRA
+      &COM Unexpected token ASSIGN (expected OPEN_PAR)
+      &PRINT &ASSIGN ?&LF
+    &RBRA
+  input: ''
+  exception: true
+  output: Unexpected token ASSIGN (expected OPEN_PAR)
+  languages:
+  - All
+- description: Missing )
+  code: |-
+    &LBRA
+      &COM Unexpected token EOL (expected CLOSE_PAR)
+      &PRINT&FLP$&COM&FRP&LF
+    &RBRA
+  input: ''
+  exception: true
+  output: Unexpected token EOL (expected CLOSE_PAR)
+  languages:
+  - All
+- description: Use Number as Identifier
+  code: |-
+    &LBRA
+      &COM Unexpected token INT
+      3 &ASSIGN $ + $&LF
+    &RBRA
+  input: ''
+  exception: true
+  output: Unexpected token INT
   languages:
   - All
