@@ -97,6 +97,7 @@
       &PRINT(a &LT b)&LF
       &PRINT(a &GT b)&LF
     &RBRA
+    &MAINCALL
   input: |-
     3
   exception: true
@@ -132,6 +133,7 @@
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN $+&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -143,6 +145,7 @@
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN $-&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -154,6 +157,7 @@
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN &LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -165,6 +169,7 @@
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN +&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -176,6 +181,7 @@
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN -&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -187,6 +193,7 @@
       &COM Unexpected token INT (expected EOL)
       &PINT&VAR ?&TSEP&INT &ASSIGN $ $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token INT
@@ -198,6 +205,7 @@
       &COM Invalid token @
       &PINT&VAR ?&TSEP&INT &ASSIGN @&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Invalid token @
@@ -209,6 +217,7 @@
       &COM Unexpected token MULT
       &PINT&VAR ?&TSEP&INT &ASSIGN *$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -220,6 +229,7 @@
       &COM Unexpected token DIV
       &PINT&VAR ?&TSEP&INT &ASSIGN /$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token DIV
@@ -231,6 +241,7 @@
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN $*&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -242,6 +253,7 @@
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN $/&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -253,6 +265,7 @@
       &COM Unexpected token MULT
       &PINT&VAR ?&TSEP&INT &ASSIGN *&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -264,6 +277,7 @@
       &COM Unexpected token DIV
       &PINT&VAR ?&TSEP&INT &ASSIGN /&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token DIV
@@ -275,6 +289,7 @@
       &COM Unexpected token MULT
       &PINT&VAR ?&TSEP&INT &ASSIGN $+*$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -286,6 +301,7 @@
       &COM Unexpected token DIV
       &PINT&VAR ?&TSEP&INT &ASSIGN $+/$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token DIV
@@ -297,6 +313,7 @@
       &COM Unexpected token MULT
       &PINT&VAR ?&TSEP&INT &ASSIGN $**$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -308,6 +325,7 @@
       &COM Unexpected token CLOSE_BRA
       &PINT&VAR ?&TSEP&INT &ASSIGN &COM$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token CLOSE_BRA
@@ -319,6 +337,7 @@
       &COM Unexpected token DIV
       &PINT&VAR ?&TSEP&INT &ASSIGN $*/$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token DIV
@@ -330,6 +349,7 @@
       &COM Unexpected token MULT
       &PINT&VAR ?&TSEP&INT &ASSIGN $/*$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -341,6 +361,7 @@
       &COM Missing CLOSE_PAR
       &PINT&VAR ?&TSEP&INT &ASSIGN ($&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing CLOSE_PAR
@@ -352,6 +373,7 @@
       &COM Unexpected token CLOSE_PAR
       &PINT&VAR ?&TSEP&INT &ASSIGN $)&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token CLOSE_PAR
@@ -363,6 +385,7 @@
       &COM Missing CLOSE_PAR
       &PINT&VAR ?&TSEP&INT &ASSIGN (($)&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing CLOSE_PAR
@@ -374,6 +397,7 @@
       &COM Unexpected token CLOSE_PAR
       &PINT&VAR ?&TSEP&INT &ASSIGN ($))&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token CLOSE_PAR
@@ -385,6 +409,7 @@
       &COM Unexpected token OPEN_PAR (wrong print token)
       &WPRINT&FLP$&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token OPEN_PAR
@@ -397,6 +422,7 @@
       &PINT&VAR L&TSEP&INT &ASSIGN 1&LF
       &PINT&VAR ?&TSEP&INT &ASSIGN $ L&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token IDEN
@@ -408,6 +434,7 @@
       &COM Unexpected token INT (expected OPEN_PAR)
       &PRINT $&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token INT (expected OPEN_PAR)
@@ -419,6 +446,7 @@
       &COM Unexpected token EOL (expected CLOSE_PAR)
       &PRINT&FLP$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token EOL (expected CLOSE_PAR)
@@ -431,6 +459,7 @@
       &COM Unexpected token INT (expected OPEN_PAR)
       &PRINT $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token INT (expected OPEN_PAR)
@@ -443,6 +472,7 @@
       &PINT&VAR x1&TSEP&INT &ASSIGN $&LF
       &PRINT&FLPX1&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Identifier not found
@@ -453,6 +483,7 @@
     &PVOID&FN main&FLP&FRP &VOID&LBRA
       &COM Unexpected token EOF (expected CLOSE_BRA)
       &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token EOF (expected CLOSE_BRA)
@@ -466,6 +497,7 @@
     &RBRA
     &LBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: '&COM Unexpected token OPEN_BRA (expected EOF)'
@@ -479,6 +511,7 @@
         &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: '&COM Unexpected token FUNC or OPEN_PAR'
@@ -491,6 +524,7 @@
       &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
     &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token CLOSE_BRA (expected EOF)
@@ -500,6 +534,7 @@
   code: |-
     &COM Unexpected token IDEN (expected OPEN_BRA)
     &PVOID&FN main&FLP&FRP &VOID
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token IDEN (expected OPEN_BRA)
@@ -519,6 +554,7 @@
       &PINT&VAR 1x&TSEP&INT &ASSIGN $&LF
       &PRINT&FLP1x&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token IDEN
@@ -530,6 +566,7 @@
       &COM Unexpected token ASSIGN (expected OPEN_PAR)
       &PRINT &ASSIGN ?&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token ASSIGN (expected OPEN_PAR)
@@ -541,6 +578,7 @@
       &COM Unexpected token EOL (expected CLOSE_PAR)
       &PRINT&FLP$&COM&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token EOL (expected CLOSE_PAR)
@@ -552,6 +590,7 @@
       &COM Unexpected token INT
       3 &ASSIGN $ + $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token INT
@@ -564,6 +603,7 @@
       &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
       &IF &ELP? &EQ 1&ERP &LBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing CLOSE_BRA
@@ -578,6 +618,7 @@
         ? &ASSIGN 2&LF
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing OPEN_BRA
@@ -593,6 +634,7 @@
       &RBRA &ELSE &LBRA
         ? &ASSIGN 3&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing CLOSE_BRA
@@ -609,6 +651,7 @@
         ? &ASSIGN 3&LF
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token EOF
@@ -622,6 +665,7 @@
       &WHILE &ELP? &EQ 1&ERP &LBRA
         ? &ASSIGN 2&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token EOF
@@ -636,6 +680,7 @@
         ? &ASSIGN 2&LF
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing OPEN_BRA
@@ -653,6 +698,7 @@
         ? &ASSIGN 3&LF
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected OPEN_BRA
@@ -671,6 +717,7 @@
         ? &ASSIGN 4&LF
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected OPEN_BRA
@@ -685,6 +732,7 @@
         ? &ASSIGN 2&LF
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing Right Expression
@@ -699,6 +747,7 @@
         ? &ASSIGN 2&LF
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing Right Expression
@@ -713,6 +762,7 @@
         ? &ASSIGN 2&LF
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing Right Expression
@@ -727,6 +777,7 @@
         ? &ASSIGN 2&LF
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing Right Expression
@@ -738,6 +789,7 @@
       &COM Missing OPEN_PAR
       &PINT&VAR ?&TSEP&INT &ASSIGN &SCAN&LF
     &RBRA
+    &MAINCALL
   input: |-
     1
   exception: true
@@ -750,6 +802,7 @@
       &COM Missing CLOSE_PAR
       &PINT&VAR ?&TSEP&INT &ASSIGN &SCAN&FLP&LF
     &RBRA
+    &MAINCALL
   input: |-
     1
   exception: true
@@ -764,6 +817,7 @@
       &LBRA
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token INT
@@ -775,6 +829,7 @@
       &COM Unexpected token CLOSE_BRA
       &IF &ELP1 &EQ 1&ERP &LBRA &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token INT
@@ -789,6 +844,7 @@
       &ELSE &LBRA 
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token NEWLINE Before Else
@@ -801,6 +857,7 @@
       &IF &ELP1 &EQ 1&ERP &LBRA 
       &RBRA &ELSE &LBRA &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token CLOSE_BRA in Else
@@ -815,6 +872,7 @@
       &LBRA
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token NEWLINE in Else
@@ -828,6 +886,7 @@
       &LBRA 
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token NEWLINE in While
@@ -839,6 +898,7 @@
       &COM Unexpected token CLOSE_BRA
       &WHILE &ELP1 &EQ 1&ERP &LBRA &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected token CLOSE_BRA in While
@@ -851,6 +911,7 @@
       &IF &ELP1 &EQ 1&ERP
         ? &ASSIGN $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing OPEN_BRA in If
@@ -864,6 +925,7 @@
       &WHILE &ELP1 &EQ 1&ERP
         ? &ASSIGN $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing OPEN_BRA in If
@@ -878,6 +940,7 @@
         &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing OPEN_PAR in If
@@ -892,6 +955,7 @@
         &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing OPEN_PAR in While
@@ -904,6 +968,7 @@
       &COM COLON not found
       &VAR x1 &ASSIGN $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: COLON not found
@@ -915,6 +980,7 @@
       &COM COLON not found
       &VAR x1 &INT &ASSIGN $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: COLON not found
@@ -926,6 +992,7 @@
       &COM TYPE not found
       &VAR x1&TSEP &ASSIGN $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: TYPE not found
@@ -938,6 +1005,7 @@
       &COM Unexpected Identifier
       &PWINT&VAR x1&TSEP&WINT &ASSIGN $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected Identifier
@@ -949,6 +1017,7 @@
       &COM Incompatible types
       &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible types
@@ -960,6 +1029,7 @@
       &COM Incompatible types
       &PINT&VAR ?&TSEP&INT &ASSIGN "a"&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible types
@@ -971,6 +1041,7 @@
       &COM Incompatible types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible types
@@ -982,6 +1053,7 @@
       &COM Incompatible types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible types
@@ -993,6 +1065,7 @@
       &COM Incompatible types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible types
@@ -1004,6 +1077,7 @@
       &COM Incompatible types
       &PSTR&VAR ?&TSEP&STR &ASSIGN $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible types
@@ -1015,6 +1089,7 @@
       &COM Incompatible types
       &PSTR&VAR ?&TSEP&STR &ASSIGN &FALSE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible types
@@ -1026,6 +1101,7 @@
       &COM Incompatible types
       &PSTR&VAR ?&TSEP&STR &ASSIGN &SCAN&FLP&FRP&LF
     &RBRA
+    &MAINCALL
   input: |-
     1
   exception: true
@@ -1039,6 +1115,7 @@
       &PINT&VAR ?&TSEP&INT&LF
       &PSTR&VAR ?&TSEP&STR&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Variable Already Declared
@@ -1050,6 +1127,7 @@
       &COM Unexpected EOF
       &PSTR&VAR ?&TSEP&STR &ASSIGN "a&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Unexpected EOF
@@ -1061,6 +1139,7 @@
       &COM Variable not found
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &WTRUE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Variable not found
@@ -1072,6 +1151,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&EQ"a"&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1083,6 +1163,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN 1&EQ&TRUE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1094,6 +1175,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&EQ&TRUE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1105,6 +1187,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&GT"a"&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1116,6 +1199,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN 1&GT&TRUE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1127,6 +1211,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&LT&TRUE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1138,6 +1223,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LT"a"&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1149,6 +1235,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &TRUE<$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1160,6 +1247,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"<&TRUE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1171,6 +1259,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&AND$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1182,6 +1271,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&OR$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1193,6 +1283,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &NOT$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1204,6 +1295,7 @@
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN 1+&TRUE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1215,6 +1307,7 @@
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE+1&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Types
@@ -1226,6 +1319,7 @@
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN 1-&TRUE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Type
@@ -1237,6 +1331,7 @@
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE-1&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Type
@@ -1248,6 +1343,7 @@
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN 1*&TRUE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Type
@@ -1259,6 +1355,7 @@
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE*1&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Type
@@ -1270,6 +1367,7 @@
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN $/&TRUE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Type
@@ -1281,6 +1379,7 @@
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE/1&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Type
@@ -1292,6 +1391,7 @@
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE&OR&FALSE&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Type
@@ -1303,6 +1403,7 @@
       &COM Incompatible Types
       &PSTR&VAR ?&TSEP&STR &ASSIGN $+$&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Type
@@ -1314,6 +1415,7 @@
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&CONCAT"b"&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Type
@@ -1326,6 +1428,7 @@
       &IF &ELP1+1&ERP &LBRA
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Type
@@ -1338,6 +1441,7 @@
       &WHILE &ELP0+0&ERP &LBRA
       &RBRA
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Incompatible Type
@@ -1348,6 +1452,7 @@
     &FN&WSmain&FLP&FRP &LBRA
       &COM Missing function type
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing function type
@@ -1359,6 +1464,7 @@
     &PVOID&FN Main&FLP&FRP &VOID&LBRA
       &COM Missing function main
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing function main
@@ -1373,6 +1479,7 @@
     &PVOID&FN main&FLP&FRP &VOID&LBRA
       &PRINT&FLPtest&FLP$&FRP&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing second arg
@@ -1387,6 +1494,7 @@
       &COM Missing second arg
       &PRINT&FLPtest&FLP$&ARGSEP &FRP&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Missing second arg
@@ -1401,6 +1509,7 @@
       &COM Missing second arg
       &PRINT&FLPtest&FLP$&FRP&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Number of args wrong
@@ -1415,6 +1524,7 @@
       &COM Number of args wrong
       &PRINT&FLPtest&FLP$&ARGSEP $&FRP&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Number of args wrong
@@ -1429,6 +1539,7 @@
       &COM Wrong arg type
       &PRINT&FLPtest&FLP$&FRP&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Wrong arg type
@@ -1443,6 +1554,7 @@
       &COM Wrong func return type
       &PRINT&FLPtest&FLP&TRUE&FRP&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Wrong func return type
@@ -1457,6 +1569,7 @@
       &COM Function not found
       &PRINT&FLPTest&FLP$&FRP&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Function not found
@@ -1469,6 +1582,7 @@
       &COM Function not found
       &PRINT&FLP?&FLP$&FRP&FRP&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Function not found
@@ -1483,6 +1597,7 @@
       &RBRA
       ? &ASSIGN $&LF
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Function not found
@@ -1494,8 +1609,10 @@
       &COM Invalid return in a void function
       &RETURN 1
     &RBRA
+    &MAINCALL
   input: ''
   exception: true
   output: Invalid return in a void function
   languages:
   - Go
+
