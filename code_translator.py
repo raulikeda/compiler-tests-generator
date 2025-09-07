@@ -6,7 +6,9 @@ import string
 
 # Load language dictionaries from external YAML files
 def load_language_dict(language):
-    lang_file = f'./data/languages/{language}.yaml'
+    # Get the directory where this script is located
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    lang_file = os.path.join(script_dir, 'data', 'languages', f'{language}.yaml')
     with open(lang_file, 'r') as f:
         return yaml.safe_load(f)
 
