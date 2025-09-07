@@ -1,4 +1,4 @@
 {
   // Missing OPEN_PAR
-  i = scanf;
+  r = scanf;
 }

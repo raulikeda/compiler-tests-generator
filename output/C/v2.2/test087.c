@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  int u = 7/true;
+  int n = 1/true;
 }

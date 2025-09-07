@@ -1,5 +1,5 @@
 {
   // Variable Already Declared
-  int n;
-  str n;
+  int c;
+  str c;
 }

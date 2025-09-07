@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  bool o = true<5;
+  bool i = true<6;
 }

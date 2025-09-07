@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  int h = 1-true;
+  int y = 1-true;
 }

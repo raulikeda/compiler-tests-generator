@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  bool j = 4=="a";
+  bool y = 9=="a";
 }

@@ -1,7 +1,7 @@
 {
   // Missing Right Expression
-  d = 1;
-  if (d >) {
-    d = 2;
+  w = 1;
+  if (w >) {
+    w = 2;
   }
 }

@@ -1,9 +1,9 @@
 {
   // Missing OPEN_BRA
-  int f = 1;
-  if (f == 1) {
-    f = 2;
+  int b = 1;
+  if (b == 1) {
+    b = 2;
   } else
-    f = 3;
+    b = 3;
   }
 }

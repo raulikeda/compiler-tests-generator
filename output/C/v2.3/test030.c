@@ -1,5 +1,5 @@
 void main() {
   // Identifier not found
-  int x1 = 7;
+  int x1 = 3;
   printf(X1);
 }

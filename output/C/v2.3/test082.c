@@ -1,4 +1,4 @@
 void main() {
   // Incompatible Types
-  int f = true+1;
+  int c = true+1;
 }

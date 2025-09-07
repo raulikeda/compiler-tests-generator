@@ -166,11 +166,11 @@
   - All
 - description: Wrong Comment
   code: |-
-    &COM Unexpected token CLOSE_BRA
+    &COM Unexpected token EOF
     ? &ASSIGN &COM$&LF
   input: ''
   exception: true
-  output: Unexpected token CLOSE_BRA
+  output: Unexpected token EOF
   languages:
   - All
 - description: Two Consecultives Operators */

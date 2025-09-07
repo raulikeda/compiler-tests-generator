@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  bool u = 9<"a";
+  bool v = 3<"a";
 }

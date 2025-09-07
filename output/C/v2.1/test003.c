@@ -1,4 +1,4 @@
 {
   // Unexpected token EOL
-  b = 8-;
+  m = 9-;
 }

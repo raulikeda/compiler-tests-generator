@@ -1,4 +1,4 @@
 {
   // Unexpected token DIV
-  int s = 1+/2;
+  int d = 3+/4;
 }

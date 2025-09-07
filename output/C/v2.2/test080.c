@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  bool c = !7;
+  bool a = !6;
 }

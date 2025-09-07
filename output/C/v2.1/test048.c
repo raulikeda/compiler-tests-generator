@@ -1,11 +1,11 @@
 {
   // Unexpected ELSE
-  c = 1;
-  if (c == 1) {
-    c = 2;
+  h = 1;
+  if (h == 1) {
+    h = 2;
   } else {
-    c = 3;
+    h = 3;
   } else {
-    c = 4;
+    h = 4;
   }
 }

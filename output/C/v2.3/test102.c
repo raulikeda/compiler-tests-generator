@@ -3,5 +3,5 @@ int test(int x) {
 }
 void main() {
   // Function not found
-  printf(Test(4));
+  printf(Test(8));
 }

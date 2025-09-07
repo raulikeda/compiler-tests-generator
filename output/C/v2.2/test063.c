@@ -1,4 +1,4 @@
 {
   // Incompatible types
-  str n = 6;
+  str y = 3;
 }

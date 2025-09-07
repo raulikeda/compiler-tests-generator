@@ -1,6 +1,6 @@
 {
   // Missing OPEN_PAR
   while 1 == 1 {
-    int m = 6;
+    int o = 9;
   }
 }

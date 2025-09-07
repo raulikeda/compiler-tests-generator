@@ -3,5 +3,5 @@ int test(int x, int y) {
 }
 void main() {
   // Missing second arg
-  printf(test(5));
+  printf(test(7));
 }

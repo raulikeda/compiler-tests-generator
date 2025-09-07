@@ -1,7 +1,7 @@
 {
   // Missing Right Expression
-  t = 1;
+  n = 1;
   if (!) {
-    t = 2;
+    n = 2;
   }
 }

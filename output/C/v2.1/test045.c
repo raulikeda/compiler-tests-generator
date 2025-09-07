@@ -1,6 +1,6 @@
 {
   // Unexpected EOF (Missing CLOSE_BRA)
-  z = 1;
-  while (z == 1) {
-    z = 2;
+  j = 1;
+  while (j == 1) {
+    j = 2;
 }

@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  int h = true||false;
+  int k = true||false;
 }

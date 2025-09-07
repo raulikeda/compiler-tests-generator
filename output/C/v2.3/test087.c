@@ -1,4 +1,4 @@
 void main() {
   // Incompatible Types
-  int s = 8/true;
+  int k = 9/true;
 }

@@ -1,4 +1,4 @@
 {
   // Unexpected token MULT
-  int y = 2**9;
+  int o = 7**8;
 }

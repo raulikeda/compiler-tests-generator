@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  bool q = 5>"a";
+  bool w = 8>"a";
 }

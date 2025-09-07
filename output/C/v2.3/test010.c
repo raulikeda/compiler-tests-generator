@@ -1,4 +1,4 @@
 void main() {
   // Unexpected token DIV
-  int k = /4;
+  int a = /9;
 }

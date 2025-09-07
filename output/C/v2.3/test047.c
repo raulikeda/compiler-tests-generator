@@ -1,10 +1,10 @@
 void main() {
   // Unexpected OPEN_BRA
-  int f = 1;
-  if (f == 1) {
-    f = 2;
+  int t = 1;
+  if (t == 1) {
+    t = 2;
   }
   {
-    f = 3;
+    t = 3;
   }
 }

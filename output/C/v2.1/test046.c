@@ -1,7 +1,7 @@
 {
   // Missing OPEN_BRA
-  m = 1;
-  while (m == 1)
-    m = 2;
+  k = 1;
+  while (k == 1)
+    k = 2;
   }
 }

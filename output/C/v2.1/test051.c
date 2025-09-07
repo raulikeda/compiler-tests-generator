@@ -1,7 +1,7 @@
 {
   // Missing Right Expression
-  v = 1;
-  if (v <) {
-    v = 2;
+  y = 1;
+  if (y <) {
+    y = 2;
   }
 }

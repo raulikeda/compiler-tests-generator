@@ -1,4 +1,4 @@
 {
   // Unexpected EOF
-  str y = "a;
+  str j = "a;
 }

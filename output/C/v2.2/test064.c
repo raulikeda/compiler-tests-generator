@@ -1,4 +1,4 @@
 {
   // Incompatible types
-  str h = false;
+  str f = false;
 }

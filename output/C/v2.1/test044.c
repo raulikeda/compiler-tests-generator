@@ -1,9 +1,9 @@
 {
   // Missing OPEN_BRA
-  t = 1;
-  if (t == 1) {
-    t = 2;
+  y = 1;
+  if (y == 1) {
+    y = 2;
   } else
-    t = 3;
+    y = 3;
   }
 }

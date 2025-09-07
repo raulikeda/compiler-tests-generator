@@ -1,11 +1,11 @@
 void main() {
   // Unexpected ELSE
-  int n = 1;
-  if (n == 1) {
-    n = 2;
+  int g = 1;
+  if (g == 1) {
+    g = 2;
   } else {
-    n = 3;
+    g = 3;
   } else {
-    n = 4;
+    g = 4;
   }
 }

@@ -1,7 +1,7 @@
 {
   // Missing OPEN_BRA
-  z = 1;
-  if (z == 1)
-    z = 2;
+  i = 1;
+  if (i == 1)
+    i = 2;
   }
 }

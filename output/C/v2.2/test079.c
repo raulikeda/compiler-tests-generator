@@ -1,4 +1,4 @@
 {
   // Incompatible Types
-  bool h = "a"||9;
+  bool d = "a"||7;
 }

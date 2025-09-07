@@ -1,10 +1,10 @@
 {
   // Unexpected OPEN_BRA
-  o = 1;
-  if (o == 1) {
-    o = 2;
+  t = 1;
+  if (t == 1) {
+    t = 2;
   }
   {
-    o = 3;
+    t = 3;
   }
 }
