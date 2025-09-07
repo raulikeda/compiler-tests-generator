@@ -19,7 +19,7 @@ def flatten_aliases(aliases):
         flat.update(d)
     return flat
 
-def translate_code(metalanguage_code, target_language):
+def translate_code(metalanguage_code, target_language, printable=False):
     # Load the language dictionary
     data = load_language_dict(target_language)
     ext = data['extension']
@@ -30,7 +30,9 @@ def translate_code(metalanguage_code, target_language):
     # Translate code using aliases
     for k, v in aliases.items():
         if k == "&NL" and v == "\\n":
-            code = code.replace(k, "\n")            
+            code = code.replace(k, "\n")
+        elif printable and k == "&LF" and v == "":
+            code = code.replace(k, "\\n")
         else:
             code = code.replace(k, v)
 
