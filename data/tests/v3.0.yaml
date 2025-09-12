@@ -1,0 +1,110 @@
+- description: Valid Input
+  code: |-
+    &PVOID&FN main&FLP&FRP &VOID&LBRA
+      &PINT&VAR A&TSEP&INT &ASSIGN 2&LF
+      &PINT&VAR x_1&TSEP&INT&LF
+      x_1 &ASSIGN 3&LF
+      &PINT&VAR x_2&TSEP&INT &ASSIGN 4*3*2*1&LF
+      &PRINT&FLPA&FRP&LF 
+      &PRINT&FLPx_2&FRP&LF
+      &LBRA
+        &PINT&VAR x_2&TSEP&INT &ASSIGN 7&LF
+        x_1 &ASSIGN 9&LF
+        A &ASSIGN 8&LF
+        &LF
+      &RBRA
+      &PRINT&FLPA&FRP&LF
+      &PRINT&FLPx_1&FRP&LF
+      
+      &IF &ELP(x_1 &GT 1 &AND &NOT&NOT&NOT(x_1 &LT 1)) &OR x_1 &EQ 9&ERP &LBRA
+        x_1 &ASSIGN 2&LF
+      &RBRA
+      
+      &PINT&VAR x&TSEP&INT &ASSIGN 3+6/3   *  2 -+-  +  2*4/2 + 0/1 -((6+ ((4)))/(2))&LF &COM Teste &COM Teste 2
+      &PINT&VAR y_1&TSEP&INT &ASSIGN 3&LF
+      y_1 &ASSIGN y_1 + x_1&LF
+      &PINT&VAR z__&TSEP&INT&LF
+      z__ &ASSIGN x + y_1&LF
+      
+      &IF &ELPx_1 &EQ 2&ERP &LBRA
+        x_1 &ASSIGN 2&LF
+      &RBRA
+      
+      &IF &ELPx_1 &EQ 3&ERP &LBRA
+        x_1 &ASSIGN 2&LF
+      &RBRA &ELSE &LBRA
+        x_1 &ASSIGN 3&LF
+      &RBRA
+      
+      x_1 &ASSIGN 0&LF
+      &WHILE &ELPx_1 &LT 1 &OR x &EQ 2&ERP &LBRA
+        &PRINT&FLPx_1&FRP&LF
+        x_1 &ASSIGN x_1 + 1&LF
+      &RBRA
+      
+      
+      &LF&LF&LF
+      &COM Saida final
+      &PRINT&FLPx_1&FRP&LF
+      &PRINT&FLPx&FRP&LF
+      &PRINT&FLPz__+1&FRP&LF
+      
+      &COM All int operations
+      &PINT&VAR y&TSEP&INT &ASSIGN 2&LF
+      &PINT&VAR z&TSEP&INT&LF
+      z = (y - 1)&LF
+      &PRINT(y+z)&LF
+      &PRINT(y-z)&LF
+      &PRINT(y*z)&LF
+      &PRINT(y/z)&LF
+      &PRINT(y &EQ z)&LF
+      &PRINT(y &LT z)&LF
+      &PRINT(y &GT z)&LF
+      
+      &COM All str operations 
+      &PSTR&VAR a&TSEP&STR&LF
+      &PSTR&VAR b&TSEP&STR&LF
+      
+      x_1 = 1&LF
+      y = 1&LF 
+      z = 2&LF
+      a = "abc"&LF
+      b = "def"&LF
+      &PRINT&FLPa&CONCATb&FRP&LF
+      &PRINT&FLPa&FRP&LF
+      &PRINT(a&CONCATx_1)&LF
+      &PRINT(x_1&CONCATa)&LF
+      &PRINT(a&CONCAT(x_1==1))&LF
+      &PRINT(a &EQ a)&LF
+      &PRINT(a &LT b)&LF
+      &PRINT(a &GT b)&LF
+    &RBRA
+    &MAINCALL
+  input: ''
+  exception: false
+  output: |-
+    2
+    24
+    8
+    9
+    0
+    1
+    6
+    12
+    3
+    1
+    2
+    2
+    &FALSE
+    &FALSE
+    &TRUE
+    abcdef
+    abc
+    abc1
+    1abc
+    abc&TRUE
+    &TRUE
+    &TRUE
+    &FALSE
+  languages:
+  - All
