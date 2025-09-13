@@ -1,5 +1,7 @@
 void main() {
-  // Unexpected EOF (Missing CLOSE_BRA)
-  int r = 1;
-  if (r == 1) {
+  // Missing OPEN_BRA
+  int x = 1;
+  if (x == 1)
+    x = 2;
+  }
 }

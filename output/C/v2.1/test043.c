@@ -1,8 +1,9 @@
-{
-  // Unexpected EOF (Missing CLOSE_BRA)
-  i = 1;
-  if (i == 1) {
-    i = 2;
-  } else {
-    i = 3;
+// Unexpected ELSE
+f = 1;
+if (f == 1) {
+  f = 2;
+} else {
+  f = 3;
+} else {
+  f = 4;
 }

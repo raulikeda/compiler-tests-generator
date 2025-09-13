@@ -1,7 +1,4 @@
 void main() {
-  // Missing Right Expression
-  int m = 1;
-  if (!) {
-    m = 2;
-  }
+  // Missing CLOSE_PAR
+  int q = scanf(;
 }

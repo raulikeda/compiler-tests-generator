@@ -1,2 +1,2 @@
 // Unexpected token MULT
-b = 8/*8;
+e = 3/*5;

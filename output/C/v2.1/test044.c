@@ -1,9 +1,5 @@
-{
-  // Missing OPEN_BRA
-  y = 1;
-  if (y == 1) {
-    y = 2;
-  } else
-    y = 3;
-  }
+// Missing Right Expression
+o = 1;
+if (o ==) {
+  o = 2;
 }

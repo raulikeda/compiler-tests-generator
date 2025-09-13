@@ -1,6 +1,2 @@
-{
-  // Missing OPEN_PAR
-  if 1 == 1 {
-    int k = 4;
-  }
-}
+// Incompatible types
+bool q = 2;

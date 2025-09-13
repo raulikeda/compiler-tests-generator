@@ -1,4 +1,2 @@
-{
-  // Variable not found
-  bool p = True;
-}
+// Incompatible Types
+bool b = 1>true;

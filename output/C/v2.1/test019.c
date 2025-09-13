@@ -1,4 +1,2 @@
-{
-  // Unexpected token DIV
-  c = 4*/9;
-}
+// Unexpected token DIV
+o = 4*/7;

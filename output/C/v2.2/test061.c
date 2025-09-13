@@ -1,4 +1,3 @@
-{
-  // Incompatible types
-  bool e = "a";
-}
+// Variable Already Declared
+int s;
+str s;

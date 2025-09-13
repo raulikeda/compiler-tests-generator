@@ -1,6 +1,3 @@
-{
-  // Unexpected token OPEN_BRA (expected EOF)
-  e = 7;
-}
-{
+// Unexpected token CLOSE_BRA (expected EOF)
+o = 2;
 }

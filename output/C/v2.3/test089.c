@@ -1,4 +1,4 @@
 void main() {
   // Incompatible Types
-  int c = true||false;
+  bool s = "a"."b";
 }

@@ -11,7 +11,7 @@
     &COM Saida final
     &PRINT&FLPx&FRP&LF
     &PRINT&FLPz__+1&FRP&LF
-    &LF&LF&LF
+    &LF&LF&LF &COM Teste do filter
   input: ''
   exception: false
   output: |-

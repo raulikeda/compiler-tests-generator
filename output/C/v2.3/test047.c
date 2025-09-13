@@ -1,10 +1,7 @@
 void main() {
-  // Unexpected OPEN_BRA
-  int t = 1;
-  if (t == 1) {
-    t = 2;
-  }
-  {
-    t = 3;
+  // Missing Right Expression
+  int b = 1;
+  if (b ==) {
+    b = 2;
   }
 }

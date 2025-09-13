@@ -1,4 +1,2 @@
-{
-  // Incompatible types
-  str f = false;
-}
+// Incompatible Types
+bool n = 3=="a";

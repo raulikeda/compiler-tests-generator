@@ -1,25 +1,25 @@
 - description: Valid Input
   code: |-
     &PINT&VAR A&TSEP&INT &ASSIGN 2&LF
-    &PVOID&FN myprint&FLP&PSTR&PSEPtext&TSEP&STR&FRP &VOID&LBRA
+    &PVOID&FN myprint&FLP&PSTR&PSEPtext&TSEP&STR&FRP&FSEP &VOID&LBRA
       &PRINT&FLPtext&FRP&LF
     &RBRA
     
-    &PINT&FN fac&FLP&PINT&PSEPx&TSEP&INT&FRP &INT&WS&LBRA
+    &PINT&FN fac&FLP&PINT&PSEPx&TSEP&INT&FRP&FSEP &INT&WS&LBRA
       &IF &ELPx &EQ 1&ERP &LBRA
         &RETURN 1&LF
       &RBRA
       &RETURN x * fac&FLPx-1&FRP&LF
     &RBRA
-    &PINT&FN sum&FLP&PINT&PSEPx&TSEP&INT&ARGSEP &PINT&PSEPy&TSEP&INT&FRP &INT&WS&LBRA
+    &PINT&FN sum&FLP&PINT&PSEPx&TSEP&INT&ARGSEP &PINT&PSEPy&TSEP&INT&FRP&FSEP &INT&WS&LBRA
       &RETURN x + y&LF
     &RBRA
     
-    &PBOOL&FN tautology&FLP&FRP &BOOL&WS&LBRA
+    &PBOOL&FN tautology&FLP&FRP&FSEP &BOOL&WS&LBRA
       &RETURN &TRUE&LF
     &RBRA
     
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &PINT&VAR x_1&TSEP&INT&LF
       x_1 &ASSIGN &SCAN&FLP&FRP&LF
       &PINT&VAR x_2&TSEP&INT &ASSIGN fac&FLP4&FRP&LF
@@ -61,7 +61,7 @@
       &RBRA
       
       
-      &LF&LF&LF
+      &LF&LF&LF &LBRA&LBRA &RBRA&RBRA &COM Teste de colchetes
       &COM Saida final
       &PRINT&FLPx_1&FRP&LF
       &PRINT&FLPx&FRP&LF
@@ -97,7 +97,7 @@
       &PRINT(a &LT b)&LF
       &PRINT(a &GT b)&LF
     &RBRA
-    &MAINCALL
+    &MAINCALL &COM Teste do filter
   input: |-
     3
   exception: true
@@ -129,7 +129,7 @@
   - All
 - description: Missing Expression After +
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN $+&LF
     &RBRA
@@ -141,7 +141,7 @@
   - All
 - description: Missing Expression After -
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN $-&LF
     &RBRA
@@ -153,7 +153,7 @@
   - All
 - description: Empty Expression
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN &LF
     &RBRA
@@ -165,7 +165,7 @@
   - All
 - description: Missing Expression After +
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN +&LF
     &RBRA
@@ -177,7 +177,7 @@
   - All
 - description: Missing Expression After -
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN -&LF
     &RBRA
@@ -189,7 +189,7 @@
   - All
 - description: No Operator
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token INT (expected EOL)
       &PINT&VAR ?&TSEP&INT &ASSIGN $ $&LF
     &RBRA
@@ -201,7 +201,7 @@
   - All
 - description: Invalid Token
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Invalid token @
       &PINT&VAR ?&TSEP&INT &ASSIGN @&LF
     &RBRA
@@ -213,7 +213,7 @@
   - All
 - description: Starting with Operator *
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token MULT
       &PINT&VAR ?&TSEP&INT &ASSIGN *$&LF
     &RBRA
@@ -225,7 +225,7 @@
   - All
 - description: Starting with Operator /
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token DIV
       &PINT&VAR ?&TSEP&INT &ASSIGN /$&LF
     &RBRA
@@ -237,7 +237,7 @@
   - All
 - description: Missing Number After *
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN $*&LF
     &RBRA
@@ -249,7 +249,7 @@
   - All
 - description: Missing Number After /
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
       &PINT&VAR ?&TSEP&INT &ASSIGN $/&LF
     &RBRA
@@ -261,7 +261,7 @@
   - All
 - description: Only Operator *
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token MULT
       &PINT&VAR ?&TSEP&INT &ASSIGN *&LF
     &RBRA
@@ -273,7 +273,7 @@
   - All
 - description: Only Operator /
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token DIV
       &PINT&VAR ?&TSEP&INT &ASSIGN /&LF
     &RBRA
@@ -285,7 +285,7 @@
   - All
 - description: Two Consecultives Operators +*
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token MULT
       &PINT&VAR ?&TSEP&INT &ASSIGN $+*$&LF
     &RBRA
@@ -297,7 +297,7 @@
   - All
 - description: Two Consecultives Operators +/
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token DIV
       &PINT&VAR ?&TSEP&INT &ASSIGN $+/$&LF
     &RBRA
@@ -309,7 +309,7 @@
   - All
 - description: Two Consecultives Operators **
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token MULT
       &PINT&VAR ?&TSEP&INT &ASSIGN $**$&LF
     &RBRA
@@ -321,7 +321,7 @@
   - All
 - description: Wrong Comment
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token CLOSE_BRA
       &PINT&VAR ?&TSEP&INT &ASSIGN &COM$&LF
     &RBRA
@@ -333,7 +333,7 @@
   - All
 - description: Two Consecultives Operators */
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token DIV
       &PINT&VAR ?&TSEP&INT &ASSIGN $*/$&LF
     &RBRA
@@ -345,7 +345,7 @@
   - All
 - description: Two Consecultives Operators /*
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token MULT
       &PINT&VAR ?&TSEP&INT &ASSIGN $/*$&LF
     &RBRA
@@ -357,7 +357,7 @@
   - All
 - description: Missing )
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing CLOSE_PAR
       &PINT&VAR ?&TSEP&INT &ASSIGN ($&LF
     &RBRA
@@ -369,7 +369,7 @@
   - All
 - description: Missing (
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token CLOSE_PAR
       &PINT&VAR ?&TSEP&INT &ASSIGN $)&LF
     &RBRA
@@ -381,7 +381,7 @@
   - All
 - description: Missing )
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing CLOSE_PAR
       &PINT&VAR ?&TSEP&INT &ASSIGN (($)&LF
     &RBRA
@@ -393,7 +393,7 @@
   - All
 - description: Missing (
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token CLOSE_PAR
       &PINT&VAR ?&TSEP&INT &ASSIGN ($))&LF
     &RBRA
@@ -405,7 +405,7 @@
   - All
 - description: Wrong Print
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token OPEN_PAR (wrong print token)
       &WPRINT&FLP$&FRP&LF
     &RBRA
@@ -417,7 +417,7 @@
   - All
 - description: No Operator
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token IDEN
       &PINT&VAR L&TSEP&INT &ASSIGN 1&LF
       &PINT&VAR ?&TSEP&INT &ASSIGN $ L&LF
@@ -430,7 +430,7 @@
   - All
 - description: Missing (
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token INT (expected OPEN_PAR)
       &PRINT $&FRP&LF
     &RBRA
@@ -442,7 +442,7 @@
   - All
 - description: Missing )
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL (expected CLOSE_PAR)
       &PRINT&FLP$&LF
     &RBRA
@@ -454,7 +454,7 @@
   - All
 - description: Missing ()
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Author: Rafael Dourado @rafaeldbo - Mar/2025
       &COM Unexpected token INT (expected OPEN_PAR)
       &PRINT $&LF
@@ -467,7 +467,7 @@
   - All
 - description: Missing Identifier
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Identifier not found
       &PINT&VAR x1&TSEP&INT &ASSIGN $&LF
       &PRINT&FLPX1&FRP&LF
@@ -480,7 +480,7 @@
   - All
 - description: Missing }
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOF (expected CLOSE_BRA)
       &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
     &MAINCALL
@@ -489,24 +489,10 @@
   output: Unexpected token EOF (expected CLOSE_BRA)
   languages:
   - All
-- description: Extra {}
+- description: Function inside Function
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
-      &COM Unexpected token OPEN_BRA (expected EOF)
-      &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
-    &RBRA
-    &LBRA
-    &RBRA
-    &MAINCALL
-  input: ''
-  exception: true
-  output: '&COM Unexpected token OPEN_BRA (expected EOF)'
-  languages:
-  - All
-- description: Extra nested {}
-  code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
-      &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+      &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
         &COM Unexpected token FUNC or OPEN_PAR
         &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
       &RBRA
@@ -514,12 +500,12 @@
     &MAINCALL
   input: ''
   exception: true
-  output: '&COM Unexpected token FUNC or OPEN_PAR'
+  output: 'Unexpected token FUNC or OPEN_PAR'
   languages:
   - All
 - description: Extra }
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token CLOSE_BRA (expected EOF)
       &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
     &RBRA
@@ -533,23 +519,23 @@
 - description: Missing {}
   code: |-
     &COM Unexpected token IDEN (expected OPEN_BRA)
-    &PVOID&FN main&FLP&FRP &VOID
+    &PVOID&FN main&FLP&FRP&FSEP &VOID
     &MAINCALL
   input: ''
   exception: true
   output: Unexpected token IDEN (expected OPEN_BRA)
   languages:
   - All
-- description: Missing {}
+- description: Missing main function
   code: ""
-  input: ''
+  input: '&MAINCALL'
   exception: true
   output: Unexpected token EOF (expected OPEN_BRA)
   languages:
   - All
 - description: Invalid Identifier Name
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token IDEN
       &PINT&VAR 1x&TSEP&INT &ASSIGN $&LF
       &PRINT&FLP1x&FRP&LF
@@ -562,7 +548,7 @@
   - All
 - description: Use Print as Identifier
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token ASSIGN (expected OPEN_PAR)
       &PRINT &ASSIGN ?&LF
     &RBRA
@@ -574,7 +560,7 @@
   - All
 - description: Missing )
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL (expected CLOSE_PAR)
       &PRINT&FLP$&COM&FRP&LF
     &RBRA
@@ -586,7 +572,7 @@
   - All
 - description: Use Number as Identifier
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token INT
       3 &ASSIGN $ + $&LF
     &RBRA
@@ -598,7 +584,7 @@
   - All
 - description: If without }
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected EOF (Missing CLOSE_BRA)
       &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
       &IF &ELP? &EQ 1&ERP &LBRA
@@ -611,7 +597,7 @@
   - All
 - description: If without {
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_BRA
       &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
       &IF &ELP? &EQ 1&ERP
@@ -626,7 +612,7 @@
   - All
 - description: Else without }
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected EOF (Missing CLOSE_BRA)
       &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
       &IF &ELP? &EQ 1&ERP &LBRA
@@ -642,7 +628,7 @@
   - All
 - description: Else without {
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_BRA
       &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
       &IF &ELP? &EQ 1&ERP &LBRA
@@ -659,7 +645,7 @@
   - All
 - description: While without }
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected EOF (Missing CLOSE_BRA)
       &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
       &WHILE &ELP? &EQ 1&ERP &LBRA
@@ -673,7 +659,7 @@
   - All
 - description: While without {
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_BRA
       &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
       &WHILE &ELP? &EQ 1&ERP
@@ -686,27 +672,9 @@
   output: Missing OPEN_BRA
   languages:
   - All
-- description: If with 2 Blocks
-  code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
-      &COM Unexpected OPEN_BRA
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ 1&ERP &LBRA
-        ? &ASSIGN 2&LF
-      &RBRA
-      &LBRA
-        ? &ASSIGN 3&LF
-      &RBRA
-    &RBRA
-    &MAINCALL
-  input: ''
-  exception: true
-  output: Unexpected OPEN_BRA
-  languages:
-  - All
 - description: If with 2 Else's
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected ELSE
       &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
       &IF &ELP? &EQ 1&ERP &LBRA
@@ -720,12 +688,12 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected OPEN_BRA
+  output: Unexpected ELSE
   languages:
   - All
 - description: Missing Equal operand
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing Right Expression
       &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
       &IF &ELP? &EQ&ERP &LBRA
@@ -740,7 +708,7 @@
   - All
 - description: Missing > operand
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing Right Expression
       &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
       &IF &ELP? &GT&ERP &LBRA
@@ -755,7 +723,7 @@
   - All
 - description: Missing < operand
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing Right Expression
       &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
       &IF &ELP? &LT&ERP &LBRA
@@ -770,7 +738,7 @@
   - All
 - description: Missing Not operand
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing Right Expression
       &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
       &IF &ELP&NOT&ERP &LBRA
@@ -785,7 +753,7 @@
   - All
 - description: Missing Reader (
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_PAR
       &PINT&VAR ?&TSEP&INT &ASSIGN &SCAN&LF
     &RBRA
@@ -798,7 +766,7 @@
   - All
 - description: Missing Reader )
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing CLOSE_PAR
       &PINT&VAR ?&TSEP&INT &ASSIGN &SCAN&FLP&LF
     &RBRA
@@ -811,7 +779,7 @@
   - All
 - description: If with misaligned {
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token NEWLINE
       &IF &ELP1 &EQ 1&ERP
       &LBRA
@@ -825,7 +793,7 @@
   - Go
 - description: If with misaligned }
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token CLOSE_BRA
       &IF &ELP1 &EQ 1&ERP &LBRA &RBRA
     &RBRA
@@ -837,7 +805,7 @@
   - Go
 - description: Else with misaligned } (before)
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token NEWLINE
       &IF &ELP1 &EQ 1&ERP &LBRA 
       &RBRA
@@ -852,7 +820,7 @@
   - Go
 - description: Else with misaligned }
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token CLOSE_BRA
       &IF &ELP1 &EQ 1&ERP &LBRA 
       &RBRA &ELSE &LBRA &RBRA
@@ -865,7 +833,7 @@
   - Go
 - description: Else with misaligned {
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token NEWLINE
       &IF &ELP1 &EQ 1&ERP &LBRA 
       &RBRA &ELSE 
@@ -880,10 +848,10 @@
   - Go
 - description: While with misaligned {
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token NEWLINE
       &WHILE &ELP1 &EQ 1&ERP 
-      &LBRA 
+      &LBRA
       &RBRA
     &RBRA
     &MAINCALL
@@ -894,7 +862,7 @@
   - Go
 - description: While with misaligned }
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token CLOSE_BRA
       &WHILE &ELP1 &EQ 1&ERP &LBRA &RBRA
     &RBRA
@@ -906,7 +874,7 @@
   - Go
 - description: If missing Brackets
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_BRA
       &IF &ELP1 &EQ 1&ERP
         ? &ASSIGN $&LF
@@ -920,7 +888,7 @@
   - Zig
 - description: While missing Brackets
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_BRA
       &WHILE &ELP1 &EQ 1&ERP
         ? &ASSIGN $&LF
@@ -934,7 +902,7 @@
   - Zig
 - description: If missing PAR
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_PAR
       &IF 1 &EQ 1 &LBRA
         &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
@@ -945,11 +913,12 @@
   exception: true
   output: Missing OPEN_PAR in If
   languages:
-  - Zig
   - C
+  - TypeScript
+  - Zig
 - description: While missing PAR
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_PAR
       &WHILE 1 &EQ 1 &LBRA
         &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
@@ -961,10 +930,11 @@
   output: Missing OPEN_PAR in While
   languages:
   - Zig
+  - TypeScript
   - C
 - description: Incomplete Declaration
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM COLON not found
       &VAR x1 &ASSIGN $&LF
     &RBRA
@@ -976,7 +946,7 @@
   - Zig
 - description: Incomplete Declaration
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM COLON not found
       &VAR x1 &INT &ASSIGN $&LF
     &RBRA
@@ -986,9 +956,10 @@
   output: COLON not found
   languages:
   - Zig
+  - TypeScript
 - description: Incomplete Declaration
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM TYPE not found
       &VAR x1&TSEP &ASSIGN $&LF
     &RBRA
@@ -999,9 +970,10 @@
   languages:
   - Go
   - Zig
+  - TypeScript
 - description: Incomplete Declaration
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected Identifier
       &PWINT&VAR x1&TSEP&WINT &ASSIGN $&LF
     &RBRA
@@ -1013,7 +985,7 @@
   - All
 - description: Incompatible Types
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
       &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE&LF
     &RBRA
@@ -1025,7 +997,7 @@
   - All
 - description: Incompatible Types
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
       &PINT&VAR ?&TSEP&INT &ASSIGN "a"&LF
     &RBRA
@@ -1037,7 +1009,7 @@
   - All
 - description: Incompatible Types
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LF
     &RBRA
@@ -1049,7 +1021,7 @@
   - All
 - description: Incompatible Types
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&LF
     &RBRA
@@ -1061,7 +1033,7 @@
   - All
 - description: Incompatible Types
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LF
     &RBRA
@@ -1073,7 +1045,7 @@
   - All
 - description: Incompatible Types
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
       &PSTR&VAR ?&TSEP&STR &ASSIGN $&LF
     &RBRA
@@ -1085,7 +1057,7 @@
   - All
 - description: Incompatible Types
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
       &PSTR&VAR ?&TSEP&STR &ASSIGN &FALSE&LF
     &RBRA
@@ -1097,7 +1069,7 @@
   - All
 - description: Incompatible Types
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
       &PSTR&VAR ?&TSEP&STR &ASSIGN &SCAN&FLP&FRP&LF
     &RBRA
@@ -1110,7 +1082,7 @@
   - All
 - description: Double Declaration
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Variable Already Declared
       &PINT&VAR ?&TSEP&INT&LF
       &PSTR&VAR ?&TSEP&STR&LF
@@ -1123,7 +1095,7 @@
   - All
 - description: Open String
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected EOF
       &PSTR&VAR ?&TSEP&STR &ASSIGN "a&LF
     &RBRA
@@ -1135,7 +1107,7 @@
   - All
 - description: Wrong True Case
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Variable not found
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &WTRUE&LF
     &RBRA
@@ -1147,7 +1119,7 @@
   - All
 - description: Incompatible Types ==
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&EQ"a"&LF
     &RBRA
@@ -1159,7 +1131,7 @@
   - All
 - description: Incompatible Types ==
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN 1&EQ&TRUE&LF
     &RBRA
@@ -1171,7 +1143,7 @@
   - All
 - description: Incompatible Types ==
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&EQ&TRUE&LF
     &RBRA
@@ -1183,7 +1155,7 @@
   - All
 - description: Incompatible Types >
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&GT"a"&LF
     &RBRA
@@ -1195,7 +1167,7 @@
   - All
 - description: Incompatible Types >
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN 1&GT&TRUE&LF
     &RBRA
@@ -1207,7 +1179,7 @@
   - All
 - description: Incompatible Types >
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&LT&TRUE&LF
     &RBRA
@@ -1219,7 +1191,7 @@
   - All
 - description: Incompatible Types <
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LT"a"&LF
     &RBRA
@@ -1231,7 +1203,7 @@
   - All
 - description: Incompatible Types <
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &TRUE<$&LF
     &RBRA
@@ -1243,7 +1215,7 @@
   - All
 - description: Incompatible Types <
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"<&TRUE&LF
     &RBRA
@@ -1255,7 +1227,7 @@
   - All
 - description: Incompatible Types &&
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&AND$&LF
     &RBRA
@@ -1267,7 +1239,7 @@
   - All
 - description: Incompatible Types ||
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&OR$&LF
     &RBRA
@@ -1279,7 +1251,7 @@
   - All
 - description: Incompatible Types !
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &NOT$&LF
     &RBRA
@@ -1291,7 +1263,7 @@
   - All
 - description: Incompatible Types +
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN 1+&TRUE&LF
     &RBRA
@@ -1303,7 +1275,7 @@
   - All
 - description: Incompatible Types +
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE+1&LF
     &RBRA
@@ -1315,7 +1287,7 @@
   - All
 - description: Incompatible Types -
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN 1-&TRUE&LF
     &RBRA
@@ -1327,7 +1299,7 @@
   - All
 - description: Incompatible Types -
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE-1&LF
     &RBRA
@@ -1339,7 +1311,7 @@
   - All
 - description: Incompatible Types *
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN 1*&TRUE&LF
     &RBRA
@@ -1351,7 +1323,7 @@
   - All
 - description: Incompatible Types *
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE*1&LF
     &RBRA
@@ -1363,7 +1335,7 @@
   - All
 - description: Incompatible Types /
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN $/&TRUE&LF
     &RBRA
@@ -1375,7 +1347,7 @@
   - All
 - description: Incompatible Types /
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE/1&LF
     &RBRA
@@ -1387,7 +1359,7 @@
   - All
 - description: Incompatible Types
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE&OR&FALSE&LF
     &RBRA
@@ -1399,7 +1371,7 @@
   - All
 - description: Incompatible Types
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PSTR&VAR ?&TSEP&STR &ASSIGN $+$&LF
     &RBRA
@@ -1411,7 +1383,7 @@
   - All
 - description: Incompatible Types
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&CONCAT"b"&LF
     &RBRA
@@ -1423,7 +1395,7 @@
   - All
 - description: Incompatible Types
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
       &IF &ELP1+1&ERP &LBRA
       &RBRA
@@ -1436,7 +1408,7 @@
   - All
 - description: Incompatible Types 2
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types 2
       &WHILE &ELP0+0&ERP &LBRA
       &RBRA
@@ -1449,7 +1421,7 @@
   - All
 - description: Missing function type
   code: |-
-    &FN&WSmain&FLP&FRP &LBRA
+    &FN&WSmain&FLP&FRP&FSEP &LBRA
       &COM Missing function type
     &RBRA
     &MAINCALL
@@ -1458,10 +1430,11 @@
   output: Missing function type
   languages:
   - C
+  - TypeScript
   - Zig
 - description: Missing function main
   code: |-
-    &PVOID&FN Main&FLP&FRP &VOID&LBRA
+    &PVOID&FN Main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing function main
     &RBRA
     &MAINCALL
@@ -1472,11 +1445,11 @@
   - All
 - description: Missing second arg
   code: |-
-    &PINT&FN test&FLP&PINT&PSEPx&TSEP&INT&ARGSEP&FRP &INT&WS&LBRA
+    &PINT&FN test&FLP&PINT&PSEPx&TSEP&INT&ARGSEP&FRP&FSEP &INT&WS&LBRA
       &COM Missing second arg
       &RETURN $&LF
     &RBRA
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &PRINT&FLPtest&FLP$&FRP&FRP&LF
     &RBRA
     &MAINCALL
@@ -1487,10 +1460,10 @@
   - All
 - description: Missing second arg
   code: |-
-    &PINT&FN test&FLP&PINT&PSEPx&TSEP&INT&ARGSEP &PINT&PSEPy&TSEP&INT&FRP &INT&WS&LBRA
+    &PINT&FN test&FLP&PINT&PSEPx&TSEP&INT&ARGSEP &PINT&PSEPy&TSEP&INT&FRP&FSEP &INT&WS&LBRA
       &RETURN x + y&LF
     &RBRA
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing second arg
       &PRINT&FLPtest&FLP$&ARGSEP &FRP&FRP&LF
     &RBRA
@@ -1502,10 +1475,10 @@
   - All
 - description: Number of args wrong
   code: |-
-    &PINT&FN test&FLP&PINT&PSEPx&TSEP&INT&ARGSEP &PINT&PSEPy&TSEP&INT&FRP &INT&WS&LBRA
+    &PINT&FN test&FLP&PINT&PSEPx&TSEP&INT&ARGSEP &PINT&PSEPy&TSEP&INT&FRP&FSEP &INT&WS&LBRA
       &RETURN x + y&LF
     &RBRA
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing second arg
       &PRINT&FLPtest&FLP$&FRP&FRP&LF
     &RBRA
@@ -1517,10 +1490,10 @@
   - All
 - description: Number of args wrong
   code: |-
-    &PINT&FN test&FLP&PINT&PSEPx&TSEP&INT&FRP &INT&WS&LBRA
+    &PINT&FN test&FLP&PINT&PSEPx&TSEP&INT&FRP&FSEP &INT&WS&LBRA
       &RETURN x&LF
     &RBRA
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Number of args wrong
       &PRINT&FLPtest&FLP$&ARGSEP $&FRP&FRP&LF
     &RBRA
@@ -1532,10 +1505,10 @@
   - All
 - description: Wrong arg type
   code: |-
-    &PBOOL&FN test&FLP&PBOOL&PSEPx&TSEP&BOOL&FRP &BOOL&WS&LBRA
+    &PBOOL&FN test&FLP&PBOOL&PSEPx&TSEP&BOOL&FRP&FSEP &BOOL&WS&LBRA
       &RETURN x&LF
     &RBRA
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Wrong arg type
       &PRINT&FLPtest&FLP$&FRP&FRP&LF
     &RBRA
@@ -1547,10 +1520,10 @@
   - All
 - description: Wrong func return type
   code: |-
-    &PINT&FN test&FLP&PBOOL&PSEPx&TSEP&BOOL&FRP &INT&WS&LBRA
+    &PINT&FN test&FLP&PBOOL&PSEPx&TSEP&BOOL&FRP&FSEP &INT&WS&LBRA
       &RETURN x&LF
     &RBRA
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Wrong func return type
       &PRINT&FLPtest&FLP&TRUE&FRP&FRP&LF
     &RBRA
@@ -1562,10 +1535,10 @@
   - All
 - description: Function not found
   code: |-
-    &PINT&FN test&FLP&PINT&PSEPx&TSEP&INT&FRP &INT&WS&LBRA
+    &PINT&FN test&FLP&PINT&PSEPx&TSEP&INT&FRP&FSEP &INT&WS&LBRA
       &RETURN x&LF
     &RBRA
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Function not found
       &PRINT&FLPTest&FLP$&FRP&FRP&LF
     &RBRA
@@ -1578,7 +1551,7 @@
 - description: Function not found
   code: |-
     &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Function not found
       &PRINT&FLP?&FLP$&FRP&FRP&LF
     &RBRA
@@ -1590,7 +1563,7 @@
   - All
 - description: Var out of scope
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Var out of scope
       &LBRA
         &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
@@ -1605,7 +1578,7 @@
   - All
 - description: 'Returning in a void function'
   code: |-
-    &PVOID&FN main&FLP&FRP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Invalid return in a void function
       &RETURN 1
     &RBRA

@@ -1,6 +1,2 @@
-{
-  // Missing OPEN_PAR
-  while 1 == 1 {
-    int o = 9;
-  }
-}
+// Incompatible types
+bool d = "a";

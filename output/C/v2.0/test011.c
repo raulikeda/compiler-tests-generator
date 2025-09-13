@@ -1,2 +1,2 @@
 // Unexpected token EOL
-r = 3*;
+z = 7*;

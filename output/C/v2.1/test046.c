@@ -1,7 +1,5 @@
-{
-  // Missing OPEN_BRA
-  k = 1;
-  while (k == 1)
-    k = 2;
-  }
+// Missing Right Expression
+f = 1;
+if (f <) {
+  f = 2;
 }

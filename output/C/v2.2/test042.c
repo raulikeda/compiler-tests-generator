@@ -1,7 +1,5 @@
-{
-  // Missing OPEN_BRA
-  int g = 1;
-  if (g == 1)
-    g = 2;
-  }
+// Missing OPEN_BRA
+int u = 1;
+while (u == 1)
+  u = 2;
 }

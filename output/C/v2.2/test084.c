@@ -1,4 +1,2 @@
-{
-  // Incompatible Types
-  int m = true-1;
-}
+// Incompatible Types
+int o = true||false;

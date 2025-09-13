@@ -1,2 +1,2 @@
 // Unexpected token MULT
-c = 8**9;
+s = 8**1;

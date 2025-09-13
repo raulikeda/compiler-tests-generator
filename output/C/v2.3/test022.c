@@ -1,4 +1,4 @@
 void main() {
   // Unexpected token CLOSE_PAR
-  int v = 3);
+  int u = 2);
 }

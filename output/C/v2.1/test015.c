@@ -1,4 +1,2 @@
-{
-  // Unexpected token MULT
-  p = 6+*9;
-}
+// Unexpected token MULT
+y = 9+*4;

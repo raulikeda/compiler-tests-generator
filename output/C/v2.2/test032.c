@@ -1,6 +1,3 @@
-{
-  // Unexpected token OPEN_BRA (expected EOF)
-  int q = 2;
-}
-{
+// Unexpected token CLOSE_BRA (expected EOF)
+int x = 3;
 }

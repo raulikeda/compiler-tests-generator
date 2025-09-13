@@ -1,4 +1,2 @@
-{
-  // Incompatible Types
-  bool d = "a"||7;
-}
+// Incompatible Types
+int c = true-1;

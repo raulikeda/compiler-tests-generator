@@ -1,3 +1,3 @@
 // Unexpected token IDEN
-1x = 3;
+1x = 7;
 printf(1x);

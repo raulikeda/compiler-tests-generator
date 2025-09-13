@@ -1,42 +1,42 @@
 - description: Valid Input
   code: |-
-    x_1 &ASSIGN &SCAN&FLP&FRP&LF
-    
-    &PRINT&FLPx_1&FRP&LF
-    
-    &IF &ELP(x_1 &GT 1 &AND &NOT&NOT&NOT(x_1 &LT 1)) &OR x_1 &EQ 3&ERP &LBRA
-      x_1 &ASSIGN 2&LF
-    &RBRA
-    
-    x &ASSIGN 3+6/3   *  2 -+-  +  2*4/2 + 0/1 -((6+ ((4)))/(2))&LF &COM Teste &COM Teste 2
-    y_1 &ASSIGN 3&LF
-    y_1 &ASSIGN y_1 + x_1&LF
-    z__ &ASSIGN x + y_1&LF
-    
-    &IF &ELPx_1 &EQ 2&ERP &LBRA
-      x_1 &ASSIGN 2&LF
-    &RBRA
-    
-    &IF &ELPx_1 &EQ 3&ERP &LBRA
-      x_1 &ASSIGN 2&LF
-    &RBRA &ELSE &LBRA
-      x_1 &ASSIGN 3&LF
-    &RBRA
-    
-    x_1 &ASSIGN 0&LF
-    &WHILE &ELPx_1 &LT 1 &OR x &EQ 2&ERP &LBRA
+    &LBRA &COM Teste geral
+      x_1 &ASSIGN &SCAN&FLP&FRP&LF
+      
       &PRINT&FLPx_1&FRP&LF
-      x_1 &ASSIGN x_1 + 1&LF
-    &RBRA
-    
-    
-    &LF&LF&LF
-    &COM Saida final
-    &PRINT&FLPx_1&FRP&LF
-    &PRINT&FLPx&FRP&LF
-    &PRINT&FLPz__+1&FRP&LF
-    
-    &RBRA
+      
+      &IF &ELP(x_1 &GT 1 &AND &NOT&NOT&NOT(x_1 &LT 1)) &OR x_1 &EQ 3&ERP &LBRA
+        x_1 &ASSIGN 2&LF
+      &RBRA
+      
+      x &ASSIGN 3+6/3   *  2 -+-  +  2*4/2 + 0/1 -((6+ ((4)))/(2))&LF &COM Teste &COM Teste 2
+      y_1 &ASSIGN 3&LF
+      y_1 &ASSIGN y_1 + x_1&LF
+      z__ &ASSIGN x + y_1&LF
+      
+      &IF &ELPx_1 &EQ 2&ERP &LBRA
+        x_1 &ASSIGN 2&LF
+      &RBRA
+      
+      &IF &ELPx_1 &EQ 3&ERP &LBRA
+        x_1 &ASSIGN 2&LF
+      &RBRA &ELSE &LBRA
+        x_1 &ASSIGN 3&LF
+      &RBRA
+      
+      x_1 &ASSIGN 0&LF
+      &WHILE &ELPx_1 &LT 1 &OR x &EQ 2&ERP &LBRA
+        &PRINT&FLPx_1&FRP&LF
+        x_1 &ASSIGN x_1 + 1&LF
+      &RBRA
+      
+      
+      &LF&LF&LF &LBRA&LBRA &RBRA&RBRA &COM Teste de colchetes
+      &COM Saida final
+      &PRINT&FLPx_1&FRP&LF
+      &PRINT&FLPx&FRP&LF
+      &PRINT&FLPz__+1&FRP&LF
+    &RBRA &COM Teste do filter
   input: |-
     3
   exception: false
@@ -312,6 +312,26 @@
   output: Identifier not found
   languages:
   - All
+- description: Missing }
+  code: |-
+    &LBRA
+      &COM Unexpected token EOF (expected CLOSE_BRA)
+      ? &ASSIGN $&LF
+  input: ''
+  exception: true
+  output: Unexpected token EOF (expected CLOSE_BRA)
+  languages:
+  - All
+- description: Extra }
+  code: |-
+    &COM Unexpected token CLOSE_BRA (expected EOF)
+    ? &ASSIGN $&LF
+    &RBRA
+  input: ''
+  exception: true
+  output: Unexpected token CLOSE_BRA (expected EOF)
+  languages:
+  - All
 - description: Invalid Identifier Name
   code: |-
     &COM Unexpected token IDEN
@@ -421,21 +441,6 @@
   output: Missing OPEN_BRA
   languages:
   - All
-- description: If with 2 Blocks
-  code: |-
-    &COM Unexpected OPEN_BRA
-    ? &ASSIGN 1&LF
-    &IF &ELP? &EQ 1&ERP &LBRA
-      ? &ASSIGN 2&LF
-    &RBRA
-    &LBRA
-      ? &ASSIGN 3&LF
-    &RBRA
-  input: ''
-  exception: true
-  output: Unexpected OPEN_BRA
-  languages:
-  - All
 - description: If with 2 Else's
   code: |-
     &COM Unexpected ELSE
@@ -449,7 +454,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Unexpected OPEN_BRA
+  output: Unexpected ELSE
   languages:
   - All
 - description: Missing Equal operand
@@ -557,7 +562,6 @@
     &COM Unexpected token CLOSE_BRA
     &IF &ELP1 &EQ 1&ERP &LBRA 
     &RBRA &ELSE &LBRA &RBRA
-    &RBRA@
   input: ''
   exception: true
   output: Unexpected token CLOSE_BRA in Else
@@ -620,8 +624,9 @@
 - description: If missing PAR
   code: |-
     &COM Missing OPEN_PAR
-    &IF 1 &EQ 1
+    &IF 1 &EQ 1 &LBRA
       ? &ASSIGN $&LF
+    &RBRA
   input: ''
   exception: true
   output: Missing OPEN_PAR in If
@@ -632,8 +637,9 @@
 - description: While missing PAR
   code: |-
     &COM Missing OPEN_PAR
-    &WHILE 1 &EQ 1
+    &WHILE 1 &EQ 1 &LBRA
       ? &ASSIGN $&LF
+    &RBRA
   input: ''
   exception: true
   output: Missing OPEN_PAR in While

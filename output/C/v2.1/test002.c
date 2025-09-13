@@ -1,4 +1,2 @@
-{
-  // Unexpected token EOL
-  i = 1+;
-}
+// Unexpected token EOL
+y = 2+;

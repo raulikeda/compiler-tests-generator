@@ -1,4 +1,2 @@
-{
-  // Incompatible Types
-  bool v = 3<"a";
-}
+// Incompatible Types
+bool k = !1;

@@ -1,7 +1,7 @@
 void main() {
   // Missing Right Expression
-  int n = 1;
-  if (n >) {
-    n = 2;
+  int i = 1;
+  if (!) {
+    i = 2;
   }
 }

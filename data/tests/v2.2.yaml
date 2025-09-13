@@ -1,6 +1,6 @@
 - description: Valid Input
   code: |-
-    &LBRA
+    &LBRA &COM Teste geral
       &PINT&VAR x_1&TSEP&INT&LF
       x_1 &ASSIGN &SCAN&FLP&FRP&LF
       
@@ -33,7 +33,7 @@
       &RBRA
       
       
-      &LF&LF&LF
+      &LF&LF&LF &LBRA&LBRA &RBRA&RBRA &COM Teste de colchetes
       &COM Saida final
       &PRINT&FLPx_1&FRP&LF
       &PRINT&FLPx&FRP&LF
@@ -67,7 +67,7 @@
       &PRINT(a &EQ a)&LF
       &PRINT(a &LT b)&LF
       &PRINT(a &GT b)&LF
-    &RBRA
+    &RBRA &COM Teste do filter
   input: |-
     3
   exception: false
@@ -95,10 +95,8 @@
   - All
 - description: Missing Expression After +
   code: |-
-    &LBRA
-      &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN $+&LF
-    &RBRA
+    &COM Unexpected token EOL
+    &PINT&VAR ?&TSEP&INT &ASSIGN $+&LF
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -106,10 +104,8 @@
   - All
 - description: Missing Expression After -
   code: |-
-    &LBRA
-      &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN $-&LF
-    &RBRA
+    &COM Unexpected token EOL
+    &PINT&VAR ?&TSEP&INT &ASSIGN $-&LF
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -117,10 +113,8 @@
   - All
 - description: Empty Expression
   code: |-
-    &LBRA
-      &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN &LF
-    &RBRA
+    &COM Unexpected token EOL
+    &PINT&VAR ?&TSEP&INT &ASSIGN &LF
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -128,10 +122,8 @@
   - All
 - description: Missing Expression After +
   code: |-
-    &LBRA
-      &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN +&LF
-    &RBRA
+    &COM Unexpected token EOL
+    &PINT&VAR ?&TSEP&INT &ASSIGN +&LF
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -139,10 +131,8 @@
   - All
 - description: Missing Expression After -
   code: |-
-    &LBRA
-      &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN -&LF
-    &RBRA
+    &COM Unexpected token EOL
+    &PINT&VAR ?&TSEP&INT &ASSIGN -&LF
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -150,10 +140,8 @@
   - All
 - description: No Operator
   code: |-
-    &LBRA
-      &COM Unexpected token INT (expected EOL)
-      &PINT&VAR ?&TSEP&INT &ASSIGN $ $&LF
-    &RBRA
+    &COM Unexpected token INT (expected EOL)
+    &PINT&VAR ?&TSEP&INT &ASSIGN $ $&LF
   input: ''
   exception: true
   output: Unexpected token INT
@@ -161,10 +149,8 @@
   - All
 - description: Invalid Token
   code: |-
-    &LBRA
-      &COM Invalid token ,
-      &PINT&VAR ?&TSEP&INT &ASSIGN ,&LF
-    &RBRA
+    &COM Invalid token ,
+    &PINT&VAR ?&TSEP&INT &ASSIGN ,&LF
   input: ''
   exception: true
   output: Invalid token ,
@@ -172,10 +158,8 @@
   - All
 - description: Starting with Operator *
   code: |-
-    &LBRA
-      &COM Unexpected token MULT
-      &PINT&VAR ?&TSEP&INT &ASSIGN *$&LF
-    &RBRA
+    &COM Unexpected token MULT
+    &PINT&VAR ?&TSEP&INT &ASSIGN *$&LF
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -183,10 +167,8 @@
   - All
 - description: Starting with Operator /
   code: |-
-    &LBRA
-      &COM Unexpected token DIV
-      &PINT&VAR ?&TSEP&INT &ASSIGN /$&LF
-    &RBRA
+    &COM Unexpected token DIV
+    &PINT&VAR ?&TSEP&INT &ASSIGN /$&LF
   input: ''
   exception: true
   output: Unexpected token DIV
@@ -194,10 +176,8 @@
   - All
 - description: Missing Number After *
   code: |-
-    &LBRA
-      &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN $*&LF
-    &RBRA
+    &COM Unexpected token EOL
+    &PINT&VAR ?&TSEP&INT &ASSIGN $*&LF
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -205,10 +185,8 @@
   - All
 - description: Missing Number After /
   code: |-
-    &LBRA
-      &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN $/&LF
-    &RBRA
+    &COM Unexpected token EOL
+    &PINT&VAR ?&TSEP&INT &ASSIGN $/&LF
   input: ''
   exception: true
   output: Unexpected token EOL
@@ -216,10 +194,8 @@
   - All
 - description: Only Operator *
   code: |-
-    &LBRA
-      &COM Unexpected token MULT
-      &PINT&VAR ?&TSEP&INT &ASSIGN *&LF
-    &RBRA
+    &COM Unexpected token MULT
+    &PINT&VAR ?&TSEP&INT &ASSIGN *&LF
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -227,10 +203,8 @@
   - All
 - description: Only Operator /
   code: |-
-    &LBRA
-      &COM Unexpected token DIV
-      &PINT&VAR ?&TSEP&INT &ASSIGN /&LF
-    &RBRA
+    &COM Unexpected token DIV
+    &PINT&VAR ?&TSEP&INT &ASSIGN /&LF
   input: ''
   exception: true
   output: Unexpected token DIV
@@ -238,10 +212,8 @@
   - All
 - description: Two Consecultives Operators +*
   code: |-
-    &LBRA
-      &COM Unexpected token MULT
-      &PINT&VAR ?&TSEP&INT &ASSIGN $+*$&LF
-    &RBRA
+    &COM Unexpected token MULT
+    &PINT&VAR ?&TSEP&INT &ASSIGN $+*$&LF
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -249,10 +221,8 @@
   - All
 - description: Two Consecultives Operators +/
   code: |-
-    &LBRA
-      &COM Unexpected token DIV
-      &PINT&VAR ?&TSEP&INT &ASSIGN $+/$&LF
-    &RBRA
+    &COM Unexpected token DIV
+    &PINT&VAR ?&TSEP&INT &ASSIGN $+/$&LF
   input: ''
   exception: true
   output: Unexpected token DIV
@@ -260,10 +230,8 @@
   - All
 - description: Two Consecultives Operators **
   code: |-
-    &LBRA
-      &COM Unexpected token MULT
-      &PINT&VAR ?&TSEP&INT &ASSIGN $**$&LF
-    &RBRA
+    &COM Unexpected token MULT
+    &PINT&VAR ?&TSEP&INT &ASSIGN $**$&LF
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -271,10 +239,8 @@
   - All
 - description: Wrong Comment
   code: |-
-    &LBRA
-      &COM Unexpected token CLOSE_BRA
-      &PINT&VAR ?&TSEP&INT &ASSIGN &COM$&LF
-    &RBRA
+    &COM Unexpected token CLOSE_BRA
+    &PINT&VAR ?&TSEP&INT &ASSIGN &COM$&LF
   input: ''
   exception: true
   output: Unexpected token CLOSE_BRA
@@ -282,10 +248,8 @@
   - All
 - description: Two Consecultives Operators */
   code: |-
-    &LBRA
-      &COM Unexpected token DIV
-      &PINT&VAR ?&TSEP&INT &ASSIGN $*/$&LF
-    &RBRA
+    &COM Unexpected token DIV
+    &PINT&VAR ?&TSEP&INT &ASSIGN $*/$&LF
   input: ''
   exception: true
   output: Unexpected token DIV
@@ -293,10 +257,8 @@
   - All
 - description: Two Consecultives Operators /*
   code: |-
-    &LBRA
-      &COM Unexpected token MULT
-      &PINT&VAR ?&TSEP&INT &ASSIGN $/*$&LF
-    &RBRA
+    &COM Unexpected token MULT
+    &PINT&VAR ?&TSEP&INT &ASSIGN $/*$&LF
   input: ''
   exception: true
   output: Unexpected token MULT
@@ -304,10 +266,8 @@
   - All
 - description: Missing )
   code: |-
-    &LBRA
-      &COM Missing CLOSE_PAR
-      &PINT&VAR ?&TSEP&INT &ASSIGN ($&LF
-    &RBRA
+    &COM Missing CLOSE_PAR
+    &PINT&VAR ?&TSEP&INT &ASSIGN ($&LF
   input: ''
   exception: true
   output: Missing CLOSE_PAR
@@ -315,10 +275,8 @@
   - All
 - description: Missing (
   code: |-
-    &LBRA
-      &COM Unexpected token CLOSE_PAR
-      &PINT&VAR ?&TSEP&INT &ASSIGN $)&LF
-    &RBRA
+    &COM Unexpected token CLOSE_PAR
+    &PINT&VAR ?&TSEP&INT &ASSIGN $)&LF
   input: ''
   exception: true
   output: Unexpected token CLOSE_PAR
@@ -326,10 +284,8 @@
   - All
 - description: Missing )
   code: |-
-    &LBRA
-      &COM Missing CLOSE_PAR
-      &PINT&VAR ?&TSEP&INT &ASSIGN (($)&LF
-    &RBRA
+    &COM Missing CLOSE_PAR
+    &PINT&VAR ?&TSEP&INT &ASSIGN (($)&LF
   input: ''
   exception: true
   output: Missing CLOSE_PAR
@@ -337,10 +293,8 @@
   - All
 - description: Missing (
   code: |-
-    &LBRA
-      &COM Unexpected token CLOSE_PAR
-      &PINT&VAR ?&TSEP&INT &ASSIGN ($))&LF
-    &RBRA
+    &COM Unexpected token CLOSE_PAR
+    &PINT&VAR ?&TSEP&INT &ASSIGN ($))&LF
   input: ''
   exception: true
   output: Unexpected token CLOSE_PAR
@@ -348,10 +302,8 @@
   - All
 - description: Wrong Print
   code: |-
-    &LBRA
-      &COM Unexpected token OPEN_PAR (wrong print token)
-      &WPRINT&FLP$&FRP&LF
-    &RBRA
+    &COM Unexpected token OPEN_PAR (wrong print token)
+    &WPRINT&FLP$&FRP&LF
   input: ''
   exception: true
   output: Unexpected token OPEN_PAR
@@ -359,11 +311,9 @@
   - All
 - description: No Operator
   code: |-
-    &LBRA
-      &COM Unexpected token IDEN
-      &PINT&VAR L&TSEP&INT &ASSIGN 1&LF
-      &PINT&VAR ?&TSEP&INT &ASSIGN $ L&LF
-    &RBRA
+    &COM Unexpected token IDEN
+    &PINT&VAR L&TSEP&INT &ASSIGN 1&LF
+    &PINT&VAR ?&TSEP&INT &ASSIGN $ L&LF
   input: ''
   exception: true
   output: Unexpected token IDEN
@@ -371,10 +321,8 @@
   - All
 - description: Missing (
   code: |-
-    &LBRA
-      &COM Unexpected token INT (expected OPEN_PAR)
-      &PRINT $&FRP&LF
-    &RBRA
+    &COM Unexpected token INT (expected OPEN_PAR)
+    &PRINT $&FRP&LF
   input: ''
   exception: true
   output: Unexpected token INT (expected OPEN_PAR)
@@ -382,10 +330,8 @@
   - All
 - description: Missing )
   code: |-
-    &LBRA
-      &COM Unexpected token EOL (expected CLOSE_PAR)
-      &PRINT&FLP$&LF
-    &RBRA
+    &COM Unexpected token EOL (expected CLOSE_PAR)
+    &PRINT&FLP$&LF
   input: ''
   exception: true
   output: Unexpected token EOL (expected CLOSE_PAR)
@@ -393,11 +339,9 @@
   - All
 - description: Missing ()
   code: |-
-    &LBRA
-      &COM Author: Rafael Dourado @rafaeldbo - Mar/2025
-      &COM Unexpected token INT (expected OPEN_PAR)
-      &PRINT $&LF
-    &RBRA
+    &COM Author: Rafael Dourado @rafaeldbo - Mar/2025
+    &COM Unexpected token INT (expected OPEN_PAR)
+    &PRINT $&LF
   input: ''
   exception: true
   output: Unexpected token INT (expected OPEN_PAR)
@@ -405,11 +349,9 @@
   - All
 - description: Missing Identifier
   code: |-
-    &LBRA
-      &COM Identifier not found
-      &PINT&VAR x1&TSEP&INT &ASSIGN $&LF
-      &PRINT&FLPX1&FRP&LF
-    &RBRA
+    &COM Identifier not found
+    &PINT&VAR x1&TSEP&INT &ASSIGN $&LF
+    &PRINT&FLPX1&FRP&LF
   input: ''
   exception: true
   output: Identifier not found
@@ -425,67 +367,21 @@
   output: Unexpected token EOF (expected CLOSE_BRA)
   languages:
   - All
-- description: Extra {}
-  code: |-
-    &LBRA
-      &COM Unexpected token OPEN_BRA (expected EOF)
-      &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
-    &RBRA
-    &LBRA
-    &RBRA
-  input: ''
-  exception: true
-  output: '&COM Unexpected token OPEN_BRA (expected EOF)'
-  languages:
-  - All
-- description: Extra nested {}
-  code: |-
-    &LBRA
-      &LBRA
-        &COM Unexpected token OPEN_BRA
-        &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
-      &RBRA
-    &RBRA
-  input: ''
-  exception: true
-  output: '&COM Unexpected token OPEN_BRA'
-  languages:
-  - All
 - description: Extra }
   code: |-
-    &LBRA
-      &COM Unexpected token CLOSE_BRA (expected EOF)
-      &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
-    &RBRA
+    &COM Unexpected token CLOSE_BRA (expected EOF)
+    &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
     &RBRA
   input: ''
   exception: true
   output: Unexpected token CLOSE_BRA (expected EOF)
   languages:
   - All
-- description: Missing {}
-  code: |-
-    &COM Unexpected token IDEN (expected OPEN_BRA)
-    &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
-  input: ''
-  exception: true
-  output: Unexpected token IDEN (expected OPEN_BRA)
-  languages:
-  - All
-- description: Missing {}
-  code: ""
-  input: ''
-  exception: true
-  output: Unexpected token EOF (expected OPEN_BRA)
-  languages:
-  - All
 - description: Invalid Identifier Name
   code: |-
-    &LBRA
-      &COM Unexpected token IDEN
-      &PINT&VAR 1x&TSEP&INT &ASSIGN $&LF
-      &PRINT&FLP1x&FRP&LF
-    &RBRA
+    &COM Unexpected token IDEN
+    &PINT&VAR 1x&TSEP&INT &ASSIGN $&LF
+    &PRINT&FLP1x&FRP&LF
   input: ''
   exception: true
   output: Unexpected token IDEN
@@ -493,10 +389,8 @@
   - All
 - description: Use Print as Identifier
   code: |-
-    &LBRA
-      &COM Unexpected token ASSIGN (expected OPEN_PAR)
-      &PRINT &ASSIGN ?&LF
-    &RBRA
+    &COM Unexpected token ASSIGN (expected OPEN_PAR)
+    &PRINT &ASSIGN ?&LF
   input: ''
   exception: true
   output: Unexpected token ASSIGN (expected OPEN_PAR)
@@ -504,10 +398,8 @@
   - All
 - description: Missing )
   code: |-
-    &LBRA
-      &COM Unexpected token EOL (expected CLOSE_PAR)
-      &PRINT&FLP$&COM&FRP&LF
-    &RBRA
+    &COM Unexpected token EOL (expected CLOSE_PAR)
+    &PRINT&FLP$&COM&FRP&LF
   input: ''
   exception: true
   output: Unexpected token EOL (expected CLOSE_PAR)
@@ -515,10 +407,8 @@
   - All
 - description: Use Number as Identifier
   code: |-
-    &LBRA
-      &COM Unexpected token INT
-      3 &ASSIGN $ + $&LF
-    &RBRA
+    &COM Unexpected token INT
+    3 &ASSIGN $ + $&LF
   input: ''
   exception: true
   output: Unexpected token INT
@@ -526,11 +416,9 @@
   - All
 - description: If without }
   code: |-
-    &LBRA
-      &COM Unexpected EOF (Missing CLOSE_BRA)
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ 1&ERP &LBRA
-    &RBRA
+    &COM Unexpected EOF (Missing CLOSE_BRA)
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
+    &IF &ELP? &EQ 1&ERP &LBRA
   input: ''
   exception: true
   output: Missing CLOSE_BRA
@@ -538,12 +426,10 @@
   - All
 - description: If without {
   code: |-
-    &LBRA
-      &COM Missing OPEN_BRA
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ 1&ERP
-        ? &ASSIGN 2&LF
-      &RBRA
+    &COM Missing OPEN_BRA
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
+    &IF &ELP? &EQ 1&ERP
+      ? &ASSIGN 2&LF
     &RBRA
   input: ''
   exception: true
@@ -552,14 +438,12 @@
   - All
 - description: Else without }
   code: |-
-    &LBRA
-      &COM Unexpected EOF (Missing CLOSE_BRA)
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ 1&ERP &LBRA
-        ? &ASSIGN 2&LF
-      &RBRA &ELSE &LBRA
-        ? &ASSIGN 3&LF
-    &RBRA
+    &COM Unexpected EOF (Missing CLOSE_BRA)
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
+    &IF &ELP? &EQ 1&ERP &LBRA
+      ? &ASSIGN 2&LF
+    &RBRA &ELSE &LBRA
+      ? &ASSIGN 3&LF
   input: ''
   exception: true
   output: Missing CLOSE_BRA
@@ -567,14 +451,12 @@
   - All
 - description: Else without {
   code: |-
-    &LBRA
-      &COM Missing OPEN_BRA
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ 1&ERP &LBRA
-        ? &ASSIGN 2&LF
-      &RBRA &ELSE
-        ? &ASSIGN 3&LF
-      &RBRA
+    &COM Missing OPEN_BRA
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
+    &IF &ELP? &EQ 1&ERP &LBRA
+      ? &ASSIGN 2&LF
+    &RBRA &ELSE
+      ? &ASSIGN 3&LF
     &RBRA
   input: ''
   exception: true
@@ -583,12 +465,10 @@
   - All
 - description: While without }
   code: |-
-    &LBRA
-      &COM Unexpected EOF (Missing CLOSE_BRA)
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &WHILE &ELP? &EQ 1&ERP &LBRA
-        ? &ASSIGN 2&LF
-    &RBRA
+    &COM Unexpected EOF (Missing CLOSE_BRA)
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
+    &WHILE &ELP? &EQ 1&ERP &LBRA
+      ? &ASSIGN 2&LF
   input: ''
   exception: true
   output: Unexpected token EOF
@@ -596,61 +476,38 @@
   - All
 - description: While without {
   code: |-
-    &LBRA
-      &COM Missing OPEN_BRA
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &WHILE &ELP? &EQ 1&ERP
-        ? &ASSIGN 2&LF
-      &RBRA
+    &COM Missing OPEN_BRA
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
+    &WHILE &ELP? &EQ 1&ERP
+      ? &ASSIGN 2&LF
     &RBRA
   input: ''
   exception: true
   output: Missing OPEN_BRA
   languages:
   - All
-- description: If with 2 Blocks
-  code: |-
-    &LBRA
-      &COM Unexpected OPEN_BRA
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ 1&ERP &LBRA
-        ? &ASSIGN 2&LF
-      &RBRA
-      &LBRA
-        ? &ASSIGN 3&LF
-      &RBRA
-    &RBRA
-  input: ''
-  exception: true
-  output: Unexpected OPEN_BRA
-  languages:
-  - All
 - description: If with 2 Else's
   code: |-
-    &LBRA
-      &COM Unexpected ELSE
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ 1&ERP &LBRA
-        ? &ASSIGN 2&LF
-      &RBRA &ELSE &LBRA
-        ? &ASSIGN 3&LF
-      &RBRA &ELSE &LBRA
-        ? &ASSIGN 4&LF
-      &RBRA
+    &COM Unexpected ELSE
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
+    &IF &ELP? &EQ 1&ERP &LBRA
+      ? &ASSIGN 2&LF
+    &RBRA &ELSE &LBRA
+      ? &ASSIGN 3&LF
+    &RBRA &ELSE &LBRA
+      ? &ASSIGN 4&LF
     &RBRA
   input: ''
   exception: true
-  output: Unexpected OPEN_BRA
+  output: Unexpected ELSE
   languages:
   - All
 - description: Missing Equal operand
   code: |-
-    &LBRA
-      &COM Missing Right Expression
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ&ERP &LBRA
-        ? &ASSIGN 2&LF
-      &RBRA
+    &COM Missing Right Expression
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
+    &IF &ELP? &EQ&ERP &LBRA
+      ? &ASSIGN 2&LF
     &RBRA
   input: ''
   exception: true
@@ -659,12 +516,10 @@
   - All
 - description: Missing > operand
   code: |-
-    &LBRA
-      &COM Missing Right Expression
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &GT&ERP &LBRA
-        ? &ASSIGN 2&LF
-      &RBRA
+    &COM Missing Right Expression
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
+    &IF &ELP? &GT&ERP &LBRA
+      ? &ASSIGN 2&LF
     &RBRA
   input: ''
   exception: true
@@ -673,12 +528,10 @@
   - All
 - description: Missing < operand
   code: |-
-    &LBRA
-      &COM Missing Right Expression
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &LT&ERP &LBRA
-        ? &ASSIGN 2&LF
-      &RBRA
+    &COM Missing Right Expression
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
+    &IF &ELP? &LT&ERP &LBRA
+      ? &ASSIGN 2&LF
     &RBRA
   input: ''
   exception: true
@@ -687,12 +540,10 @@
   - All
 - description: Missing Not operand
   code: |-
-    &LBRA
-      &COM Missing Right Expression
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP&NOT&ERP &LBRA
-        ? &ASSIGN 2&LF
-      &RBRA
+    &COM Missing Right Expression
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
+    &IF &ELP&NOT&ERP &LBRA
+      ? &ASSIGN 2&LF
     &RBRA
   input: ''
   exception: true
@@ -701,10 +552,8 @@
   - All
 - description: Missing Reader (
   code: |-
-    &LBRA
-      &COM Missing OPEN_PAR
-      &PINT&VAR ?&TSEP&INT &ASSIGN &SCAN&LF
-    &RBRA
+    &COM Missing OPEN_PAR
+    &PINT&VAR ?&TSEP&INT &ASSIGN &SCAN&LF
   input: |-
     1
   exception: true
@@ -713,10 +562,8 @@
   - All
 - description: Missing Reader )
   code: |-
-    &LBRA
-      &COM Missing CLOSE_PAR
-      &PINT&VAR ?&TSEP&INT &ASSIGN &SCAN&FLP&LF
-    &RBRA
+    &COM Missing CLOSE_PAR
+    &PINT&VAR ?&TSEP&INT &ASSIGN &SCAN&FLP&LF
   input: |-
     1
   exception: true
@@ -725,11 +572,9 @@
   - All
 - description: If with misaligned {
   code: |-
+    &COM Unexpected token NEWLINE
+    &IF &ELP1 &EQ 1&ERP
     &LBRA
-      &COM Unexpected token NEWLINE
-      &IF &ELP1 &EQ 1&ERP
-      &LBRA
-      &RBRA
     &RBRA
   input: ''
   exception: true
@@ -738,10 +583,8 @@
   - Go
 - description: If with misaligned }
   code: |-
-    &LBRA
-      &COM Unexpected token CLOSE_BRA
-      &IF &ELP1 &EQ 1&ERP &LBRA &RBRA
-    &RBRA
+    &COM Unexpected token CLOSE_BRA
+    &IF &ELP1 &EQ 1&ERP &LBRA &RBRA
   input: ''
   exception: true
   output: Unexpected token INT
@@ -749,12 +592,10 @@
   - Go
 - description: Else with misaligned } (before)
   code: |-
-    &LBRA
-      &COM Unexpected token NEWLINE
-      &IF &ELP1 &EQ 1&ERP &LBRA 
-      &RBRA
-      &ELSE &LBRA 
-      &RBRA
+    &COM Unexpected token NEWLINE
+    &IF &ELP1 &EQ 1&ERP &LBRA 
+    &RBRA
+    &ELSE &LBRA 
     &RBRA
   input: ''
   exception: true
@@ -763,24 +604,20 @@
   - Go
 - description: Else with misaligned }
   code: |-
-    &LBRA
-      &COM Unexpected token CLOSE_BRA
-      &IF &ELP1 &EQ 1&ERP &LBRA 
-      &RBRA &ELSE &LBRA &RBRA
-    &RBRA
+    &COM Unexpected token CLOSE_BRA
+    &IF &ELP1 &EQ 1&ERP &LBRA 
+    &RBRA &ELSE &LBRA &RBRA
   input: ''
   exception: true
   output: Unexpected token CLOSE_BRA in Else
   languages:
   - Go
-- description: 'Else with misaligned {'
+- description: Else with misaligned {
   code: |-
+    &COM Unexpected token NEWLINE
+    &IF &ELP1 &EQ 1&ERP &LBRA 
+    &RBRA &ELSE 
     &LBRA
-      &COM Unexpected token NEWLINE
-      &IF &ELP1 &EQ 1&ERP &LBRA 
-      &RBRA &ELSE 
-      &LBRA
-      &RBRA
     &RBRA
   input: ''
   exception: true
@@ -789,11 +626,9 @@
   - Go
 - description: While with misaligned {
   code: |-
+    &COM Unexpected token NEWLINE
+    &WHILE &ELP1 &EQ 1&ERP 
     &LBRA
-      &COM Unexpected token NEWLINE
-      &WHILE &ELP1 &EQ 1&ERP 
-      &LBRA 
-      &RBRA
     &RBRA
   input: ''
   exception: true
@@ -802,10 +637,8 @@
   - Go
 - description: While with misaligned }
   code: |-
-    &LBRA
-      &COM Unexpected token CLOSE_BRA
-      &WHILE &ELP1 &EQ 1&ERP &LBRA &RBRA
-    &RBRA
+    &COM Unexpected token CLOSE_BRA
+    &WHILE &ELP1 &EQ 1&ERP &LBRA &RBRA
   input: ''
   exception: true
   output: Unexpected token CLOSE_BRA in While
@@ -813,11 +646,9 @@
   - Go
 - description: If missing Brackets
   code: |-
-    &LBRA
-      &COM Missing OPEN_BRA
-      &IF &ELP1 &EQ 1&ERP
-        ? &ASSIGN $&LF
-    &RBRA
+    &COM Missing OPEN_BRA
+    &IF &ELP1 &EQ 1&ERP
+      ? &ASSIGN $&LF
   input: ''
   exception: true
   output: Missing OPEN_BRA in If
@@ -826,11 +657,9 @@
   - Zig
 - description: While missing Brackets
   code: |-
-    &LBRA
-      &COM Missing OPEN_BRA
-      &WHILE &ELP1 &EQ 1&ERP
-        ? &ASSIGN $&LF
-    &RBRA
+    &COM Missing OPEN_BRA
+    &WHILE &ELP1 &EQ 1&ERP
+      ? &ASSIGN $&LF
   input: ''
   exception: true
   output: Missing OPEN_BRA in If
@@ -839,38 +668,34 @@
   - Zig
 - description: If missing PAR
   code: |-
-    &LBRA
-      &COM Missing OPEN_PAR
-      &IF 1 &EQ 1 &LBRA
-        &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
-      &RBRA
+    &COM Missing OPEN_PAR
+    &IF 1 &EQ 1 &LBRA
+      &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
     &RBRA
   input: ''
   exception: true
   output: Missing OPEN_PAR in If
   languages:
-  - Zig
   - C
+  - TypeScript
+  - Zig
 - description: While missing PAR
   code: |-
-    &LBRA
-      &COM Missing OPEN_PAR
-      &WHILE 1 &EQ 1 &LBRA
-        &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
-      &RBRA
+    &COM Missing OPEN_PAR
+    &WHILE 1 &EQ 1 &LBRA
+      &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
     &RBRA
   input: ''
   exception: true
   output: Missing OPEN_PAR in While
   languages:
   - Zig
+  - TypeScript
   - C
 - description: Incomplete Declaration
   code: |-
-    &LBRA
-      &COM COLON not found
-      &VAR x1 &ASSIGN $&LF
-    &RBRA
+    &COM COLON not found
+    &VAR x1 &ASSIGN $&LF
   input: ''
   exception: true
   output: COLON not found
@@ -878,33 +703,29 @@
   - Zig
 - description: Incomplete Declaration
   code: |-
-    &LBRA
-      &COM COLON not found
-      &VAR x1 &INT &ASSIGN $&LF
-    &RBRA
+    &COM COLON not found
+    &VAR x1 &INT &ASSIGN $&LF
   input: ''
   exception: true
   output: COLON not found
   languages:
   - Zig
+  - TypeScript
 - description: Incomplete Declaration
   code: |-
-    &LBRA
-      &COM TYPE not found
-      &VAR x1&TSEP &ASSIGN $&LF
-    &RBRA
+    &COM TYPE not found
+    &VAR x1&TSEP &ASSIGN $&LF
   input: ''
   exception: true
   output: TYPE not found
   languages:
   - Go
   - Zig
+  - TypeScript
 - description: Incomplete Declaration
   code: |-
-    &LBRA
-      &COM Unexpected Identifier
-      &PWINT&VAR x1&TSEP&WINT &ASSIGN $&LF
-    &RBRA
+    &COM Unexpected Identifier
+    &PWINT&VAR x1&TSEP&WINT &ASSIGN $&LF
   input: ''
   exception: true
   output: Unexpected Identifier
@@ -912,10 +733,8 @@
   - All
 - description: Incompatible Types
   code: |-
-    &LBRA
-      &COM Incompatible types
-      &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE&LF
-    &RBRA
+    &COM Incompatible types
+    &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE&LF
   input: ''
   exception: true
   output: Incompatible types
@@ -923,10 +742,8 @@
   - All
 - description: Incompatible Types
   code: |-
-    &LBRA
-      &COM Incompatible types
-      &PINT&VAR ?&TSEP&INT &ASSIGN "a"&LF
-    &RBRA
+    &COM Incompatible types
+    &PINT&VAR ?&TSEP&INT &ASSIGN "a"&LF
   input: ''
   exception: true
   output: Incompatible types
@@ -934,10 +751,8 @@
   - All
 - description: Incompatible Types
   code: |-
-    &LBRA
-      &COM Incompatible types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LF
-    &RBRA
+    &COM Incompatible types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LF
   input: ''
   exception: true
   output: Incompatible types
@@ -945,10 +760,8 @@
   - All
 - description: Incompatible Types
   code: |-
-    &LBRA
-      &COM Incompatible types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&LF
-    &RBRA
+    &COM Incompatible types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&LF
   input: ''
   exception: true
   output: Incompatible types
@@ -956,10 +769,8 @@
   - All
 - description: Incompatible Types
   code: |-
-    &LBRA
-      &COM Incompatible types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LF
-    &RBRA
+    &COM Incompatible types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LF
   input: ''
   exception: true
   output: Incompatible types
@@ -967,10 +778,8 @@
   - All
 - description: Incompatible Types
   code: |-
-    &LBRA
-      &COM Incompatible types
-      &PSTR&VAR ?&TSEP&STR &ASSIGN $&LF
-    &RBRA
+    &COM Incompatible types
+    &PSTR&VAR ?&TSEP&STR &ASSIGN $&LF
   input: ''
   exception: true
   output: Incompatible types
@@ -978,10 +787,8 @@
   - All
 - description: Incompatible Types
   code: |-
-    &LBRA
-      &COM Incompatible types
-      &PSTR&VAR ?&TSEP&STR &ASSIGN &FALSE&LF
-    &RBRA
+    &COM Incompatible types
+    &PSTR&VAR ?&TSEP&STR &ASSIGN &FALSE&LF
   input: ''
   exception: true
   output: Incompatible types
@@ -989,10 +796,8 @@
   - All
 - description: Incompatible Types
   code: |-
-    &LBRA
-      &COM Incompatible types
-      &PSTR&VAR ?&TSEP&STR &ASSIGN &SCAN&FLP&FRP&LF
-    &RBRA
+    &COM Incompatible types
+    &PSTR&VAR ?&TSEP&STR &ASSIGN &SCAN&FLP&FRP&LF
   input: |-
     1
   exception: true
@@ -1001,11 +806,9 @@
   - All
 - description: Double Declaration
   code: |-
-    &LBRA
-      &COM Variable Already Declared
-      &PINT&VAR ?&TSEP&INT&LF
-      &PSTR&VAR ?&TSEP&STR&LF
-    &RBRA
+    &COM Variable Already Declared
+    &PINT&VAR ?&TSEP&INT&LF
+    &PSTR&VAR ?&TSEP&STR&LF
   input: ''
   exception: true
   output: Variable Already Declared
@@ -1013,10 +816,8 @@
   - All
 - description: Open String
   code: |-
-    &LBRA
-      &COM Unexpected EOF
-      &PSTR&VAR ?&TSEP&STR &ASSIGN "a&LF
-    &RBRA
+    &COM Unexpected EOF
+    &PSTR&VAR ?&TSEP&STR &ASSIGN "a&LF
   input: ''
   exception: true
   output: Unexpected EOF
@@ -1024,10 +825,8 @@
   - All
 - description: Wrong True Case
   code: |-
-    &LBRA
-      &COM Variable not found
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &WTRUE&LF
-    &RBRA
+    &COM Variable not found
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &WTRUE&LF
   input: ''
   exception: true
   output: Variable not found
@@ -1035,10 +834,8 @@
   - All
 - description: Incompatible Types ==
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&EQ"a"&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&EQ"a"&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1046,10 +843,8 @@
   - All
 - description: Incompatible Types ==
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN 1&EQ&TRUE&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN 1&EQ&TRUE&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1057,10 +852,8 @@
   - All
 - description: Incompatible Types ==
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&EQ&TRUE&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&EQ&TRUE&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1068,10 +861,8 @@
   - All
 - description: Incompatible Types >
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&GT"a"&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&GT"a"&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1079,10 +870,8 @@
   - All
 - description: Incompatible Types >
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN 1&GT&TRUE&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN 1&GT&TRUE&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1090,10 +879,8 @@
   - All
 - description: Incompatible Types >
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&LT&TRUE&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&LT&TRUE&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1101,10 +888,8 @@
   - All
 - description: Incompatible Types <
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LT"a"&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LT"a"&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1112,10 +897,8 @@
   - All
 - description: Incompatible Types <
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &TRUE<$&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &TRUE<$&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1123,10 +906,8 @@
   - All
 - description: Incompatible Types <
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"<&TRUE&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"<&TRUE&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1134,10 +915,8 @@
   - All
 - description: Incompatible Types &&
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&AND$&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&AND$&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1145,10 +924,8 @@
   - All
 - description: Incompatible Types ||
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&OR$&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&OR$&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1156,10 +933,8 @@
   - All
 - description: Incompatible Types !
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &NOT$&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &NOT$&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1167,10 +942,8 @@
   - All
 - description: Incompatible Types +
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1+&TRUE&LF
-    &RBRA
+    &COM Incompatible Types
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1+&TRUE&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1178,10 +951,8 @@
   - All
 - description: Incompatible Types +
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE+1&LF
-    &RBRA
+    &COM Incompatible Types
+    &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE+1&LF
   input: ''
   exception: true
   output: Incompatible Types
@@ -1189,10 +960,8 @@
   - All
 - description: Incompatible Types -
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1-&TRUE&LF
-    &RBRA
+    &COM Incompatible Types
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1-&TRUE&LF
   input: ''
   exception: true
   output: Incompatible Type
@@ -1200,10 +969,8 @@
   - All
 - description: Incompatible Types -
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE-1&LF
-    &RBRA
+    &COM Incompatible Types
+    &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE-1&LF
   input: ''
   exception: true
   output: Incompatible Type
@@ -1211,10 +978,8 @@
   - All
 - description: Incompatible Types *
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1*&TRUE&LF
-    &RBRA
+    &COM Incompatible Types
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1*&TRUE&LF
   input: ''
   exception: true
   output: Incompatible Type
@@ -1222,10 +987,8 @@
   - All
 - description: Incompatible Types *
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE*1&LF
-    &RBRA
+    &COM Incompatible Types
+    &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE*1&LF
   input: ''
   exception: true
   output: Incompatible Type
@@ -1233,10 +996,8 @@
   - All
 - description: Incompatible Types /
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN $/&TRUE&LF
-    &RBRA
+    &COM Incompatible Types
+    &PINT&VAR ?&TSEP&INT &ASSIGN $/&TRUE&LF
   input: ''
   exception: true
   output: Incompatible Type
@@ -1244,10 +1005,8 @@
   - All
 - description: Incompatible Types /
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE/1&LF
-    &RBRA
+    &COM Incompatible Types
+    &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE/1&LF
   input: ''
   exception: true
   output: Incompatible Type
@@ -1255,10 +1014,8 @@
   - All
 - description: Incompatible Types
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE&OR&FALSE&LF
-    &RBRA
+    &COM Incompatible Types
+    &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE&OR&FALSE&LF
   input: ''
   exception: true
   output: Incompatible Type
@@ -1266,10 +1023,8 @@
   - All
 - description: Incompatible Types
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PSTR&VAR ?&TSEP&STR &ASSIGN $+$&LF
-    &RBRA
+    &COM Incompatible Types
+    &PSTR&VAR ?&TSEP&STR &ASSIGN $+$&LF
   input: ''
   exception: true
   output: Incompatible Type
@@ -1277,10 +1032,8 @@
   - All
 - description: Incompatible Types
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&CONCAT"b"&LF
-    &RBRA
+    &COM Incompatible Types
+    &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&CONCAT"b"&LF
   input: ''
   exception: true
   output: Incompatible Type
@@ -1288,10 +1041,8 @@
   - All
 - description: Incompatible Types
   code: |-
-    &LBRA
-      &COM Incompatible Types
-      &IF &ELP1+1&ERP &LBRA
-      &RBRA
+    &COM Incompatible Types
+    &IF &ELP1+1&ERP &LBRA
     &RBRA
   input: ''
   exception: true
@@ -1300,10 +1051,8 @@
   - All
 - description: Incompatible Types 2
   code: |-
-    &LBRA
-      &COM Incompatible Types 2
-      &WHILE &ELP0+0&ERP &LBRA
-      &RBRA
+    &COM Incompatible Types 2
+    &WHILE &ELP0+0&ERP &LBRA
     &RBRA
   input: ''
   exception: true

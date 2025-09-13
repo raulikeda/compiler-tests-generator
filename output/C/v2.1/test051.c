@@ -1,7 +1,4 @@
-{
-  // Missing Right Expression
-  y = 1;
-  if (y <) {
-    y = 2;
-  }
+// Missing OPEN_PAR
+while 1 == 1 {
+  w = 2;
 }

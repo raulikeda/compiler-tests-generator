@@ -24,6 +24,7 @@ aliases:
   - "&WHILE": 'while'
   - "&VAR": 'var'
   - "&TSEP": ': '
+  - "&FSEP": ''
   - "&PSEP": ''
   - "&PINT": ''
   - "&INT": 'i32'

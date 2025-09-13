@@ -1,4 +1,2 @@
-{
-  // Incompatible types
-  str y = 3;
-}
+// Variable not found
+bool k = True;

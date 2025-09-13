@@ -1,2 +1,2 @@
-// Unexpected token IDEN (expected OPEN_BRA)
-int k = 9;
+// Unexpected token EOL (expected CLOSE_PAR)
+printf(7//);

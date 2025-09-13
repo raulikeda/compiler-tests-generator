@@ -1,4 +1,5 @@
-{
-  // Unexpected token ASSIGN (expected OPEN_PAR)
-  printf = v;
+// Missing OPEN_BRA
+d = 1;
+if (d == 1)
+  d = 2;
 }

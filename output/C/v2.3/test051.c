@@ -1,7 +1,4 @@
 void main() {
-  // Missing Right Expression
-  int m = 1;
-  if (m <) {
-    m = 2;
-  }
+  // Missing OPEN_PAR
+  int e = scanf;
 }

@@ -1,4 +1,2 @@
-{
-  // Unexpected token EOL
-  int z = -;
-}
+// Unexpected token EOL
+int k = -;

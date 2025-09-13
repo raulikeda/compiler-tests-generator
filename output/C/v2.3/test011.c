@@ -1,4 +1,4 @@
 void main() {
   // Unexpected token EOL
-  int z = 5*;
+  int q = 7*;
 }

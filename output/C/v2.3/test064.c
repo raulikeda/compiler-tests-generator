@@ -1,4 +1,5 @@
 void main() {
-  // Incompatible types
-  str i = false;
+  // Variable Already Declared
+  int d;
+  str d;
 }

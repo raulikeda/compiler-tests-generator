@@ -1,4 +1,2 @@
-{
-  // Incompatible types
-  bool g = 6;
-}
+// Unexpected EOF
+str h = "a;

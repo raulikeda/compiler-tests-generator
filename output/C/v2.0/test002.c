@@ -1,2 +1,2 @@
 // Unexpected token EOL
-q = 5+;
+s = 1+;

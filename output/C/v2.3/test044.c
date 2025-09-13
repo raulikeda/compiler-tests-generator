@@ -1,9 +1,6 @@
 void main() {
-  // Missing OPEN_BRA
-  int p = 1;
-  if (p == 1) {
-    p = 2;
-  } else
-    p = 3;
-  }
+  // Unexpected EOF (Missing CLOSE_BRA)
+  int f = 1;
+  while (f == 1) {
+    f = 2;
 }

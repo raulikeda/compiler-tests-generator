@@ -1,4 +1,4 @@
 void main() {
   // Incompatible Types
-  bool k = "a"||2;
+  int o = 1+true;
 }

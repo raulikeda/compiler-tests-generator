@@ -1,4 +1,4 @@
 void main() {
   // Incompatible Types
-  bool o = "a"&&9;
+  bool g = !2;
 }

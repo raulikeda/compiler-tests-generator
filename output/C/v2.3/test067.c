@@ -1,4 +1,4 @@
 void main() {
-  // Unexpected EOF
-  str n = "a;
+  // Incompatible Types
+  bool h = 5=="a";
 }

@@ -59,7 +59,7 @@ void main() {
   }
   
   
-  ;;;
+  ;;; {{ }} // Teste de colchetes
   // Saida final
   printf(x_1);
   printf(x);
@@ -95,3 +95,4 @@ void main() {
   printf(a < b);
   printf(a > b);
 }
+ // Teste do filter

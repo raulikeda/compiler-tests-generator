@@ -1,7 +1,5 @@
-{
-  // Missing OPEN_BRA
-  i = 1;
-  if (i == 1)
-    i = 2;
-  }
+// Missing OPEN_BRA
+u = 1;
+while (u == 1)
+  u = 2;
 }

@@ -1,3 +1,3 @@
 void main() {
   // Unexpected token EOF (expected CLOSE_BRA)
-  int e = 4;
+  int u = 1;

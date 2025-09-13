@@ -1,11 +1,2 @@
-{
-  // Unexpected ELSE
-  h = 1;
-  if (h == 1) {
-    h = 2;
-  } else {
-    h = 3;
-  } else {
-    h = 4;
-  }
-}
+// Missing OPEN_PAR
+z = scanf;

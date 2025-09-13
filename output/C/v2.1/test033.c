@@ -1,6 +1,3 @@
-{
-  {
-    // Unexpected token OPEN_BRA
-    c = 2;
-  }
-}
+// Unexpected token IDEN
+1x = 9;
+printf(1x);

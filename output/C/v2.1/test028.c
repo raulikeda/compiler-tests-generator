@@ -1,4 +1,2 @@
-{
-  // Unexpected token EOL (expected CLOSE_PAR)
-  printf(6;
-}
+// Unexpected token EOL (expected CLOSE_PAR)
+printf(8;

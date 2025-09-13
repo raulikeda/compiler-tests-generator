@@ -1,2 +1,2 @@
 // Unexpected token EOF
-b = //8;
+r = //6;

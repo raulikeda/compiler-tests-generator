@@ -1,4 +1,2 @@
-{
-  // Unexpected token DIV
-  o = /;
-}
+// Unexpected token DIV
+y = /;

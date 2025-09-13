@@ -1,4 +1,4 @@
 void main() {
-  // Unexpected token ASSIGN (expected OPEN_PAR)
-  printf = u;
+  // Unexpected token EOL (expected CLOSE_PAR)
+  printf(7//);
 }

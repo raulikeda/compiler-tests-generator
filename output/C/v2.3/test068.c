@@ -1,4 +1,4 @@
 void main() {
-  // Variable not found
-  bool y = True;
+  // Incompatible Types
+  bool o = 1==true;
 }

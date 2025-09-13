@@ -1,10 +1,5 @@
-{
-  // Unexpected OPEN_BRA
-  t = 1;
-  if (t == 1) {
-    t = 2;
-  }
-  {
-    t = 3;
-  }
+// Missing Right Expression
+v = 1;
+if (!) {
+  v = 2;
 }

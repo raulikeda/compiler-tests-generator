@@ -1,4 +1,2 @@
-{
-  // Incompatible Types
-  int u = true+1;
-}
+// Incompatible Types
+int s = 6/true;

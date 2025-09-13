@@ -1,7 +1,2 @@
-{
-  // Missing Right Expression
-  int d = 1;
-  if (!) {
-    d = 2;
-  }
-}
+// Unexpected Identifier
+imt x1 = 8;

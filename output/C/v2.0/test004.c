@@ -1,2 +1,2 @@
 // Unexpected token EOL
-u = ;
+z = ;

@@ -1,4 +1,4 @@
 void main() {
-  // Unexpected Identifier
-  imt x1 = 4;
+  // Incompatible types
+  int b = "a";
 }

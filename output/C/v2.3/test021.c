@@ -1,4 +1,4 @@
 void main() {
   // Missing CLOSE_PAR
-  int x = (1;
+  int x = (8;
 }

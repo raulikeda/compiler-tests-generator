@@ -1,4 +1,2 @@
-{
-  // Unexpected token EOL
-  int e = 7*;
-}
+// Unexpected token EOL
+int x = 8*;

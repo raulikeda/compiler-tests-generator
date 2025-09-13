@@ -1,4 +1,6 @@
 void main() {
   // Missing OPEN_PAR
-  int y = scanf;
+  if 1 == 1 {
+    int z = 5;
+  }
 }

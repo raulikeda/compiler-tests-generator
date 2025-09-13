@@ -1,5 +1,4 @@
 void main() {
-  // Variable Already Declared
-  int d;
-  str d;
+  // Variable not found
+  bool r = True;
 }
