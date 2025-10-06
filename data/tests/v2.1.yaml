@@ -31,7 +31,7 @@
       &RBRA
       
       
-      &LF&LF&LF &LBRA&LBRA &RBRA&RBRA &COM Teste de colchetes
+      &LF&LF&LF &LBRA&NL&LBRA&NL &RBRA&NL&RBRA &COM Teste de colchetes
       &COM Saida final
       &PRINT&FLPx_1&FRP&LF
       &PRINT&FLPx&FRP&LF
