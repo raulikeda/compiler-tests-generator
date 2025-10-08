@@ -92,7 +92,7 @@
       myprint(a)&LF
       &PRINT(a&CONCATx_1)&LF
       &PRINT(x_1&CONCATa)&LF
-      &PRINT(a&CONCAT(x_1==1))&LF
+      &PRINT(a&CONCAT(x_1&EQ1))&LF
       &PRINT(a &EQ a)&LF
       &PRINT(a &LT b)&LF
       &PRINT(a &GT b)&LF
