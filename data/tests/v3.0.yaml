@@ -8,7 +8,7 @@
       &PRINT&FLPA&FRP&LF 
       &PRINT&FLPx_2&FRP&LF
       &LBRA
-        &PINT&VAR x_2&TSEP&INT &ASSIGN 7&LF
+        &PINT&VAR x_3&TSEP&INT &ASSIGN 7&LF
         x_1 &ASSIGN 9&LF
         A &ASSIGN 8&LF
         &LF
