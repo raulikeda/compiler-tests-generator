@@ -39,7 +39,7 @@ aliases:
   - "&WTRUE": 'True'
   - "&CONCAT": '+'
   - "&FN": 'function'
-  - "&VOID": ': void'
+  - "&VOID": 'void'
   - "&PVOID": ''
   - "&MAINCALL": 'main();'
   - "&RETURN": 'return'
