@@ -527,8 +527,9 @@
   languages:
   - All
 - description: Missing main function
-  code: ""
-  input: '&MAINCALL'
+  code: |-
+    &MAINCALL
+  input: ''
   exception: true
   output: Unexpected token EOF (expected OPEN_BRA)
   languages:
