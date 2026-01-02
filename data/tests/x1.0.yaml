@@ -1,0 +1,55 @@
+- description: Valid Input
+  code: "1 + 2 ^ 4 + 8"
+  input: ''
+  exception: false
+  output: '15'
+  languages:
+  - All
+- description: Starting with Operator ^
+  code: |-
+    ^$
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token XOR (expected INT)'
+  languages:
+  - All
+- description: Missing Number After ^
+  code: |-
+    $^
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token EOF (expected INT)'
+  languages:
+  - All
+- description: Two Consecultives Operators ^^
+  code: |-
+    $^^$
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token XOR (expected INT)'
+  languages:
+  - All
+- description: Two Consecultives Operators +^
+  code: |-
+    $+^$
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token XOR (expected INT)'
+  languages:
+  - All
+- description: Two Consecultives Operators ^+
+  code: |-
+    $^+$
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token PLUS (expected INT)'
+  languages:
+  - All
+- description: Only Operator ^
+  code: |-
+    ^
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token XOR (expected INT)'
+  languages:
+  - All

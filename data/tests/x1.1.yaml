@@ -1,0 +1,31 @@
+- description: Valid Input
+  code: "-2**3*1/-(-2)**2+1"
+  input: ''
+  exception: false
+  output: '3'
+  languages:
+  - All
+- description: Missing Number After **
+  code: |-
+    $**
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token EOF'
+  languages:
+  - All
+- description: Only Operator **
+  code: |-
+    **
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token POWER'
+  languages:
+  - All
+- description: Starting with Operator **
+  code: |-
+    **$
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token POWER'
+  languages:
+  - All

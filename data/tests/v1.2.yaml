@@ -10,7 +10,7 @@
     $+
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: '[Parser] Unexpected token EOF'
   languages:
   - All
 - description: Missing Number After -
@@ -18,14 +18,14 @@
     $-
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: '[Parser] Unexpected token EOF'
   languages:
   - All
 - description: Empty Input
   code: ""
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: '[Parser] Unexpected token EOF'
   languages:
   - All
 - description: Only Operator +
@@ -33,7 +33,7 @@
     +
   input: ''
   exception: true
-  output: Unexpected token PLUS
+  output: '[Parser] Unexpected token PLUS'
   languages:
   - All
 - description: Only Operator -
@@ -41,7 +41,7 @@
     -
   input: ''
   exception: true
-  output: Unexpected token MINUS
+  output: '[Parser] Unexpected token MINUS'
   languages:
   - All
 - description: No Operator
@@ -49,15 +49,15 @@
     $ $
   input: ''
   exception: true
-  output: Unexpected token INT
+  output: '[Parser] Unexpected token INT'
   languages:
   - All
 - description: Invalid Token
   code: |-
-    ,
+    @
   input: ''
   exception: true
-  output: Invalid token ,
+  output: '[Lexer] Invalid token @'
   languages:
   - All
 - description: Starting with Operator *
@@ -65,7 +65,7 @@
     *$
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Starting with Operator /
@@ -73,7 +73,7 @@
     /$
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Missing Number After *
@@ -81,7 +81,7 @@
     $*
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: '[Parser] Unexpected token EOF'
   languages:
   - All
 - description: Missing Number After /
@@ -89,7 +89,7 @@
     $/
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: '[Parser] Unexpected token EOF'
   languages:
   - All
 - description: Only Operator *
@@ -97,7 +97,7 @@
     *
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Only Operator /
@@ -105,7 +105,7 @@
     /
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Two Consecultives Operators +*
@@ -113,7 +113,7 @@
     $+*$
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Two Consecultives Operators +/
@@ -121,15 +121,7 @@
     $+/$
   input: ''
   exception: true
-  output: Unexpected token DIV
-  languages:
-  - All
-- description: Two Consecultives Operators **
-  code: |-
-    $**$
-  input: ''
-  exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Two Consecultives Operators //
@@ -137,7 +129,7 @@
     $//$
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Two Consecultives Operators */
@@ -145,7 +137,7 @@
     $*/$
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Two Consecultives Operators /*
@@ -153,7 +145,7 @@
     $/*$
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Missing )
@@ -161,7 +153,7 @@
     ($
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: '[Parser] Unexpected token EOF'
   languages:
   - All
 - description: Missing (
@@ -169,7 +161,7 @@
     $)
   input: ''
   exception: true
-  output: Unexpected token CLOSE_PAR
+  output: '[Parser] Unexpected token CLOSE_PAR'
   languages:
   - All
 - description: Missing )
@@ -177,7 +169,7 @@
     (($)
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: '[Parser] Unexpected token EOF'
   languages:
   - All
 - description: Missing (
@@ -185,6 +177,14 @@
     ($))
   input: ''
   exception: true
-  output: Unexpected token CLOSE_PAR
+  output: '[Parser] Unexpected token CLOSE_PAR'
+  languages:
+  - All
+- description: Division by Zero
+  code: |-
+    1/0
+  input: ''
+  exception: true
+  output: '[Semantic] Division by zero'
   languages:
   - All

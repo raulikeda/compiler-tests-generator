@@ -1,2 +1,2 @@
 // Incompatible Types
-bool q = 1==true;
+bool t = 1==true;

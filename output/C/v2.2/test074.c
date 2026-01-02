@@ -1,2 +1,2 @@
 // Incompatible Types
-bool e = "a"||6;
+bool d = "a"||3;

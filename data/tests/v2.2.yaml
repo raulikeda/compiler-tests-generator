@@ -99,7 +99,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN $+&LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Missing Expression After -
@@ -108,7 +108,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN $-&LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Empty Expression
@@ -117,7 +117,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN &LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Missing Expression After +
@@ -126,7 +126,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN +&LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Missing Expression After -
@@ -135,7 +135,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN -&LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: No Operator
@@ -144,16 +144,16 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN $ $&LF
   input: ''
   exception: true
-  output: Unexpected token INT
+  output: '[Parser] Unexpected token INT'
   languages:
   - All
 - description: Invalid Token
   code: |-
-    &COM Invalid token ,
+    &COM Invalid token @
     &PINT&VAR ?&TSEP&INT &ASSIGN ,&LF
   input: ''
   exception: true
-  output: Invalid token ,
+  output: '[Lexer] Invalid token @'
   languages:
   - All
 - description: Starting with Operator *
@@ -162,7 +162,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN *$&LF
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Starting with Operator /
@@ -171,7 +171,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN /$&LF
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Missing Number After *
@@ -180,7 +180,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN $*&LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Missing Number After /
@@ -189,7 +189,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN $/&LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Only Operator *
@@ -198,7 +198,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN *&LF
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Only Operator /
@@ -207,7 +207,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN /&LF
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Two Consecultives Operators +*
@@ -216,7 +216,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN $+*$&LF
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Two Consecultives Operators +/
@@ -225,16 +225,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN $+/$&LF
   input: ''
   exception: true
-  output: Unexpected token DIV
-  languages:
-  - All
-- description: Two Consecultives Operators **
-  code: |-
-    &COM Unexpected token MULT
-    &PINT&VAR ?&TSEP&INT &ASSIGN $**$&LF
-  input: ''
-  exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Wrong Comment
@@ -243,7 +234,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN &COM$&LF
   input: ''
   exception: true
-  output: Unexpected token CLOSE_BRA
+  output: '[Parser] Unexpected token CLOSE_BRA'
   languages:
   - All
 - description: Two Consecultives Operators */
@@ -252,7 +243,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN $*/$&LF
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Two Consecultives Operators /*
@@ -261,7 +252,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN $/*$&LF
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Missing )
@@ -270,7 +261,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN ($&LF
   input: ''
   exception: true
-  output: Missing CLOSE_PAR
+  output: '[Parser] Missing CLOSE_PAR'
   languages:
   - All
 - description: Missing (
@@ -279,7 +270,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN $)&LF
   input: ''
   exception: true
-  output: Unexpected token CLOSE_PAR
+  output: '[Parser] Unexpected token CLOSE_PAR'
   languages:
   - All
 - description: Missing )
@@ -288,7 +279,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN (($)&LF
   input: ''
   exception: true
-  output: Missing CLOSE_PAR
+  output: '[Parser] Missing CLOSE_PAR'
   languages:
   - All
 - description: Missing (
@@ -297,7 +288,16 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN ($))&LF
   input: ''
   exception: true
-  output: Unexpected token CLOSE_PAR
+  output: '[Parser] Unexpected token CLOSE_PAR'
+  languages:
+  - All
+- description: Division by Zero
+  code: |-
+    &COM Division by Zero
+    &PINT&VAR ?&TSEP&INT &ASSIGN 1/0&LF
+  input: ''
+  exception: true
+  output: '[Semantic] Division by zero'
   languages:
   - All
 - description: Wrong Print
@@ -306,7 +306,7 @@
     &WPRINT&FLP$&FRP&LF
   input: ''
   exception: true
-  output: Unexpected token OPEN_PAR
+  output: '[Parser] Unexpected token OPEN_PAR'
   languages:
   - All
 - description: No Operator
@@ -316,7 +316,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN $ L&LF
   input: ''
   exception: true
-  output: Unexpected token IDEN
+  output: '[Parser] Unexpected token IDEN'
   languages:
   - All
 - description: Missing (
@@ -325,7 +325,7 @@
     &PRINT $&FRP&LF
   input: ''
   exception: true
-  output: Unexpected token INT (expected OPEN_PAR)
+  output: '[Parser] Unexpected token INT (expected OPEN_PAR)'
   languages:
   - All
 - description: Missing )
@@ -334,7 +334,7 @@
     &PRINT&FLP$&LF
   input: ''
   exception: true
-  output: Unexpected token EOL (expected CLOSE_PAR)
+  output: '[Parser] Unexpected token EOL (expected CLOSE_PAR)'
   languages:
   - All
 - description: Missing ()
@@ -344,7 +344,7 @@
     &PRINT $&LF
   input: ''
   exception: true
-  output: Unexpected token INT (expected OPEN_PAR)
+  output: '[Parser] Unexpected token INT (expected OPEN_PAR)'
   languages:
   - All
 - description: Missing Identifier
@@ -354,7 +354,7 @@
     &PRINT&FLPX1&FRP&LF
   input: ''
   exception: true
-  output: Identifier not found
+  output: '[Semantic] Identifier not found'
   languages:
   - All
 - description: Missing }
@@ -364,7 +364,7 @@
       &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
   input: ''
   exception: true
-  output: Unexpected token EOF (expected CLOSE_BRA)
+  output: '[Parser] Unexpected token EOF (expected CLOSE_BRA)'
   languages:
   - All
 - description: Extra }
@@ -374,7 +374,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Unexpected token CLOSE_BRA (expected EOF)
+  output: '[Parser] Unexpected token CLOSE_BRA (expected EOF)'
   languages:
   - All
 - description: Invalid Identifier Name
@@ -384,7 +384,7 @@
     &PRINT&FLP1x&FRP&LF
   input: ''
   exception: true
-  output: Unexpected token IDEN
+  output: '[Parser] Unexpected token IDEN'
   languages:
   - All
 - description: Use Print as Identifier
@@ -393,7 +393,7 @@
     &PRINT &ASSIGN ?&LF
   input: ''
   exception: true
-  output: Unexpected token ASSIGN (expected OPEN_PAR)
+  output: '[Parser] Unexpected token ASSIGN (expected OPEN_PAR)'
   languages:
   - All
 - description: Missing )
@@ -402,7 +402,7 @@
     &PRINT&FLP$&COM&FRP&LF
   input: ''
   exception: true
-  output: Unexpected token EOL (expected CLOSE_PAR)
+  output: '[Parser] Unexpected token EOL (expected CLOSE_PAR)'
   languages:
   - All
 - description: Use Number as Identifier
@@ -411,7 +411,7 @@
     3 &ASSIGN $ + $&LF
   input: ''
   exception: true
-  output: Unexpected token INT
+  output: '[Parser] Unexpected token INT'
   languages:
   - All
 - description: If without }
@@ -421,7 +421,7 @@
     &IF &ELP? &EQ 1&ERP &LBRA
   input: ''
   exception: true
-  output: Missing CLOSE_BRA
+  output: '[Parser] Missing CLOSE_BRA'
   languages:
   - All
 - description: If without {
@@ -433,7 +433,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Missing OPEN_BRA
+  output: '[Parser] Missing OPEN_BRA'
   languages:
   - All
 - description: Else without }
@@ -446,7 +446,7 @@
       ? &ASSIGN 3&LF
   input: ''
   exception: true
-  output: Missing CLOSE_BRA
+  output: '[Parser] Missing CLOSE_BRA'
   languages:
   - All
 - description: Else without {
@@ -460,7 +460,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: '[Parser] Unexpected token EOF'
   languages:
   - All
 - description: While without }
@@ -471,7 +471,7 @@
       ? &ASSIGN 2&LF
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: '[Parser] Unexpected token EOF'
   languages:
   - All
 - description: While without {
@@ -483,7 +483,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Missing OPEN_BRA
+  output: '[Parser] Missing OPEN_BRA'
   languages:
   - All
 - description: If with 2 Else's
@@ -499,7 +499,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Unexpected ELSE
+  output: '[Parser] Unexpected ELSE'
   languages:
   - All
 - description: Missing Equal operand
@@ -511,7 +511,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Missing Right Expression
+  output: '[Parser] Missing Right Expression'
   languages:
   - All
 - description: Missing > operand
@@ -523,7 +523,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Missing Right Expression
+  output: '[Parser] Missing Right Expression'
   languages:
   - All
 - description: Missing < operand
@@ -535,7 +535,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Missing Right Expression
+  output: '[Parser] Missing Right Expression'
   languages:
   - All
 - description: Missing Not operand
@@ -547,7 +547,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Missing Right Expression
+  output: '[Parser] Missing Right Expression'
   languages:
   - All
 - description: Missing Reader (
@@ -557,7 +557,7 @@
   input: |-
     1
   exception: true
-  output: Missing OPEN_PAR
+  output: '[Parser] Missing OPEN_PAR'
   languages:
   - All
 - description: Missing Reader )
@@ -567,7 +567,7 @@
   input: |-
     1
   exception: true
-  output: Missing CLOSE_PAR
+  output: '[Parser] Missing CLOSE_PAR'
   languages:
   - All
 - description: If with misaligned {
@@ -578,7 +578,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Unexpected token INT
+  output: '[Parser] Unexpected token INT'
   languages:
   - Go
 - description: If with misaligned }
@@ -587,7 +587,7 @@
     &IF &ELP1 &EQ 1&ERP &LBRA &RBRA
   input: ''
   exception: true
-  output: Unexpected token INT
+  output: '[Parser] Unexpected token INT'
   languages:
   - Go
 - description: Else with misaligned } (before)
@@ -599,7 +599,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Unexpected token NEWLINE Before Else
+  output: '[Parser] Unexpected token NEWLINE Before Else'
   languages:
   - Go
 - description: Else with misaligned }
@@ -609,7 +609,7 @@
     &RBRA &ELSE &LBRA &RBRA
   input: ''
   exception: true
-  output: Unexpected token CLOSE_BRA in Else
+  output: '[Parser] Unexpected token CLOSE_BRA in Else'
   languages:
   - Go
 - description: Else with misaligned {
@@ -621,7 +621,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Unexpected token NEWLINE in Else
+  output: '[Parser] Unexpected token NEWLINE in Else'
   languages:
   - Go
 - description: While with misaligned {
@@ -632,7 +632,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Unexpected token NEWLINE in While
+  output: '[Parser] Unexpected token NEWLINE in While'
   languages:
   - Go
 - description: While with misaligned }
@@ -641,7 +641,7 @@
     &WHILE &ELP1 &EQ 1&ERP &LBRA &RBRA
   input: ''
   exception: true
-  output: Unexpected token CLOSE_BRA in While
+  output: '[Parser] Unexpected token CLOSE_BRA in While'
   languages:
   - Go
 - description: If missing Brackets
@@ -651,7 +651,7 @@
       ? &ASSIGN $&LF
   input: ''
   exception: true
-  output: Missing OPEN_BRA in If
+  output: '[Parser] Missing OPEN_BRA in If'
   languages:
   - Go
   - Zig
@@ -662,7 +662,7 @@
       ? &ASSIGN $&LF
   input: ''
   exception: true
-  output: Missing OPEN_BRA in If
+  output: '[Parser] Missing OPEN_BRA in If'
   languages:
   - Go
   - Zig
@@ -674,7 +674,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Missing OPEN_PAR in If
+  output: '[Parser] Missing OPEN_PAR in If'
   languages:
   - C
   - TypeScript
@@ -687,7 +687,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Missing OPEN_PAR in While
+  output: '[Parser] Missing OPEN_PAR in While'
   languages:
   - Zig
   - TypeScript
@@ -698,7 +698,7 @@
     &VAR x1 &ASSIGN $&LF
   input: ''
   exception: true
-  output: COLON not found
+  output: '[Parser] COLON not found'
   languages:
   - Zig
 - description: Incomplete Declaration
@@ -707,7 +707,7 @@
     &VAR x1 &INT &ASSIGN $&LF
   input: ''
   exception: true
-  output: COLON not found
+  output: '[Parser] COLON not found'
   languages:
   - Zig
   - TypeScript
@@ -717,7 +717,7 @@
     &VAR x1&TSEP &ASSIGN $&LF
   input: ''
   exception: true
-  output: TYPE not found
+  output: '[Parser] TYPE not found'
   languages:
   - Go
   - Zig
@@ -728,7 +728,7 @@
     &PWINT&VAR x1&TSEP&WINT &ASSIGN $&LF
   input: ''
   exception: true
-  output: Unexpected Identifier
+  output: '[Parser] Unexpected Identifier'
   languages:
   - All
 - description: Incompatible Types
@@ -737,7 +737,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE&LF
   input: ''
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Incompatible Types
@@ -746,7 +746,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN "a"&LF
   input: ''
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Incompatible Types
@@ -755,7 +755,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LF
   input: ''
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Incompatible Types
@@ -764,7 +764,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&LF
   input: ''
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Incompatible Types
@@ -773,7 +773,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LF
   input: ''
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Incompatible Types
@@ -782,7 +782,7 @@
     &PSTR&VAR ?&TSEP&STR &ASSIGN $&LF
   input: ''
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Incompatible Types
@@ -801,7 +801,7 @@
   input: |-
     1
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Double Declaration
@@ -811,7 +811,7 @@
     &PSTR&VAR ?&TSEP&STR&LF
   input: ''
   exception: true
-  output: Variable Already Declared
+  output: '[Semantic] Variable Already Declared'
   languages:
   - All
 - description: Open String
@@ -820,7 +820,7 @@
     &PSTR&VAR ?&TSEP&STR &ASSIGN "a&LF
   input: ''
   exception: true
-  output: Unexpected EOF
+  output: '[Lexer] Unexpected EOF'
   languages:
   - All
 - description: Wrong True Case
@@ -829,7 +829,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &WTRUE&LF
   input: ''
   exception: true
-  output: Variable not found
+  output: '[Semantic] Variable not found'
   languages:
   - All
 - description: Incompatible Types ==
@@ -838,7 +838,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&EQ"a"&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types ==
@@ -847,7 +847,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN 1&EQ&TRUE&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types ==
@@ -856,7 +856,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&EQ&TRUE&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types >
@@ -865,7 +865,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&GT"a"&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types >
@@ -874,7 +874,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN 1&GT&TRUE&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types >
@@ -883,7 +883,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&LT&TRUE&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types <
@@ -892,7 +892,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LT"a"&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types <
@@ -901,7 +901,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &TRUE<$&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types <
@@ -910,7 +910,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"<&TRUE&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types &&
@@ -919,7 +919,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&AND$&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types ||
@@ -928,7 +928,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&OR$&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types !
@@ -937,7 +937,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &NOT$&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types +
@@ -946,7 +946,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN 1+&TRUE&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types +
@@ -955,7 +955,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE+1&LF
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types -
@@ -964,7 +964,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN 1-&TRUE&LF
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types -
@@ -973,7 +973,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE-1&LF
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types *
@@ -982,7 +982,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN 1*&TRUE&LF
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types *
@@ -991,7 +991,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE*1&LF
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types /
@@ -1000,7 +1000,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN $/&TRUE&LF
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types /
@@ -1009,7 +1009,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE/1&LF
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types
@@ -1018,7 +1018,7 @@
     &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE&OR&FALSE&LF
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types
@@ -1027,7 +1027,7 @@
     &PSTR&VAR ?&TSEP&STR &ASSIGN $+$&LF
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types
@@ -1036,7 +1036,7 @@
     &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&CONCAT"b"&LF
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types
@@ -1046,7 +1046,7 @@
     &RBRA
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types 2
@@ -1056,6 +1056,6 @@
     &RBRA
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All

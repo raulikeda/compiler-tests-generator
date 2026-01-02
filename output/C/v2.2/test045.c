@@ -1,5 +1,5 @@
 // Missing Right Expression
-int e = 1;
-if (e >) {
-  e = 2;
+int y = 1;
+if (y >) {
+  y = 2;
 }

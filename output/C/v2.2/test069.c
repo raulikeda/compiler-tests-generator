@@ -1,2 +1,2 @@
 // Incompatible Types
-bool e = "a"<true;
+bool a = "a"<true;

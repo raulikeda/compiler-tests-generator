@@ -1,2 +1,2 @@
-// Unexpected token CLOSE_BRA
-c = //8;
+// Unexpected token DIV
+e = 3*/2;

@@ -1,4 +1,4 @@
 // Unexpected EOF (Missing CLOSE_BRA)
-n = 1;
-while (n == 1) {
-  n = 2;
+a = 1;
+while (a == 1) {
+  a = 2;

@@ -1,2 +1,2 @@
 // Incompatible Types
-int r = 1+true;
+int n = 1+true;

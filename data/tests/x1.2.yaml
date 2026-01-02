@@ -1,0 +1,31 @@
+- description: Valid Input
+  code: "(9+-3!)!"
+  input: ''
+  exception: false
+  output: '6'
+  languages:
+  - All
+- description: Only Operator !
+  code: |-
+    !
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token FACT'
+  languages:
+  - All
+- description: Starting with Operator !
+  code: |-
+    !$
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token FACT'
+  languages:
+  - All
+- description: Negative Number Factorial
+  code: |-
+    (-2)!
+  input: ''
+  exception: true
+  output: '[Semantic] Factorial is not defined for negative numbers'
+  languages:
+  - All

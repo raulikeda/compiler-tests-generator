@@ -1,2 +1,2 @@
-// Unexpected token CLOSE_PAR
-int e = (8));
+// Division by Zero
+int x = 1/0;

@@ -1,2 +1,2 @@
-// Unexpected token CLOSE_PAR
-r = (1));
+// Division by Zero
+j = 1/0;

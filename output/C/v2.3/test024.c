@@ -1,4 +1,4 @@
 void main() {
-  // Unexpected token CLOSE_PAR
-  int a = (3));
+  // Division by Zero
+  int k = 1/0;
 }

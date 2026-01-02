@@ -1,2 +1,2 @@
 // Unexpected token DIV
-y = /5;
+z = /7;

@@ -1,4 +1,4 @@
 void main() {
   // Incompatible Types
-  bool m = 1>true;
+  bool y = 1>true;
 }

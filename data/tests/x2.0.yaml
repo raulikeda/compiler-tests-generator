@@ -1,0 +1,53 @@
+- description: Valid Input
+  code: |-
+    &DEFINE N 1
+    &CONST x &ASSIGN 3&LF
+    &PRINT&FLPx+N&FRP&LF
+    y &ASSIGN N&LF
+    y &ASSIGN y + x&LF
+    &PRINT&FLPy&FRP&LF
+  input: ''
+  exception: false
+  output: |-
+    4
+    4
+  languages:
+  - All
+- description: Incomplete define Statement
+  code: |-
+    &COM Incomplete define statement
+    &DEFINE N
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token EOL'
+  languages:
+  - All
+- description: Change Value of Constant
+  code: |-
+    &COM Variable not found
+    &DEFINE N 1
+    N = 3&LF
+  input: ''
+  exception: true
+  output: '[Semantic] Variable N not found'
+  languages:
+  - All
+- description: Incomplete Immutable Variable Declaration
+  code: |-
+    &COM Incomplete immutable variable declaration
+    &const x&LF
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token EOL'
+  languages:
+  - All
+- description: Change Value of Immutable Variable
+  code: |-
+    &COM Variable x can not be changed
+    &CONST x = 1
+    x = 3&LF
+  input: ''
+  exception: true
+  output: '[Semantic] Variable x can not be changed'
+  languages:
+  - All

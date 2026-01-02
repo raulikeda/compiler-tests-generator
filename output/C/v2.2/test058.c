@@ -1,2 +1,2 @@
 // Incompatible types
-str s = 3;
+str c = 1;

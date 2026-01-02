@@ -95,5 +95,5 @@ tests:
   description: Invalid Token
   input: []
   output:
-  - Invalid token ,
+  - Invalid token @
   exception: true

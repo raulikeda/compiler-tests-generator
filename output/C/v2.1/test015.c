@@ -1,2 +1,2 @@
 // Unexpected token MULT
-y = 9+*4;
+n = 5+*7;

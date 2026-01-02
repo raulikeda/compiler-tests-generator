@@ -1,4 +1,4 @@
 // Unexpected EOF (Missing CLOSE_BRA)
-int f = 1;
-while (f == 1) {
-  f = 2;
+int m = 1;
+while (m == 1) {
+  m = 2;

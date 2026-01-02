@@ -136,7 +136,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Missing Expression After -
@@ -148,7 +148,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Empty Expression
@@ -160,7 +160,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Missing Expression After +
@@ -172,7 +172,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Missing Expression After -
@@ -184,7 +184,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: No Operator
@@ -196,7 +196,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token INT
+  output: '[Parser] Unexpected token INT'
   languages:
   - All
 - description: Invalid Token
@@ -208,7 +208,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Invalid token @
+  output: '[Lexer] Invalid token @'
   languages:
   - All
 - description: Starting with Operator *
@@ -220,7 +220,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Starting with Operator /
@@ -232,7 +232,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Missing Number After *
@@ -244,7 +244,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Missing Number After /
@@ -256,7 +256,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Only Operator *
@@ -268,7 +268,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Only Operator /
@@ -280,7 +280,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Two Consecultives Operators +*
@@ -292,7 +292,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Two Consecultives Operators +/
@@ -304,19 +304,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token DIV
-  languages:
-  - All
-- description: Two Consecultives Operators **
-  code: |-
-    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
-      &COM Unexpected token MULT
-      &PINT&VAR ?&TSEP&INT &ASSIGN $**$&LF
-    &RBRA
-    &MAINCALL
-  input: ''
-  exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Wrong Comment
@@ -328,7 +316,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token CLOSE_BRA
+  output: '[Parser] Unexpected token CLOSE_BRA'
   languages:
   - All
 - description: Two Consecultives Operators */
@@ -340,7 +328,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Two Consecultives Operators /*
@@ -352,7 +340,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Missing )
@@ -364,7 +352,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing CLOSE_PAR
+  output: '[Parser] Missing CLOSE_PAR'
   languages:
   - All
 - description: Missing (
@@ -376,7 +364,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token CLOSE_PAR
+  output: '[Parser] Unexpected token CLOSE_PAR'
   languages:
   - All
 - description: Missing )
@@ -388,7 +376,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing CLOSE_PAR
+  output: '[Parser] Missing CLOSE_PAR'
   languages:
   - All
 - description: Missing (
@@ -400,7 +388,19 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token CLOSE_PAR
+  output: '[Parser] Unexpected token CLOSE_PAR'
+  languages:
+  - All
+- description: Division by Zero
+  code: |-
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+      &COM Division by Zero
+      &PINT&VAR ?&TSEP&INT &ASSIGN 1/0&LF
+    &RBRA
+    &MAINCALL
+  input: ''
+  exception: true
+  output: '[Semantic] Division by zero'
   languages:
   - All
 - description: Wrong Print
@@ -412,7 +412,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token OPEN_PAR
+  output: '[Parser] Unexpected token OPEN_PAR'
   languages:
   - All
 - description: No Operator
@@ -425,7 +425,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token IDEN
+  output: '[Parser] Unexpected token IDEN'
   languages:
   - All
 - description: Missing (
@@ -437,7 +437,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token INT (expected OPEN_PAR)
+  output: '[Parser] Unexpected token INT (expected OPEN_PAR)'
   languages:
   - All
 - description: Missing )
@@ -449,7 +449,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOL (expected CLOSE_PAR)
+  output: '[Parser] Unexpected token EOL (expected CLOSE_PAR)'
   languages:
   - All
 - description: Missing ()
@@ -462,7 +462,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token INT (expected OPEN_PAR)
+  output: '[Parser] Unexpected token INT (expected OPEN_PAR)'
   languages:
   - All
 - description: Missing Identifier
@@ -475,7 +475,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Identifier not found
+  output: '[Semantic] Identifier not found'
   languages:
   - All
 - description: Missing }
@@ -486,7 +486,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOF (expected CLOSE_BRA)
+  output: '[Parser] Unexpected token EOF (expected CLOSE_BRA)'
   languages:
   - All
 - description: Function inside Function
@@ -500,7 +500,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: 'Unexpected token FUNC or OPEN_PAR'
+  output: '[Parser] Unexpected token FUNC or OPEN_PAR'
   languages:
   - All
 - description: Extra }
@@ -513,7 +513,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token CLOSE_BRA (expected EOF)
+  output: '[Parser] Unexpected token CLOSE_BRA (expected EOF)'
   languages:
   - All
 - description: Missing {}
@@ -523,7 +523,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token IDEN (expected OPEN_BRA)
+  output: '[Parser] Unexpected token IDEN (expected OPEN_BRA)'
   languages:
   - All
 - description: Missing main function
@@ -531,7 +531,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOF (expected OPEN_BRA)
+  output: '[Parser] Unexpected token EOF (expected OPEN_BRA)'
   languages:
   - All
 - description: Invalid Identifier Name
@@ -544,7 +544,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token IDEN
+  output: '[Parser] Unexpected token IDEN'
   languages:
   - All
 - description: Use Print as Identifier
@@ -556,7 +556,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token ASSIGN (expected OPEN_PAR)
+  output: '[Parser] Unexpected token ASSIGN (expected OPEN_PAR)'
   languages:
   - All
 - description: Missing )
@@ -568,7 +568,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOL (expected CLOSE_PAR)
+  output: '[Parser] Unexpected token EOL (expected CLOSE_PAR)'
   languages:
   - All
 - description: Use Number as Identifier
@@ -580,7 +580,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token INT
+  output: '[Parser] Unexpected token INT'
   languages:
   - All
 - description: If without }
@@ -593,7 +593,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing CLOSE_BRA
+  output: '[Parser] Missing CLOSE_BRA'
   languages:
   - All
 - description: If without {
@@ -608,7 +608,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing OPEN_BRA
+  output: '[Parser] Missing OPEN_BRA'
   languages:
   - All
 - description: Else without }
@@ -624,7 +624,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing CLOSE_BRA
+  output: '[Parser] Missing CLOSE_BRA'
   languages:
   - All
 - description: Else without {
@@ -641,7 +641,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: '[Parser] Unexpected token EOF'
   languages:
   - All
 - description: While without }
@@ -655,7 +655,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: '[Parser] Unexpected token EOF'
   languages:
   - All
 - description: While without {
@@ -670,7 +670,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing OPEN_BRA
+  output: '[Parser] Missing OPEN_BRA'
   languages:
   - All
 - description: If with 2 Else's
@@ -689,7 +689,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected ELSE
+  output: '[Parser] Unexpected ELSE'
   languages:
   - All
 - description: Missing Equal operand
@@ -704,7 +704,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing Right Expression
+  output: '[Parser] Missing Right Expression'
   languages:
   - All
 - description: Missing > operand
@@ -719,7 +719,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing Right Expression
+  output: '[Parser] Missing Right Expression'
   languages:
   - All
 - description: Missing < operand
@@ -734,7 +734,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing Right Expression
+  output: '[Parser] Missing Right Expression'
   languages:
   - All
 - description: Missing Not operand
@@ -749,7 +749,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing Right Expression
+  output: '[Parser] Missing Right Expression'
   languages:
   - All
 - description: Missing Reader (
@@ -762,7 +762,7 @@
   input: |-
     1
   exception: true
-  output: Missing OPEN_PAR
+  output: '[Parser] Missing OPEN_PAR'
   languages:
   - All
 - description: Missing Reader )
@@ -775,7 +775,7 @@
   input: |-
     1
   exception: true
-  output: Missing CLOSE_PAR
+  output: '[Parser] Missing CLOSE_PAR'
   languages:
   - All
 - description: If with misaligned {
@@ -789,7 +789,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token INT
+  output: '[Parser] Unexpected token INT'
   languages:
   - Go
 - description: If with misaligned }
@@ -801,7 +801,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token INT
+  output: '[Parser] Unexpected token INT'
   languages:
   - Go
 - description: Else with misaligned } (before)
@@ -816,7 +816,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token NEWLINE Before Else
+  output: '[Parser] Unexpected token NEWLINE Before Else'
   languages:
   - Go
 - description: Else with misaligned }
@@ -829,7 +829,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token CLOSE_BRA in Else
+  output: '[Parser] Unexpected token CLOSE_BRA in Else'
   languages:
   - Go
 - description: Else with misaligned {
@@ -844,7 +844,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token NEWLINE in Else
+  output: '[Parser] Unexpected token NEWLINE in Else'
   languages:
   - Go
 - description: While with misaligned {
@@ -858,7 +858,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token NEWLINE in While
+  output: '[Parser] Unexpected token NEWLINE in While'
   languages:
   - Go
 - description: While with misaligned }
@@ -870,7 +870,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected token CLOSE_BRA in While
+  output: '[Parser] Unexpected token CLOSE_BRA in While'
   languages:
   - Go
 - description: If missing Brackets
@@ -883,7 +883,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing OPEN_BRA in If
+  output: '[Parser] Missing OPEN_BRA in If'
   languages:
   - Go
   - Zig
@@ -897,7 +897,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing OPEN_BRA in If
+  output: '[Parser] Missing OPEN_BRA in If'
   languages:
   - Go
   - Zig
@@ -912,7 +912,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing OPEN_PAR in If
+  output: '[Parser] Missing OPEN_PAR in If'
   languages:
   - C
   - TypeScript
@@ -928,7 +928,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing OPEN_PAR in While
+  output: '[Parser] Missing OPEN_PAR in While'
   languages:
   - Zig
   - TypeScript
@@ -942,7 +942,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: COLON not found
+  output: '[Parser] COLON not found'
   languages:
   - Zig
 - description: Incomplete Declaration
@@ -954,7 +954,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: COLON not found
+  output: '[Parser] COLON not found'
   languages:
   - Zig
   - TypeScript
@@ -967,7 +967,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: TYPE not found
+  output: '[Parser] TYPE not found'
   languages:
   - Go
   - Zig
@@ -981,7 +981,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected Identifier
+  output: '[Parser] Unexpected Identifier'
   languages:
   - All
 - description: Incompatible Types
@@ -993,7 +993,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Incompatible Types
@@ -1005,7 +1005,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Incompatible Types
@@ -1017,7 +1017,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Incompatible Types
@@ -1029,7 +1029,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Incompatible Types
@@ -1041,7 +1041,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Incompatible Types
@@ -1053,7 +1053,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Incompatible Types
@@ -1078,7 +1078,7 @@
   input: |-
     1
   exception: true
-  output: Incompatible types
+  output: '[Semantic] Incompatible types'
   languages:
   - All
 - description: Double Declaration
@@ -1091,7 +1091,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Variable Already Declared
+  output: '[Semantic] Variable Already Declared'
   languages:
   - All
 - description: Open String
@@ -1103,7 +1103,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Unexpected EOF
+  output: '[Lexer] Unexpected EOF'
   languages:
   - All
 - description: Wrong True Case
@@ -1115,7 +1115,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Variable not found
+  output: '[Semantic] Variable not found'
   languages:
   - All
 - description: Incompatible Types ==
@@ -1127,7 +1127,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types ==
@@ -1139,7 +1139,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types ==
@@ -1151,7 +1151,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types >
@@ -1163,7 +1163,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types >
@@ -1175,7 +1175,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types >
@@ -1187,7 +1187,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types <
@@ -1199,7 +1199,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types <
@@ -1211,7 +1211,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types <
@@ -1223,7 +1223,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types &&
@@ -1235,7 +1235,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types ||
@@ -1247,7 +1247,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types !
@@ -1259,7 +1259,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types +
@@ -1271,7 +1271,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types +
@@ -1283,7 +1283,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Types
+  output: '[Semantic] Incompatible Types'
   languages:
   - All
 - description: Incompatible Types -
@@ -1295,7 +1295,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types -
@@ -1307,7 +1307,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types *
@@ -1319,7 +1319,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types *
@@ -1331,7 +1331,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types /
@@ -1343,7 +1343,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types /
@@ -1355,7 +1355,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types
@@ -1367,7 +1367,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types
@@ -1379,7 +1379,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types
@@ -1391,7 +1391,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types
@@ -1404,7 +1404,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Incompatible Types 2
@@ -1417,7 +1417,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Incompatible Type
+  output: '[Semantic] Incompatible Type'
   languages:
   - All
 - description: Missing function type
@@ -1428,7 +1428,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing function type
+  output: '[Parser] Missing function type'
   languages:
   - C
   - TypeScript
@@ -1441,7 +1441,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing function main
+  output: '[Semantic] Missing function main'
   languages:
   - All
 - description: Missing second arg
@@ -1456,7 +1456,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing second arg
+  output: '[Semantic] Missing second arg'
   languages:
   - All
 - description: Missing second arg
@@ -1471,7 +1471,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Missing second arg
+  output: '[Semantic] Missing second arg'
   languages:
   - All
 - description: Number of args wrong
@@ -1486,7 +1486,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Number of args wrong
+  output: '[Semantic] Number of args wrong'
   languages:
   - All
 - description: Number of args wrong
@@ -1501,7 +1501,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Number of args wrong
+  output: '[Semantic] Number of args wrong'
   languages:
   - All
 - description: Wrong arg type
@@ -1516,7 +1516,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Wrong arg type
+  output: '[Semantic] Wrong arg type'
   languages:
   - All
 - description: Wrong func return type
@@ -1531,7 +1531,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Wrong func return type
+  output: '[Semantic] Wrong func return type'
   languages:
   - All
 - description: Function not found
@@ -1546,7 +1546,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Function not found
+  output: '[Semantic] Function not found'
   languages:
   - All
 - description: Function not found
@@ -1559,7 +1559,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Function not found
+  output: '[Semantic] Function not found'
   languages:
   - All
 - description: Var out of scope
@@ -1574,7 +1574,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Function not found
+  output: '[Semantic] Function not found'
   languages:
   - All
 - description: 'Returning in a void function'
@@ -1586,7 +1586,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: Invalid return in a void function
+  output: '[Semantic] Invalid return in a void function'
   languages:
   - Go
 

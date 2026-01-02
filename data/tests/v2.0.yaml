@@ -26,7 +26,7 @@
     ? &ASSIGN $+&LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Missing Expression After -
@@ -35,7 +35,7 @@
     ? &ASSIGN $-&LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Empty Expression
@@ -44,7 +44,7 @@
     ? &ASSIGN &LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Missing Expression After +
@@ -53,7 +53,7 @@
     ? &ASSIGN +&LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Missing Expression After -
@@ -62,7 +62,7 @@
     ? &ASSIGN -&LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: No Operator
@@ -71,16 +71,16 @@
     ? &ASSIGN $ $&LF
   input: ''
   exception: true
-  output: Unexpected token INT
+  output: '[Parser] Unexpected token INT'
   languages:
   - All
 - description: Invalid Token
   code: |-
-    &COM Invalid token ,
-    ? &ASSIGN ,&LF
+    &COM Invalid token @
+    ? &ASSIGN @&LF
   input: ''
   exception: true
-  output: Invalid token ,
+  output: '[Lexer] Invalid token @'
   languages:
   - All
 - description: Starting with Operator *
@@ -89,7 +89,7 @@
     ? &ASSIGN *$&LF
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Starting with Operator /
@@ -98,7 +98,7 @@
     ? &ASSIGN /$&LF
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Missing Number After *
@@ -107,7 +107,7 @@
     ? &ASSIGN $*&LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Missing Number After /
@@ -116,7 +116,7 @@
     ? &ASSIGN $/&LF
   input: ''
   exception: true
-  output: Unexpected token EOL
+  output: '[Parser] Unexpected token EOL'
   languages:
   - All
 - description: Only Operator *
@@ -125,7 +125,7 @@
     ? &ASSIGN *&LF
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Only Operator /
@@ -134,7 +134,7 @@
     ? &ASSIGN /&LF
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Two Consecultives Operators +*
@@ -143,7 +143,7 @@
     ? &ASSIGN $+*$&LF
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Two Consecultives Operators +/
@@ -152,16 +152,7 @@
     ? &ASSIGN $+/$&LF
   input: ''
   exception: true
-  output: Unexpected token DIV
-  languages:
-  - All
-- description: Two Consecultives Operators **
-  code: |-
-    &COM Unexpected token MULT
-    ? &ASSIGN $**$&LF
-  input: ''
-  exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Wrong Comment
@@ -170,7 +161,7 @@
     ? &ASSIGN &COM$&LF
   input: ''
   exception: true
-  output: Unexpected token EOF
+  output: '[Parser] Unexpected token EOF'
   languages:
   - All
 - description: Two Consecultives Operators */
@@ -179,7 +170,7 @@
     ? &ASSIGN $*/$&LF
   input: ''
   exception: true
-  output: Unexpected token DIV
+  output: '[Parser] Unexpected token DIV'
   languages:
   - All
 - description: Two Consecultives Operators /*
@@ -188,7 +179,7 @@
     ? &ASSIGN $/*$&LF
   input: ''
   exception: true
-  output: Unexpected token MULT
+  output: '[Parser] Unexpected token MULT'
   languages:
   - All
 - description: Missing )
@@ -197,7 +188,7 @@
     ? &ASSIGN ($&LF
   input: ''
   exception: true
-  output: Missing CLOSE_PAR
+  output: '[Parser] Missing CLOSE_PAR'
   languages:
   - All
 - description: Missing (
@@ -206,7 +197,7 @@
     ? &ASSIGN $)&LF
   input: ''
   exception: true
-  output: Unexpected token CLOSE_PAR
+  output: '[Parser] Unexpected token CLOSE_PAR'
   languages:
   - All
 - description: Missing )
@@ -215,7 +206,7 @@
     ? &ASSIGN (($)&LF
   input: ''
   exception: true
-  output: Missing CLOSE_PAR
+  output: '[Parser] Missing CLOSE_PAR'
   languages:
   - All
 - description: Missing (
@@ -224,7 +215,16 @@
     ? &ASSIGN ($))&LF
   input: ''
   exception: true
-  output: Unexpected token CLOSE_PAR
+  output: '[Parser] Unexpected token CLOSE_PAR'
+  languages:
+  - All
+- description: Division by Zero
+  code: |-
+    &COM Division by Zero
+    ? &ASSIGN 1/0&LF
+  input: ''
+  exception: true
+  output: '[Semantic] Division by zero'
   languages:
   - All
 - description: Wrong Print
@@ -233,7 +233,7 @@
     &WPRINT&FLP$&FRP&LF
   input: ''
   exception: true
-  output: Unexpected token OPEN_PAR
+  output: '[Parser] Unexpected token OPEN_PAR'
   languages:
   - All
 - description: No Operator
@@ -243,7 +243,7 @@
     ? &ASSIGN $ X&LF
   input: ''
   exception: true
-  output: Unexpected token IDEN
+  output: '[Parser] Unexpected token IDEN'
   languages:
   - All
 - description: Missing (
@@ -252,7 +252,7 @@
     &PRINT $&FRP&LF
   input: ''
   exception: true
-  output: Unexpected token INT (expected OPEN_PAR)
+  output: '[Parser] Unexpected token INT (expected OPEN_PAR)'
   languages:
   - All
 - description: Missing )
@@ -261,7 +261,7 @@
     &PRINT&FLP$&LF
   input: ''
   exception: true
-  output: Unexpected token EOL (expected CLOSE_PAR)
+  output: '[Parser] Unexpected token EOL (expected CLOSE_PAR)'
   languages:
   - All
 - description: Missing ()
@@ -271,7 +271,7 @@
     &PRINT $&LF
   input: ''
   exception: true
-  output: Unexpected token INT (expected OPEN_PAR)
+  output: '[Parser] Unexpected token INT (expected OPEN_PAR)'
   languages:
   - All
 - description: Missing Identifier
@@ -281,7 +281,7 @@
     &PRINT&FLPX1&FRP&LF
   input: ''
   exception: true
-  output: Identifier not found
+  output: '[Semantic] Identifier not found'
   languages:
   - All
 - description: Invalid Identifier Name
@@ -291,7 +291,7 @@
     &PRINT&FLP1x&FRP&LF
   input: ''
   exception: true
-  output: Unexpected token IDEN
+  output: '[Parser] Unexpected token IDEN'
   languages:
   - All
 - description: Use Print as Identifier
@@ -300,7 +300,7 @@
     &PRINT &ASSIGN ?&LF
   input: ''
   exception: true
-  output: Unexpected token ASSIGN (expected OPEN_PAR)
+  output: '[Parser] Unexpected token ASSIGN (expected OPEN_PAR)'
   languages:
   - All
 - description: Missing )
@@ -309,7 +309,7 @@
     &PRINT&FLP$&COM&FRP&LF
   input: ''
   exception: true
-  output: Unexpected token EOL (expected CLOSE_PAR)
+  output: '[Parser] Unexpected token EOL (expected CLOSE_PAR)'
   languages:
   - All
 - description: Use Number as Identifier
@@ -318,6 +318,6 @@
     3 &ASSIGN $ + $&LF
   input: ''
   exception: true
-  output: Unexpected token INT
+  output: '[Parser] Unexpected token INT'
   languages:
   - All

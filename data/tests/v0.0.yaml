@@ -10,7 +10,7 @@
     +$
   input: ''
   exception: true
-  output: Unexpected token PLUS (expected INT)
+  output: 'Unexpected token PLUS (expected INT)'
   languages:
   - All
 - description: Starting with Operator -
@@ -18,7 +18,7 @@
     -$
   input: ''
   exception: true
-  output: Unexpected token MINUS (expected INT)
+  output: 'Unexpected token MINUS (expected INT)'
   languages:
   - All
 - description: Missing Number After +
@@ -26,7 +26,7 @@
     $+
   input: ''
   exception: true
-  output: Unexpected token EOF (expected INT)
+  output: 'Unexpected token EOF (expected INT)'
   languages:
   - All
 - description: Missing Number After -
@@ -34,7 +34,7 @@
     $-
   input: ''
   exception: true
-  output: Unexpected token EOF (expected INT)
+  output: 'Unexpected token EOF (expected INT)'
   languages:
   - All
 - description: Two Consecultives Operators ++
@@ -42,7 +42,7 @@
     $++$
   input: ''
   exception: true
-  output: Unexpected token PLUS (expected INT)
+  output: 'Unexpected token PLUS (expected INT)'
   languages:
   - All
 - description: Two Consecultives Operators +-
@@ -50,7 +50,7 @@
     $+-$
   input: ''
   exception: true
-  output: Unexpected token MINUS (expected INT)
+  output: 'Unexpected token MINUS (expected INT)'
   languages:
   - All
 - description: Two Consecultives Operators -+
@@ -58,7 +58,7 @@
     $-+$
   input: ''
   exception: true
-  output: Unexpected token PLUS (expected INT)
+  output: 'Unexpected token PLUS (expected INT)'
   languages:
   - All
 - description: Two Consecultives Operators --
@@ -66,14 +66,14 @@
     $--$
   input: ''
   exception: true
-  output: Unexpected token MINUS (expected INT)
+  output: 'Unexpected token MINUS (expected INT)'
   languages:
   - All
 - description: Empty Input
   code: ""
   input: ''
   exception: true
-  output: Unexpected token EOF (expected INT)
+  output: 'Unexpected token EOF (expected INT)'
   languages:
   - All
 - description: Only Operator +
@@ -81,7 +81,7 @@
     +
   input: ''
   exception: true
-  output: Unexpected token PLUS (expected INT)
+  output: 'Unexpected token PLUS (expected INT)'
   languages:
   - All
 - description: Only Operator -
@@ -89,7 +89,7 @@
     -
   input: ''
   exception: true
-  output: Unexpected token MINUS (expected INT)
+  output: 'Unexpected token MINUS (expected INT)'
   languages:
   - All
 - description: No Operator
@@ -97,14 +97,14 @@
     $ $
   input: ''
   exception: true
-  output: Unexpected token INT (expected EOF)
+  output: 'Unexpected token INT (expected EOF)'
   languages:
   - All
 - description: Invalid Token
   code: |-
-    ,
+    @
   input: ''
   exception: true
-  output: Invalid token ,
+  output: 'Invalid token @'
   languages:
   - All

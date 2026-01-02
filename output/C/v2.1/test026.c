@@ -1,3 +1,3 @@
 // Unexpected token IDEN
 X = 1;
-t = 7 X;
+f = 8 X;

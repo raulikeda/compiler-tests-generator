@@ -1,2 +1,2 @@
 // Missing OPEN_PAR
-z = scanf;
+q = scanf;
