@@ -1,2 +1,2 @@
 // Unexpected token INT (expected EOL)
-f = 4 9;
+i = 3 5;

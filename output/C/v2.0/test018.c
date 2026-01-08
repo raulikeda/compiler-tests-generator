@@ -1,2 +1,2 @@
 // Unexpected token DIV
-g = 2*/5;
+w = 7*/2;

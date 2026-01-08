@@ -1,4 +1,4 @@
 void main() {
   // Division by Zero
-  int k = 1/0;
+  int o = 1/0;
 }

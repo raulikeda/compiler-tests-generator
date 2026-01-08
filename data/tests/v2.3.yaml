@@ -100,10 +100,11 @@
     &MAINCALL &COM Teste do filter
   input: |-
     3
-  exception: true
+  exception: false
   output: |-
     2
     24
+    7
     8
     9
     0
@@ -131,7 +132,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN $+&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $+&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -143,7 +144,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN $-&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $-&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -155,7 +156,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN &LF
+      &PINT&VAR #&TSEP&INT &ASSIGN &LF
     &RBRA
     &MAINCALL
   input: ''
@@ -167,7 +168,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN +&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN +&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -179,7 +180,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN -&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN -&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -191,7 +192,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token INT (expected EOL)
-      &PINT&VAR ?&TSEP&INT &ASSIGN $ $&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $ $&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -203,7 +204,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Invalid token @
-      &PINT&VAR ?&TSEP&INT &ASSIGN @&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN @&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -215,7 +216,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token MULT
-      &PINT&VAR ?&TSEP&INT &ASSIGN *$&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN *$&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -227,7 +228,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token DIV
-      &PINT&VAR ?&TSEP&INT &ASSIGN /$&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN /$&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -239,7 +240,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN $*&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $*&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -251,7 +252,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOL
-      &PINT&VAR ?&TSEP&INT &ASSIGN $/&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $/&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -263,7 +264,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token MULT
-      &PINT&VAR ?&TSEP&INT &ASSIGN *&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN *&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -275,7 +276,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token DIV
-      &PINT&VAR ?&TSEP&INT &ASSIGN /&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN /&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -287,7 +288,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token MULT
-      &PINT&VAR ?&TSEP&INT &ASSIGN $+*$&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $+*$&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -299,7 +300,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token DIV
-      &PINT&VAR ?&TSEP&INT &ASSIGN $+/$&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $+/$&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -311,7 +312,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token CLOSE_BRA
-      &PINT&VAR ?&TSEP&INT &ASSIGN &COM$&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN &COM$&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -323,7 +324,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token DIV
-      &PINT&VAR ?&TSEP&INT &ASSIGN $*/$&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $*/$&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -335,7 +336,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token MULT
-      &PINT&VAR ?&TSEP&INT &ASSIGN $/*$&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $/*$&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -347,7 +348,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing CLOSE_PAR
-      &PINT&VAR ?&TSEP&INT &ASSIGN ($&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN ($&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -359,7 +360,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token CLOSE_PAR
-      &PINT&VAR ?&TSEP&INT &ASSIGN $)&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $)&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -371,7 +372,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing CLOSE_PAR
-      &PINT&VAR ?&TSEP&INT &ASSIGN (($)&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN (($)&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -383,7 +384,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token CLOSE_PAR
-      &PINT&VAR ?&TSEP&INT &ASSIGN ($))&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN ($))&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -395,7 +396,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Division by Zero
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1/0&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1/0&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -412,7 +413,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: '[Parser] Unexpected token OPEN_PAR'
+  output: '[Semantic] Undefined variable (function)'
   languages:
   - All
 - description: No Operator
@@ -420,7 +421,7 @@
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token IDEN
       &PINT&VAR L&TSEP&INT &ASSIGN 1&LF
-      &PINT&VAR ?&TSEP&INT &ASSIGN $ L&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $ L&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -482,7 +483,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token EOF (expected CLOSE_BRA)
-      &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $&LF
     &MAINCALL
   input: ''
   exception: true
@@ -494,7 +495,7 @@
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
         &COM Unexpected token FUNC or OPEN_PAR
-        &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
+        &PINT&VAR #&TSEP&INT &ASSIGN $&LF
       &RBRA
     &RBRA
     &MAINCALL
@@ -507,7 +508,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token CLOSE_BRA (expected EOF)
-      &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $&LF
     &RBRA
     &RBRA
     &MAINCALL
@@ -531,7 +532,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: '[Parser] Unexpected token EOF (expected OPEN_BRA)'
+  output: '[Semantic] Undefined function main'
   languages:
   - All
 - description: Invalid Identifier Name
@@ -551,7 +552,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected token ASSIGN (expected OPEN_PAR)
-      &PRINT &ASSIGN ?&LF
+      &PRINT &ASSIGN #&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -587,8 +588,8 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected EOF (Missing CLOSE_BRA)
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ 1&ERP &LBRA
+      &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
+      &IF &ELP# &EQ 1&ERP &LBRA
     &RBRA
     &MAINCALL
   input: ''
@@ -600,9 +601,9 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_BRA
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ 1&ERP
-        ? &ASSIGN 2&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
+      &IF &ELP# &EQ 1&ERP
+        # &ASSIGN 2&LF
       &RBRA
     &RBRA
     &MAINCALL
@@ -615,11 +616,11 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected EOF (Missing CLOSE_BRA)
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ 1&ERP &LBRA
-        ? &ASSIGN 2&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
+      &IF &ELP# &EQ 1&ERP &LBRA
+        # &ASSIGN 2&LF
       &RBRA &ELSE &LBRA
-        ? &ASSIGN 3&LF
+        # &ASSIGN 3&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -631,11 +632,11 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_BRA
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ 1&ERP &LBRA
-        ? &ASSIGN 2&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
+      &IF &ELP# &EQ 1&ERP &LBRA
+        # &ASSIGN 2&LF
       &RBRA &ELSE
-        ? &ASSIGN 3&LF
+        # &ASSIGN 3&LF
       &RBRA
     &RBRA
     &MAINCALL
@@ -648,9 +649,9 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected EOF (Missing CLOSE_BRA)
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &WHILE &ELP? &EQ 1&ERP &LBRA
-        ? &ASSIGN 2&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
+      &WHILE &ELP# &EQ 1&ERP &LBRA
+        # &ASSIGN 2&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -662,9 +663,9 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_BRA
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &WHILE &ELP? &EQ 1&ERP
-        ? &ASSIGN 2&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
+      &WHILE &ELP# &EQ 1&ERP
+        # &ASSIGN 2&LF
       &RBRA
     &RBRA
     &MAINCALL
@@ -677,13 +678,13 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected ELSE
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ 1&ERP &LBRA
-        ? &ASSIGN 2&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
+      &IF &ELP# &EQ 1&ERP &LBRA
+        # &ASSIGN 2&LF
       &RBRA &ELSE &LBRA
-        ? &ASSIGN 3&LF
+        # &ASSIGN 3&LF
       &RBRA &ELSE &LBRA
-        ? &ASSIGN 4&LF
+        # &ASSIGN 4&LF
       &RBRA
     &RBRA
     &MAINCALL
@@ -696,9 +697,9 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing Right Expression
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &EQ&ERP &LBRA
-        ? &ASSIGN 2&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
+      &IF &ELP# &EQ&ERP &LBRA
+        # &ASSIGN 2&LF
       &RBRA
     &RBRA
     &MAINCALL
@@ -711,9 +712,9 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing Right Expression
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &GT&ERP &LBRA
-        ? &ASSIGN 2&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
+      &IF &ELP# &GT&ERP &LBRA
+        # &ASSIGN 2&LF
       &RBRA
     &RBRA
     &MAINCALL
@@ -726,9 +727,9 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing Right Expression
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
-      &IF &ELP? &LT&ERP &LBRA
-        ? &ASSIGN 2&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
+      &IF &ELP# &LT&ERP &LBRA
+        # &ASSIGN 2&LF
       &RBRA
     &RBRA
     &MAINCALL
@@ -741,9 +742,9 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing Right Expression
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
       &IF &ELP&NOT&ERP &LBRA
-        ? &ASSIGN 2&LF
+        # &ASSIGN 2&LF
       &RBRA
     &RBRA
     &MAINCALL
@@ -756,7 +757,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_PAR
-      &PINT&VAR ?&TSEP&INT &ASSIGN &SCAN&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN &SCAN&LF
     &RBRA
     &MAINCALL
   input: |-
@@ -769,7 +770,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing CLOSE_PAR
-      &PINT&VAR ?&TSEP&INT &ASSIGN &SCAN&FLP&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN &SCAN&FLP&LF
     &RBRA
     &MAINCALL
   input: |-
@@ -878,7 +879,7 @@
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_BRA
       &IF &ELP1 &EQ 1&ERP
-        ? &ASSIGN $&LF
+        # &ASSIGN $&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -892,7 +893,7 @@
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_BRA
       &WHILE &ELP1 &EQ 1&ERP
-        ? &ASSIGN $&LF
+        # &ASSIGN $&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -906,7 +907,7 @@
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_PAR
       &IF 1 &EQ 1 &LBRA
-        &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
+        &PINT&VAR #&TSEP&INT &ASSIGN $&LF
       &RBRA
     &RBRA
     &MAINCALL
@@ -922,7 +923,7 @@
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Missing OPEN_PAR
       &WHILE 1 &EQ 1 &LBRA
-        &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
+        &PINT&VAR #&TSEP&INT &ASSIGN $&LF
       &RBRA
     &RBRA
     &MAINCALL
@@ -988,7 +989,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
-      &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN &TRUE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1000,7 +1001,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
-      &PINT&VAR ?&TSEP&INT &ASSIGN "a"&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN "a"&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1012,7 +1013,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN $&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1024,7 +1025,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN "a"&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1036,7 +1037,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN $&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1048,7 +1049,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
-      &PSTR&VAR ?&TSEP&STR &ASSIGN $&LF
+      &PSTR&VAR #&TSEP&STR &ASSIGN $&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1060,7 +1061,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
-      &PSTR&VAR ?&TSEP&STR &ASSIGN &FALSE&LF
+      &PSTR&VAR #&TSEP&STR &ASSIGN &FALSE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1072,7 +1073,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible types
-      &PSTR&VAR ?&TSEP&STR &ASSIGN &SCAN&FLP&FRP&LF
+      &PSTR&VAR #&TSEP&STR &ASSIGN &SCAN&FLP&FRP&LF
     &RBRA
     &MAINCALL
   input: |-
@@ -1085,8 +1086,8 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Variable Already Declared
-      &PINT&VAR ?&TSEP&INT&LF
-      &PSTR&VAR ?&TSEP&STR&LF
+      &PINT&VAR #&TSEP&INT&LF
+      &PSTR&VAR #&TSEP&STR&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1098,7 +1099,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Unexpected EOF
-      &PSTR&VAR ?&TSEP&STR &ASSIGN "a&LF
+      &PSTR&VAR #&TSEP&STR &ASSIGN "a&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1110,7 +1111,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Variable not found
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &WTRUE&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN &WTRUE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1122,7 +1123,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&EQ"a"&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN $&EQ"a"&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1134,7 +1135,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN 1&EQ&TRUE&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN 1&EQ&TRUE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1146,7 +1147,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&EQ&TRUE&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN "a"&EQ&TRUE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1158,7 +1159,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&GT"a"&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN $&GT"a"&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1170,7 +1171,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN 1&GT&TRUE&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN 1&GT&TRUE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1182,7 +1183,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&LT&TRUE&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN "a"&LT&TRUE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1194,7 +1195,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN $&LT"a"&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN $&LT"a"&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1206,7 +1207,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &TRUE<$&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN &TRUE<$&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1218,7 +1219,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"<&TRUE&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN "a"<&TRUE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1230,7 +1231,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&AND$&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN "a"&AND$&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1242,7 +1243,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&OR$&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN "a"&OR$&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1254,7 +1255,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN &NOT$&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN &NOT$&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1266,7 +1267,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1+&TRUE&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1+&TRUE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1278,7 +1279,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE+1&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN &TRUE+1&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1290,7 +1291,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1-&TRUE&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1-&TRUE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1302,7 +1303,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE-1&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN &TRUE-1&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1314,7 +1315,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN 1*&TRUE&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN 1*&TRUE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1326,7 +1327,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE*1&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN &TRUE*1&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1338,7 +1339,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN $/&TRUE&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN $/&TRUE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1350,7 +1351,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE/1&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN &TRUE/1&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1362,7 +1363,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PINT&VAR ?&TSEP&INT &ASSIGN &TRUE&OR&FALSE&LF
+      &PINT&VAR #&TSEP&INT &ASSIGN &TRUE&OR&FALSE&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1374,7 +1375,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PSTR&VAR ?&TSEP&STR &ASSIGN $+$&LF
+      &PSTR&VAR #&TSEP&STR &ASSIGN $+$&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1386,7 +1387,7 @@
   code: |-
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Incompatible Types
-      &PBOOL&VAR ?&TSEP&BOOL &ASSIGN "a"&CONCAT"b"&LF
+      &PBOOL&VAR #&TSEP&BOOL &ASSIGN "a"&CONCAT"b"&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1456,7 +1457,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: '[Semantic] Missing second arg'
+  output: '[Parser] Unexpected token CLOSE_PAR'
   languages:
   - All
 - description: Missing second arg
@@ -1471,7 +1472,7 @@
     &MAINCALL
   input: ''
   exception: true
-  output: '[Semantic] Missing second arg'
+  output: '[Parser] Unexpected token CLOSE_PAR'
   languages:
   - All
 - description: Number of args wrong
@@ -1551,10 +1552,10 @@
   - All
 - description: Function not found
   code: |-
-    &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
+    &PINT&VAR #&TSEP&INT &ASSIGN $&LF
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Function not found
-      &PRINT&FLP?&FLP$&FRP&FRP&LF
+      &PRINT&FLP#&FLP$&FRP&FRP&LF
     &RBRA
     &MAINCALL
   input: ''
@@ -1567,9 +1568,9 @@
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &COM Var out of scope
       &LBRA
-        &PINT&VAR ?&TSEP&INT &ASSIGN $&LF
+        &PINT&VAR #&TSEP&INT &ASSIGN $&LF
       &RBRA
-      ? &ASSIGN $&LF
+      # &ASSIGN $&LF
     &RBRA
     &MAINCALL
   input: ''

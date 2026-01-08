@@ -1,6 +1,6 @@
 void main() {
   // Unexpected EOF (Missing CLOSE_BRA)
-  int t = 1;
-  while (t == 1) {
-    t = 2;
+  int k = 1;
+  while (k == 1) {
+    k = 2;
 }

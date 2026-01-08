@@ -1,0 +1,57 @@
+- description: Valid Input
+  code: |-
+    &COM Float implementation
+    &PINT&VAR n&TSEP&INT &ASSIGN 5&LF
+    &PFLOAT&VAR y&TSEP&FLOAT &ASSIGN 1.6&LF
+
+    y &ASSIGN (&FLOAT&PFLOAT) n + y&LF
+    &PRINT&FLP(&INT&PINT) y&FRP&LF
+    &IF &ELP(&BOOL&PBOOL) y&ERP &LBRA
+      y &ASSIGN 2/3 + 1/3&LF
+    &RBRA
+    &PRINT&FLP(&INT&PINT) y&FRP&LF
+    &PRINT&FLP(&STR&PSTR) n &CONCAT "A"&FRP&LF
+  input: ''
+  exception: false
+  output: |-
+    7
+    1
+    5A
+  languages:
+  - All
+- description: Incorrect Type Assignment
+  code: |-
+    &COM Incorrect Type Assignment
+    &PINT&VAR n&TSEP&INT &ASSIGN 5.1&LF
+  input: ''
+  exception: true
+  output: '[Semantic] Unexpected type FLOAT assigned to INT variable'
+  languages:
+  - All
+- description: Incorrect casting
+  code: |-
+    &COM Incorrect Type Assignment
+    &PINT&VAR n&TSEP&INT &ASSIGN (&FLOAT&PFLOAT) "5.1"&LF
+  input: ''
+  exception: true
+  output: '[Semantic] Unexpected type FLOAT assigned to INT variable'
+  languages:
+  - All
+- description: Missing close par in casting
+  code: |-
+    &COM Missing close par in casting
+    &PINT&VAR n&TSEP&INT &ASSIGN (&INT&PINT "5"&LF
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token STR'
+  languages:
+  - All
+- description: Wrong Type in Binary Operator
+  code: |-
+    &COM Wrong Type in Binary Operator
+    &PFLOAT&VAR n&TSEP&FLOAT &ASSIGN 1.1 * "5.1"&LF
+  input: ''
+  exception: true
+  output: '[Semantic] Diffenrent types in binary operation: FLOAT and STR'
+  languages:
+  - All

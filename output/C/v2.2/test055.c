@@ -1,2 +1,2 @@
 // Incompatible types
-bool v = 9;
+bool a = 8;

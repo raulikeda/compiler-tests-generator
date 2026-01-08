@@ -1,2 +1,2 @@
 // Unexpected token MULT
-int m = 1+*5;
+int g = 3+*8;

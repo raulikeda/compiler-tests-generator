@@ -1,4 +1,4 @@
 void main() {
   // Unexpected token INT (expected EOL)
-  int r = 7 3;
+  int i = 2 4;
 }

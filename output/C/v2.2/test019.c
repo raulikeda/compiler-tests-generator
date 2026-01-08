@@ -1,2 +1,2 @@
 // Unexpected token MULT
-int a = 1/*7;
+int e = 9/*7;

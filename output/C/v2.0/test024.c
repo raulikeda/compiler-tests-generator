@@ -1,2 +1,2 @@
 // Division by Zero
-u = 1/0;
+s = 1/0;

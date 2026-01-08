@@ -1,3 +1,3 @@
 // Variable Already Declared
-int v;
-str v;
+int e;
+str e;

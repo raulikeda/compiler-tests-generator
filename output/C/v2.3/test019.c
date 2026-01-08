@@ -1,4 +1,4 @@
 void main() {
   // Unexpected token MULT
-  int z = 6/*2;
+  int t = 9/*3;
 }

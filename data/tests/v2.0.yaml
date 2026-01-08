@@ -23,7 +23,7 @@
 - description: Missing Expression After +
   code: |-
     &COM Unexpected token EOL
-    ? &ASSIGN $+&LF
+    # &ASSIGN $+&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token EOL'
@@ -32,7 +32,7 @@
 - description: Missing Expression After -
   code: |-
     &COM Unexpected token EOL
-    ? &ASSIGN $-&LF
+    # &ASSIGN $-&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token EOL'
@@ -41,7 +41,7 @@
 - description: Empty Expression
   code: |-
     &COM Unexpected token EOL
-    ? &ASSIGN &LF
+    # &ASSIGN &LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token EOL'
@@ -50,7 +50,7 @@
 - description: Missing Expression After +
   code: |-
     &COM Unexpected token EOL
-    ? &ASSIGN +&LF
+    # &ASSIGN +&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token EOL'
@@ -59,7 +59,7 @@
 - description: Missing Expression After -
   code: |-
     &COM Unexpected token EOL
-    ? &ASSIGN -&LF
+    # &ASSIGN -&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token EOL'
@@ -68,7 +68,7 @@
 - description: No Operator
   code: |-
     &COM Unexpected token INT (expected EOL)
-    ? &ASSIGN $ $&LF
+    # &ASSIGN $ $&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token INT'
@@ -77,7 +77,7 @@
 - description: Invalid Token
   code: |-
     &COM Invalid token @
-    ? &ASSIGN @&LF
+    # &ASSIGN @&LF
   input: ''
   exception: true
   output: '[Lexer] Invalid token @'
@@ -86,7 +86,7 @@
 - description: Starting with Operator *
   code: |-
     &COM Unexpected token MULT
-    ? &ASSIGN *$&LF
+    # &ASSIGN *$&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token MULT'
@@ -95,7 +95,7 @@
 - description: Starting with Operator /
   code: |-
     &COM Unexpected token DIV
-    ? &ASSIGN /$&LF
+    # &ASSIGN /$&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token DIV'
@@ -104,7 +104,7 @@
 - description: Missing Number After *
   code: |-
     &COM Unexpected token EOL
-    ? &ASSIGN $*&LF
+    # &ASSIGN $*&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token EOL'
@@ -113,7 +113,7 @@
 - description: Missing Number After /
   code: |-
     &COM Unexpected token EOL
-    ? &ASSIGN $/&LF
+    # &ASSIGN $/&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token EOL'
@@ -122,7 +122,7 @@
 - description: Only Operator *
   code: |-
     &COM Unexpected token MULT
-    ? &ASSIGN *&LF
+    # &ASSIGN *&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token MULT'
@@ -131,7 +131,7 @@
 - description: Only Operator /
   code: |-
     &COM Unexpected token DIV
-    ? &ASSIGN /&LF
+    # &ASSIGN /&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token DIV'
@@ -140,7 +140,7 @@
 - description: Two Consecultives Operators +*
   code: |-
     &COM Unexpected token MULT
-    ? &ASSIGN $+*$&LF
+    # &ASSIGN $+*$&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token MULT'
@@ -149,7 +149,7 @@
 - description: Two Consecultives Operators +/
   code: |-
     &COM Unexpected token DIV
-    ? &ASSIGN $+/$&LF
+    # &ASSIGN $+/$&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token DIV'
@@ -158,7 +158,7 @@
 - description: Wrong Comment
   code: |-
     &COM Unexpected token EOF
-    ? &ASSIGN &COM$&LF
+    # &ASSIGN &COM$&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token EOF'
@@ -167,7 +167,7 @@
 - description: Two Consecultives Operators */
   code: |-
     &COM Unexpected token DIV
-    ? &ASSIGN $*/$&LF
+    # &ASSIGN $*/$&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token DIV'
@@ -176,7 +176,7 @@
 - description: Two Consecultives Operators /*
   code: |-
     &COM Unexpected token MULT
-    ? &ASSIGN $/*$&LF
+    # &ASSIGN $/*$&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token MULT'
@@ -185,7 +185,7 @@
 - description: Missing )
   code: |-
     &COM Missing CLOSE_PAR
-    ? &ASSIGN ($&LF
+    # &ASSIGN ($&LF
   input: ''
   exception: true
   output: '[Parser] Missing CLOSE_PAR'
@@ -194,7 +194,7 @@
 - description: Missing (
   code: |-
     &COM Unexpected token CLOSE_PAR
-    ? &ASSIGN $)&LF
+    # &ASSIGN $)&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token CLOSE_PAR'
@@ -203,7 +203,7 @@
 - description: Missing )
   code: |-
     &COM Missing CLOSE_PAR
-    ? &ASSIGN (($)&LF
+    # &ASSIGN (($)&LF
   input: ''
   exception: true
   output: '[Parser] Missing CLOSE_PAR'
@@ -212,7 +212,7 @@
 - description: Missing (
   code: |-
     &COM Unexpected token CLOSE_PAR
-    ? &ASSIGN ($))&LF
+    # &ASSIGN ($))&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token CLOSE_PAR'
@@ -221,7 +221,7 @@
 - description: Division by Zero
   code: |-
     &COM Division by Zero
-    ? &ASSIGN 1/0&LF
+    # &ASSIGN 1/0&LF
   input: ''
   exception: true
   output: '[Semantic] Division by zero'
@@ -240,7 +240,7 @@
   code: |-
     &COM Unexpected token IDEN
     X &ASSIGN 1&LF
-    ? &ASSIGN $ X&LF
+    # &ASSIGN $ X&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token IDEN'
@@ -297,7 +297,7 @@
 - description: Use Print as Identifier
   code: |-
     &COM Unexpected token ASSIGN (expected OPEN_PAR)
-    &PRINT &ASSIGN ?&LF
+    &PRINT &ASSIGN #&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token ASSIGN (expected OPEN_PAR)'

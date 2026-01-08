@@ -1,3 +1,3 @@
 // Unexpected token CLOSE_BRA (expected EOF)
-int u = 4;
+int h = 2;
 }

@@ -1,6 +1,6 @@
 void main() {
   void main() {
     // Unexpected token FUNC or OPEN_PAR
-    int m = 2;
+    int o = 2;
   }
 }

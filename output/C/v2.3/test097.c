@@ -3,5 +3,5 @@ int test(int x) {
 }
 void main() {
   // Number of args wrong
-  printf(test(3, 1));
+  printf(test(9, 5));
 }

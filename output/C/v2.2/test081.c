@@ -1,2 +1,2 @@
 // Incompatible Types
-int k = true*1;
+int j = true*1;

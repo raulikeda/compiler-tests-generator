@@ -1,0 +1,101 @@
+- description: Valid Input
+  code: |-
+    &COM Struct implementation
+
+    &ISTRUCT Student &LBRA
+      &PSTR&VAR name&TSEP&STR&LF
+      &PINT&VAR age&TSEP&INT&LF
+      &PFLOAT&VAR grade&TSEP&FLOAT&LF
+    &RBRA&LF
+
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+      &ISTRUCT Student student1&LF
+      student1&DOTname &ASSIGN "John Doe"&LF
+      student1&DOTage &ASSIGN 20&LF
+      student1&DOTgrade &ASSIGN 8.7&LF
+
+      student1&DOTage &ASSIGN student1&DOTage + 1&LF
+      &PRINT&FLPstudent1&DOTname&FRP&LF
+      &PRINT&FLPstudent1&DOTage&FRP&LF
+      &PRINT&FLP(&INT&PINT) student1&DOTgrade&FRP&LF
+
+    &RBRA
+    &MAINCALL &COM test main function call
+  input: ''
+  exception: false
+  output: |-
+    John Doe
+    21
+    9
+  languages:
+  - All
+- description: Incomplete struct Statement
+  code: |-
+    &COM Struct implementation
+
+    &ISTRUCT Student &LBRA
+      &PSTR&VAR name&TSEP&STR&LF
+    &RBRA
+
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+    &RBRA
+    &MAINCALL &COM test main function call
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token EOL'
+  languages:
+  - All
+- description: Invalid struct operation
+  code: |-
+    &COM Invalid struct operation
+
+    &ISTRUCT Student &LBRA
+      &PINT&VAR age&TSEP&INT&LF
+    &RBRA&LF
+    
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+      &ISTRUCT Student student1&LF
+      student1 &ASSIGN 20&LF
+    &RBRA
+    &MAINCALL &COM test main function call
+  input: ''
+  exception: true
+  output: '[Semantic] Wrong Assignment to struct variable'
+  languages:
+  - All
+- description: Invalid struct operation
+  code: |-
+    &COM Invalid struct operation
+
+    &ISTRUCT Student &LBRA
+      &PINT&VAR age&TSEP&INT&LF
+    &RBRA&LF
+    
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+      &ISTRUCT Student student1&LF
+      &PINT&VAR n&TSEP&INT &ASSIGN student1&LF
+    &RBRA
+    &MAINCALL &COM test main function call
+  input: ''
+  exception: true
+  output: '[Semantic] Wrong Assignment from struct variable'
+  languages:
+  - All
+- description: Attribute not found in struct
+  code: |-
+    &COM Attribute not found in struct
+
+    &ISTRUCT Student &LBRA
+      &PINT&VAR age&TSEP&INT&LF
+    &RBRA&LF
+    
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+      &ISTRUCT Student student1&LF
+      student1&DOTages &ASSIGN 20&LF
+    &RBRA
+    &MAINCALL &COM test main function call
+  input: ''
+  exception: true
+  output: '[Semantic] Attribute not found in struct: ages'
+  languages:
+  - All

@@ -1,2 +1,2 @@
 // Unexpected token EOL
-int a = 9*;
+int h = 6*;

@@ -1,2 +1,2 @@
 // Incomplete immutable variable declaration
-&const x;
+const x;

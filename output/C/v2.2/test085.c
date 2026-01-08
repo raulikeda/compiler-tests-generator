@@ -1,2 +1,2 @@
 // Incompatible Types
-str j = 1+3;
+str z = 2+2;

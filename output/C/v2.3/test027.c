@@ -1,4 +1,4 @@
 void main() {
   // Unexpected token INT (expected OPEN_PAR)
-  printf 1);
+  printf 9);
 }

@@ -1,2 +1,2 @@
 // Incompatible types
-int a = "a";
+int z = "a";

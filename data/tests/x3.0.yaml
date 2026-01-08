@@ -1,0 +1,32 @@
+- description: Valid Input
+  code: |-
+    &COM Function implementation
+
+    &PINT&FN fac&FLP&PINT&PSEPx&TSEP&INT&FRP&FSEP &INT&WS&LBRA
+      &IF &ELPx &EQ 1&ERP &LBRA
+        &RETURN 1&LF
+      &RBRA
+      &PRINT&FLPx&FRP&LF
+      &RETURN mult&FLPx&ARGSEP fac&FLPx-1&FRP&FRP&LF
+    &RBRA
+
+    &PINT&FN mult&FLP&PINT&PSEPx&TSEP&INT&ARGSEP &PINT&PSEPy&TSEP&INT&FRP&FSEP &INT&WS&LBRA
+      &RETURN x * y&LF
+    &RBRA
+
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+      &PINT&VAR n&TSEP&INT &ASSIGN 5&LF
+      &PRINT&FLPfac&FLPn&FRP&FRP&LF
+    &RBRA
+    &MAINCALL &COM test main function call
+
+  input: ''
+  exception: false
+  output: |-
+    5
+    4
+    3
+    2
+    120
+  languages:
+  - All

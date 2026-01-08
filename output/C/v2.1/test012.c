@@ -1,2 +1,2 @@
 // Unexpected token EOL
-b = 6/;
+o = 3/;

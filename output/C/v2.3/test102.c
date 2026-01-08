@@ -1,7 +1,7 @@
 void main() {
   // Var out of scope
   {
-    int q = 3;
+    int y = 3;
   }
-  q = 7;
+  y = 5;
 }

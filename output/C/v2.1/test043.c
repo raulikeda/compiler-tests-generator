@@ -1,9 +1,9 @@
 // Unexpected ELSE
-g = 1;
-if (g == 1) {
-  g = 2;
+p = 1;
+if (p == 1) {
+  p = 2;
 } else {
-  g = 3;
+  p = 3;
 } else {
-  g = 4;
+  p = 4;
 }

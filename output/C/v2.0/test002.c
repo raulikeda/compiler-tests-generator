@@ -1,2 +1,2 @@
 // Unexpected token EOL
-y = 9+;
+f = 1+;

@@ -1,2 +1,2 @@
 // Division by Zero
-int x = 1/0;
+int r = 1/0;

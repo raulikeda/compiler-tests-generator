@@ -1,2 +1,2 @@
 // Incompatible Types
-bool z = !8;
+bool m = !3;

@@ -1,7 +1,7 @@
 void main() {
   // Missing Right Expression
-  int m = 1;
+  int g = 1;
   if (!) {
-    m = 2;
+    g = 2;
   }
 }

@@ -1,5 +1,5 @@
 void main() {
   // Unexpected EOF (Missing CLOSE_BRA)
-  int o = 1;
-  if (o == 1) {
+  int t = 1;
+  if (t == 1) {
 }

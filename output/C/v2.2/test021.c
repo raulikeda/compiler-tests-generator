@@ -1,2 +1,2 @@
 // Unexpected token CLOSE_PAR
-int n = 1);
+int j = 7);

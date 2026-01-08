@@ -1,0 +1,70 @@
+- description: Valid Input
+  code: |-
+    &COM For implementation
+    n &ASSIGN 5&LF
+    y &ASSIGN 1&LF
+    i &ASSIGN 0&LF
+    &FOR (i &ASSIGN 0; i &LT n; i &ASSIGN i + 1)
+    &LBRA
+      n &ASSIGN n * i&LF
+    &RBRA
+    &PRINT&FLPi &EQ n &QUESTION y : n&FRP&LF
+    &PRINT&FLPi &EQ n+1 &QUESTION y : n&FRP&LF
+  input: ''
+  exception: false
+  output: |-
+    120
+    5
+  languages:
+  - All
+- description: Incomplete for Statement
+  code: |-
+    &COM Incomplete For implementation
+    n &ASSIGN 5&LF
+    i &ASSIGN 0&LF
+    &FOR (i &ASSIGN 0; i &LT n)&LF
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token CLOSE_PAR'
+  languages:
+  - All
+- description: Incomplete for Statement
+  code: |-
+    &COM Incomplete For implementation
+    n &ASSIGN 5&LF
+    i &ASSIGN 0&LF
+    &FOR (i &ASSIGN 0)&LF
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token CLOSE_PAR'
+  languages:
+  - All
+- description: Wrong for Statement
+  code: |-
+    &COM Wrong For implementation (expected expression)
+    n &ASSIGN 5&LF
+    i &ASSIGN 0&LF
+    &FOR (i &ASSIGN 0; i &ASSIGN 0; i &ASSIGN 0)&LF
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token ASSIGN'
+  languages:
+  - All
+- description: Incomplete ternary if Expression
+  code: |-
+    &COM Incomplete ternary if implementation
+    n &ASSIGN 1 &EQ 2 &QUESTION&LF
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token EOL'
+  languages:
+  - All
+- description: Incomplete ternary if Expression
+  code: |-
+    &COM Incomplete ternary if implementation
+    n &ASSIGN 1 &EQ 2 &QUESTION 3&LF
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token EOL'
+  languages:
+  - All

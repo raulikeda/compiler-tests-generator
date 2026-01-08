@@ -1,6 +1,6 @@
 void main() {
   // Missing OPEN_PAR
   while 1 == 1 {
-    int z = 7;
+    int d = 7;
   }
 }

@@ -61,10 +61,10 @@
   z = 2;
   a = "abc";
   b = "def";
-  printf(a.b);
-  printf(a.x_1);
-  printf(x_1.a);
-  printf(a.(x_1==1));
+  printf(a$b);
+  printf(a$x_1);
+  printf(x_1$a);
+  printf(a$(x_1==1));
   printf(a == a);
   printf(a < b);
   printf(a > b);

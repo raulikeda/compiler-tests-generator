@@ -12,14 +12,14 @@ tests:
   description: Incomplete define Statement
   input: []
   output:
-  - '[Parser] Unexpected token EOL'
+  - '[PrePro] Invalid define directive'
   exception: true
 - index: 3
   name: test003
   description: Change Value of Constant
   input: []
   output:
-  - '[Semantic] Variable N not found'
+  - '[Parser] Expected token EOL but found ASSIGN'
   exception: true
 - index: 4
   name: test004

@@ -1,2 +1,2 @@
 // Incompatible Types
-bool s = 4=="a";
+bool q = 5=="a";

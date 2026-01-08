@@ -1,6 +1,6 @@
 // Unexpected EOF (Missing CLOSE_BRA)
-p = 1;
-if (p == 1) {
-  p = 2;
+h = 1;
+if (h == 1) {
+  h = 2;
 } else {
-  p = 3;
+  h = 3;

@@ -65,7 +65,7 @@ python generate.py v2.3 C
 
 ## Test Placeholders
 - `$` in code: replaced by a random integer (1-9)
-- `?` in code: replaced by a random lowercase letter (except 'l')
+- `#` in code: replaced by a random lowercase letter (except 'l')
 - `&NL` in code: replaced by a newline (or removed in v2.1+ YAMLs)
 
 ## Adding a New Language

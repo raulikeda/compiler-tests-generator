@@ -1,3 +1,3 @@
 // Unexpected EOF (Missing CLOSE_BRA)
-w = 1;
-if (w == 1) {
+o = 1;
+if (o == 1) {

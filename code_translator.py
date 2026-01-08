@@ -27,6 +27,16 @@ def translate_code(metalanguage_code, target_language, printable=False):
 
     code = metalanguage_code
 
+    # Replace $ with random int between 1 and 9
+    while '$' in code:
+        code = code.replace('$', str(randint(1, 9)), 1)
+
+    # Replace ? with a random lowercase letter except 'l'
+    letters = [c for c in string.ascii_lowercase if c != 'l']
+    randletter = letters[randint(0, len(letters)-1)]
+    while '#' in code:
+        code = code.replace('#', randletter, 1)
+
     # Translate code using aliases
     for k, v in aliases.items():
         if k == "&NL" and v == "\\n":
@@ -35,16 +45,6 @@ def translate_code(metalanguage_code, target_language, printable=False):
             code = code.replace(k, "\\n")
         else:
             code = code.replace(k, v)
-
-    # Replace $ with random int between 1 and 9
-    while '$' in code:
-        code = code.replace('$', str(randint(1, 9)), 1)
-
-    # Replace ? with a random lowercase letter except 'l'
-    letters = [c for c in string.ascii_lowercase if c != 'l']
-    randletter = letters[randint(0, len(letters)-1)]
-    while '?' in code:
-        code = code.replace('?', randletter, 1)
 
     return code
 

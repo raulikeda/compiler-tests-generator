@@ -1,4 +1,4 @@
 // Missing OPEN_PAR
 while 1 == 1 {
-  int v = 8;
+  int h = 9;
 }

@@ -1,4 +1,4 @@
 void main() {
   // Variable not found
-  bool k = True;
+  bool i = True;
 }

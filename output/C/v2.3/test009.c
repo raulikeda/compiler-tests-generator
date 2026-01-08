@@ -1,4 +1,4 @@
 void main() {
   // Unexpected token MULT
-  int d = *7;
+  int j = *7;
 }

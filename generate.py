@@ -51,15 +51,6 @@ for i, test in enumerate(filtered_tests, 1):
     input_val = test.get('input', '')
     output_val = test.get('output', '')
     exception_val = test.get('exception', False)
-
-    # Translate code using aliases
-    for k, v in aliases.items():
-        if k == "&NL" and v == "\\n":
-            code = code.replace(k, "\n")            
-        else:
-            code = code.replace(k, v)
-
-        output_val = output_val.replace(k, v)
         
 
     # Replace $ with random int between 1 and 9
@@ -69,8 +60,17 @@ for i, test in enumerate(filtered_tests, 1):
     # Replace ? with a random lowercase letter except 'l'
     letters = [c for c in string.ascii_lowercase if c != 'l']
     randletter = letters[randint(0, len(letters)-1)]
-    while '?' in code:
-        code = code.replace('?', randletter, 1)
+    while '#' in code:
+        code = code.replace('#', randletter, 1)
+
+    # Translate code using aliases
+    for k, v in aliases.items():
+        if k == "&NL" and v == "\\n":
+            code = code.replace(k, "\n")            
+        else:
+            code = code.replace(k, v)
+
+        output_val = output_val.replace(k, v)
 
     # Write code file
     code_filename = f'{name}.{ext}'

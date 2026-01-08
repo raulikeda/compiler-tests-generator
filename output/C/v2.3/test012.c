@@ -1,4 +1,4 @@
 void main() {
   // Unexpected token EOL
-  int j = 8/;
+  int o = 8/;
 }

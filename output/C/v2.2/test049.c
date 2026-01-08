@@ -1,2 +1,2 @@
 // Missing CLOSE_PAR
-int c = scanf(;
+int b = scanf(;

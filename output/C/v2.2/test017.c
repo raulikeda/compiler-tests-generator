@@ -1,2 +1,2 @@
 // Unexpected token CLOSE_BRA
-int e = //1;
+int q = //8;

@@ -1,2 +1,2 @@
 // Incompatible Types
-bool o = 5<"a";
+bool s = 7<"a";

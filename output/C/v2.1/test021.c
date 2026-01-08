@@ -1,2 +1,2 @@
 // Unexpected token CLOSE_PAR
-y = 3);
+s = 4);

@@ -1,2 +1,2 @@
 // Incompatible Types
-int y = true||false;
+int f = true||false;

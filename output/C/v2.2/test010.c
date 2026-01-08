@@ -1,2 +1,2 @@
 // Unexpected token DIV
-int r = /6;
+int a = /7;

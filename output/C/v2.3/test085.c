@@ -1,4 +1,4 @@
 void main() {
   // Incompatible Types
-  int e = 5/true;
+  int c = 5/true;
 }

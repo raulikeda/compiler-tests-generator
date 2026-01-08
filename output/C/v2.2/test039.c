@@ -1,6 +1,6 @@
 // Unexpected EOF (Missing CLOSE_BRA)
-int n = 1;
-if (n == 1) {
-  n = 2;
+int r = 1;
+if (r == 1) {
+  r = 2;
 } else {
-  n = 3;
+  r = 3;

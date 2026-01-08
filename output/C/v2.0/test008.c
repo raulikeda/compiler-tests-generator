@@ -1,2 +1,2 @@
 // Invalid token @
-t = @;
+y = @;

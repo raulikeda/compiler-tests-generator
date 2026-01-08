@@ -1,2 +1,2 @@
 // Unexpected token MULT
-k = *8;
+q = *9;

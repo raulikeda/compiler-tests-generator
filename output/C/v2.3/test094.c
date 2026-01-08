@@ -3,5 +3,5 @@ int test(int x,) {
   return 5;
 }
 void main() {
-  printf(test(2));
+  printf(test(7));
 }

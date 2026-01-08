@@ -1,4 +1,4 @@
 void main() {
   // Incompatible Types
-  bool j = !6;
+  bool s = !3;
 }
