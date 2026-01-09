@@ -5,19 +5,19 @@
     &ISTRUCT Student &LBRA
       &PSTR&VAR name&TSEP&STR&LF
       &PINT&VAR age&TSEP&INT&LF
-      &PFLOAT&VAR grade&TSEP&FLOAT&LF
+      &PBOOL&VAR grade&TSEP&BOOL&LF
     &RBRA&LF
 
     &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
       &ISTRUCT Student student1&LF
       student1&DOTname &ASSIGN "John Doe"&LF
       student1&DOTage &ASSIGN 20&LF
-      student1&DOTgrade &ASSIGN 8.7&LF
+      student1&DOTgrade &ASSIGN &TRUE&LF
 
       student1&DOTage &ASSIGN student1&DOTage + 1&LF
       &PRINT&FLPstudent1&DOTname&FRP&LF
       &PRINT&FLPstudent1&DOTage&FRP&LF
-      &PRINT&FLP(&INT&PINT) student1&DOTgrade&FRP&LF
+      &PRINT&FLPstudent1&DOTgrade&FRP&LF
 
     &RBRA
     &MAINCALL &COM test main function call
@@ -26,7 +26,7 @@
   output: |-
     John Doe
     21
-    9
+    true
   languages:
   - All
 - description: Incomplete struct Statement
@@ -97,5 +97,23 @@
   input: ''
   exception: true
   output: '[Semantic] Attribute not found in struct: ages'
+  languages:
+  - All
+- description: Incomplete Attribute access
+  code: |-
+    &COM Incomplete Attribute access
+
+    &ISTRUCT Student &LBRA
+      &PINT&VAR age&TSEP&INT&LF
+    &RBRA&LF
+    
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+      &ISTRUCT Student student1&LF
+      student1&DOT &ASSIGN 20&LF
+    &RBRA
+    &MAINCALL &COM test main function call
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token ASSIGN'
   languages:
   - All

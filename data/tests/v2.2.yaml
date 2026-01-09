@@ -150,7 +150,7 @@
 - description: Invalid Token
   code: |-
     &COM Invalid token @
-    &PINT&VAR #&TSEP&INT &ASSIGN ,&LF
+    &PINT&VAR #&TSEP&INT &ASSIGN @&LF
   input: ''
   exception: true
   output: '[Lexer] Invalid token @'

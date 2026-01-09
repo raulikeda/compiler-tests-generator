@@ -7,7 +7,7 @@
     y &ASSIGN (&FLOAT&PFLOAT) n + y&LF
     &PRINT&FLP(&INT&PINT) y&FRP&LF
     &IF &ELP(&BOOL&PBOOL) y&ERP &LBRA
-      y &ASSIGN 2/3 + 1/3&LF
+      y &ASSIGN 2.0/3 + 1/3.0&LF
     &RBRA
     &PRINT&FLP(&INT&PINT) y&FRP&LF
     &PRINT&FLP(&STR&PSTR) n &CONCAT "A"&FRP&LF
@@ -17,6 +17,15 @@
     7
     1
     5A
+  languages:
+  - All
+- description: Invalid Number Format
+  code: |-
+    &COM Invalid Number Format
+    &PFLOAT&VAR n&TSEP&FLOAT &ASSIGN 5.1.2&LF
+  input: ''
+  exception: true
+  output: '[Lexer] Invalid number format: 5.1.2'
   languages:
   - All
 - description: Incorrect Type Assignment

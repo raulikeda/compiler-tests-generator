@@ -6,7 +6,7 @@
     i &ASSIGN 0&LF
     &FOR (i &ASSIGN 0; i &LT n; i &ASSIGN i + 1)
     &LBRA
-      n &ASSIGN n * i&LF
+      y &ASSIGN y * (i + 1)&LF
     &RBRA
     &PRINT&FLPi &EQ n &QUESTION y : n&FRP&LF
     &PRINT&FLPi &EQ n+1 &QUESTION y : n&FRP&LF
