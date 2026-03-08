@@ -45,7 +45,7 @@ aliases:
   - "&RETURN": 'return'
   - "&ARGSEP": ',' 
   - "&WS": ' '
-  - "&DEFINE": '#define'
+  - "&DEFINE": 'const'
   - "&CONST": 'let'
   - "&FOR": 'for'
   - "&LSEP": ';'
