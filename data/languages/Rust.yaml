@@ -3,6 +3,7 @@ aliases:
   - "&LBRA": '{'
   - "&RBRA": '}'
   - "&ASSIGN": '='
+  - "&CASSIGN": '='
   - "&PRINT": 'println!'
   - "&FLP": '('
   - "&FRP": ')'
