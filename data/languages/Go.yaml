@@ -2,6 +2,12 @@ extension: go
 aliases:
   - "&LBRA": '{'
   - "&RBRA": '}'
+  - "&LIBRA": '{'
+  - "&RIBRA": '}'
+  - "&LFBRA": '{'
+  - "&RFBRA": '}'
+  - "&LWBRA": '{'
+  - "&RWBRA": '}'
   - "&ASSIGN": '='
   - "&CASSIGN": '= '
   - "&PRINT": 'Println'
