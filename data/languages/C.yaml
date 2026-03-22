@@ -2,6 +2,12 @@ extension: c
 aliases:
   - "&LBRA": '{'
   - "&RBRA": '}'
+  - "&LIBRA": '{'
+  - "&RIBRA": '}'
+  - "&LFBRA": '{'
+  - "&RFBRA": '}'
+  - "&LWBRA": '{'
+  - "&RWBRA": '}'
   - "&ASSIGN": '='
   - "&CASSIGN": ''
   - "&PRINT": 'printf'

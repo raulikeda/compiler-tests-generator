@@ -8,7 +8,7 @@
       &PBOOL&VAR grade&TSEP&BOOL&LF
     &RBRA&LF
 
-    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LFBRA
       &ISTRUCT Student student1&LF
       student1&DOTname &ASSIGN "John Doe"&LF
       student1&DOTage &ASSIGN 20&LF
@@ -37,7 +37,7 @@
       &PSTR&VAR name&TSEP&STR&LF
     &RBRA
 
-    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LFBRA
     &RBRA
     &MAINCALL &COM test main function call
   input: ''
@@ -53,7 +53,7 @@
       &PINT&VAR age&TSEP&INT&LF
     &RBRA&LF
     
-    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LFBRA
       &ISTRUCT Student student1&LF
       student1 &ASSIGN 20&LF
     &RBRA
@@ -71,7 +71,7 @@
       &PINT&VAR age&TSEP&INT&LF
     &RBRA&LF
     
-    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LFBRA
       &ISTRUCT Student student1&LF
       &PINT&VAR n&TSEP&INT &ASSIGN student1&LF
     &RBRA
@@ -89,7 +89,7 @@
       &PINT&VAR age&TSEP&INT&LF
     &RBRA&LF
     
-    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LFBRA
       &ISTRUCT Student student1&LF
       student1&DOTages &ASSIGN 20&LF
     &RBRA
@@ -107,7 +107,7 @@
       &PINT&VAR age&TSEP&INT&LF
     &RBRA&LF
     
-    &PVOID&FN main&FLP&FRP&FSEP &VOID&LBRA
+    &PVOID&FN main&FLP&FRP&FSEP &VOID&LFBRA
       &ISTRUCT Student student1&LF
       student1&DOT &ASSIGN 20&LF
     &RBRA

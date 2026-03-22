@@ -1,10 +1,13 @@
-# Tá coerente com a lógica, suscetível a mudanças, mas é isso aí
-# Aceita doideiras que não existem em Lua, como `if cond do` e `end else do`
-
 extension: lua
 aliases:
   - "&LBRA": 'do'
   - "&RBRA": 'end'
+  - "&LIBRA": 'then'
+  - "&RIBRA": 'end'
+  - "&LFBRA": ''
+  - "&RFBRA": 'end'
+  - "&LWBRA": 'do'
+  - "&RWBRA": 'end'
   - "&ASSIGN": '='
   - "&CASSIGN": '= '
   - "&PRINT": 'print'

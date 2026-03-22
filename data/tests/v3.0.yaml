@@ -16,7 +16,7 @@
       &PRINT&FLPA&FRP&LF
       &PRINT&FLPx_1&FRP&LF
       
-      &IF &ELP(x_1 &GT 1 &AND &NOT&NOT&NOT(x_1 &LT 1)) &OR x_1 &EQ 9&ERP &LBRA
+      &IF &ELP(x_1 &GT 1 &AND &NOT&NOT&NOT(x_1 &LT 1)) &OR x_1 &EQ 9&ERP &LIBRA
         x_1 &ASSIGN 2&LF
       &RBRA
       
@@ -26,23 +26,23 @@
       &PINT&VAR z__&TSEP&INT&LF
       z__ &ASSIGN x + y_1&LF
       
-      &IF &ELPx_1 &EQ 2&ERP &LBRA
+      &IF &ELPx_1 &EQ 2&ERP &LIBRA
         x_1 &ASSIGN 2&LF
       &RBRA
       
-      &IF &ELPx_1 &EQ 3&ERP &LBRA
+      &IF &ELPx_1 &EQ 3&ERP &LIBRA
         x_1 &ASSIGN 2&LF
-      &RBRA &ELSE &LBRA
+      &RBRA &ELSE &LIBRA
         x_1 &ASSIGN 3&LF
       &RBRA
       
       x_1 &ASSIGN 0&LF
-      &WHILE &ELPx_1 &LT 1 &OR x &EQ 2&ERP &LBRA
+      &WHILE &ELPx_1 &LT 1 &OR x &EQ 2&ERP &LWBRA
         &PRINT&FLPx_1&FRP&LF
         x_1 &ASSIGN x_1 + 1&LF
-        &IF &ELPx_1 &EQ 3&ERP &LBRA
+        &IF &ELPx_1 &EQ 3&ERP &LIBRA
           x_1 &ASSIGN 2&LF
-        &RBRA &ELSE &LBRA
+        &RBRA &ELSE &LIBRA
           x_1 &ASSIGN 3&LF
         &RBRA
       &RBRA
