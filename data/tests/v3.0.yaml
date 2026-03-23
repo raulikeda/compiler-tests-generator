@@ -18,7 +18,7 @@
       
       &IF &ELP(x_1 &GT 1 &AND &NOT&NOT&NOT(x_1 &LT 1)) &OR x_1 &EQ 9&ERP &LIBRA
         x_1 &ASSIGN 2&LF
-      &RBRA
+      &REBRA
       
       &PINT&VAR x&TSEP&INT &ASSIGN 3+6/3   *  2 -+-  +  2*4/2 + 0/1 -((6+ ((4)))/(2))&LF &COM Teste &COM Teste 2
       &PINT&VAR y_1&TSEP&INT &ASSIGN 3&LF
@@ -28,13 +28,13 @@
       
       &IF &ELPx_1 &EQ 2&ERP &LIBRA
         x_1 &ASSIGN 2&LF
-      &RBRA
+      &REBRA
       
       &IF &ELPx_1 &EQ 3&ERP &LIBRA
         x_1 &ASSIGN 2&LF
-      &RBRA &ELSE &LIBRA
+      &RIBRA &ELSE &LIBRA
         x_1 &ASSIGN 3&LF
-      &RBRA
+      &REBRA
       
       x_1 &ASSIGN 0&LF
       &WHILE &ELPx_1 &LT 1 &OR x &EQ 2&ERP &LWBRA
@@ -42,10 +42,10 @@
         x_1 &ASSIGN x_1 + 1&LF
         &IF &ELPx_1 &EQ 3&ERP &LIBRA
           x_1 &ASSIGN 2&LF
-        &RBRA &ELSE &LIBRA
+        &RIBRA &ELSE &LIBRA
           x_1 &ASSIGN 3&LF
-        &RBRA
-      &RBRA
+        &REBRA
+      &RWBRA
       
       
       &LF&LF&LF &LBRA&LBRA &RBRA&RBRA &COM Teste de colchetes

@@ -7,7 +7,7 @@
       
       &IF &ELP(x_1 &GT 1 &AND &NOT&NOT&NOT(x_1 &LT 1)) &OR x_1 &EQ 3&ERP &LIBRA
         x_1 &ASSIGN 2&LF
-      &RBRA
+      &REBRA
       
       x &ASSIGN 3+6/3   *  2 -+-  +  2*4/2 + 0/1 -((6+ ((4)))/(2))&LF &COM Teste &COM Teste 2
       y_1 &ASSIGN 3&LF
@@ -16,19 +16,19 @@
       
       &IF &ELPx_1 &EQ 2&ERP &LIBRA
         x_1 &ASSIGN 2&LF
-      &RBRA
+      &REBRA
       
       &IF &ELPx_1 &EQ 3&ERP &LIBRA
         x_1 &ASSIGN 2&LF
-      &RBRA &ELSE &LIBRA
+      &RIBRA &ELSE &LIBRA
         x_1 &ASSIGN 3&LF
-      &RBRA
+      &REBRA
       
       x_1 &ASSIGN 0&LF
       &WHILE &ELPx_1 &LT 1 &OR x &EQ 2&ERP &LWBRA
         &PRINT&FLPx_1&FRP&LF
         x_1 &ASSIGN x_1 + 1&LF
-      &RBRA
+      &RWBRA
       
       
       &LF&LF&LF &LBRA&NL&LBRA&NL &RBRA&NL&RBRA &COM Teste de colchetes
@@ -385,7 +385,7 @@
     # &ASSIGN 1&LF
     &IF &ELP# &EQ 1&ERP
       # &ASSIGN 2&LF
-    &RBRA
+    &REBRA
   input: ''
   exception: true
   output: '[Parser] Missing OPEN_BRA'
@@ -397,7 +397,7 @@
     # &ASSIGN 1&LF
     &IF &ELP# &EQ 1&ERP &LIBRA
       # &ASSIGN 2&LF
-    &RBRA &ELSE &LIBRA
+    &RIBRA &ELSE &LIBRA
       # &ASSIGN 3&LF
   input: ''
   exception: true
@@ -410,9 +410,9 @@
     # &ASSIGN 1&LF
     &IF &ELP# &EQ 1&ERP &LIBRA
       # &ASSIGN 2&LF
-    &RBRA &ELSE
+    &RIBRA &ELSE
       # &ASSIGN 3&LF
-    &RBRA
+    &REBRA
   input: ''
   exception: true
   output: '[Parser] Unexpected token EOF'
@@ -435,7 +435,7 @@
     # &ASSIGN 1&LF
     &WHILE &ELP# &EQ 1&ERP
       # &ASSIGN 2&LF
-    &RBRA
+    &RWBRA
   input: ''
   exception: true
   output: '[Parser] Missing OPEN_BRA'
@@ -447,11 +447,11 @@
     # &ASSIGN 1&LF
     &IF &ELP# &EQ 1&ERP &LIBRA
       # &ASSIGN 2&LF
-    &RBRA &ELSE &LIBRA
+    &RIBRA &ELSE &LIBRA
       # &ASSIGN 3&LF
-    &RBRA &ELSE &LIBRA
+    &RIBRA &ELSE &LIBRA
       # &ASSIGN 4&LF
-    &RBRA
+    &REBRA
   input: ''
   exception: true
   output: '[Parser] Unexpected ELSE'
@@ -463,7 +463,7 @@
     # &ASSIGN 1&LF
     &IF &ELP# &EQ&ERP &LIBRA
       # &ASSIGN 2&LF
-    &RBRA
+    &REBRA
   input: ''
   exception: true
   output: '[Parser] Missing Right Expression'
@@ -475,7 +475,7 @@
     # &ASSIGN 1&LF
     &IF &ELP# &GT&ERP &LIBRA
       # &ASSIGN 2&LF
-    &RBRA
+    &REBRA
   input: ''
   exception: true
   output: '[Parser] Missing Right Expression'
@@ -487,7 +487,7 @@
     # &ASSIGN 1&LF
     &IF &ELP# &LT&ERP &LIBRA
       # &ASSIGN 2&LF
-    &RBRA
+    &REBRA
   input: ''
   exception: true
   output: '[Parser] Missing Right Expression'
@@ -499,7 +499,7 @@
     # &ASSIGN 1&LF
     &IF &ELP&NOT&ERP &LIBRA
       # &ASSIGN 2&LF
-    &RBRA
+    &REBRA
   input: ''
   exception: true
   output: '[Parser] Missing Right Expression'
@@ -530,7 +530,7 @@
     &COM Unexpected token NEWLINE
     &IF &ELP1 &EQ 1&ERP
     &LIBRA
-    &RBRA
+    &REBRA
   input: ''
   exception: true
   output: '[Parser] Unexpected token INT'
@@ -539,7 +539,7 @@
 - description: If with misaligned }
   code: |-
     &COM Unexpected token CLOSE_BRA
-    &IF &ELP1 &EQ 1&ERP &LIBRA &RBRA
+    &IF &ELP1 &EQ 1&ERP &LIBRA &REBRA
   input: ''
   exception: true
   output: '[Parser] Unexpected token INT'
@@ -549,9 +549,9 @@
   code: |-
     &COM Unexpected token NEWLINE
     &IF &ELP1 &EQ 1&ERP &LIBRA 
-    &RBRA
+    &RIBRA
     &ELSE &LIBRA 
-    &RBRA
+    &REBRA
   input: ''
   exception: true
   output: '[Parser] Unexpected token NEWLINE Before Else'
@@ -561,7 +561,7 @@
   code: |-
     &COM Unexpected token CLOSE_BRA
     &IF &ELP1 &EQ 1&ERP &LIBRA 
-    &RBRA &ELSE &LIBRA &RBRA
+    &RIBRA &ELSE &LIBRA &REBRA
   input: ''
   exception: true
   output: '[Parser] Unexpected token CLOSE_BRA in Else'
@@ -571,9 +571,9 @@
   code: |-
     &COM Unexpected token NEWLINE
     &IF &ELP1 &EQ 1&ERP &LIBRA 
-    &RBRA &ELSE 
+    &RIBRA &ELSE 
     &LIBRA
-    &RBRA
+    &REBRA
   input: ''
   exception: true
   output: '[Parser] Unexpected token NEWLINE in Else'
@@ -584,7 +584,7 @@
     &COM Unexpected token NEWLINE
     &WHILE &ELP1 &EQ 1&ERP 
     &LWBRA
-    &RBRA
+    &RWBRA
   input: ''
   exception: true
   output: '[Parser] Unexpected token NEWLINE in While'
@@ -593,7 +593,7 @@
 - description: While with misaligned }
   code: |-
     &COM Unexpected token CLOSE_BRA
-    &WHILE &ELP1 &EQ 1&ERP &LWBRA &RBRA
+    &WHILE &ELP1 &EQ 1&ERP &LWBRA &RWBRA
   input: ''
   exception: true
   output: '[Parser] Unexpected token CLOSE_BRA in While'
@@ -626,7 +626,7 @@
     &COM Missing OPEN_PAR
     &IF 1 &EQ 1 &LIBRA
       # &ASSIGN $&LF
-    &RBRA
+    &REBRA
   input: ''
   exception: true
   output: '[Parser] Missing OPEN_PAR in If'
@@ -639,7 +639,7 @@
     &COM Missing OPEN_PAR
     &WHILE 1 &EQ 1 &LWBRA
       # &ASSIGN $&LF
-    &RBRA
+    &RWBRA
   input: ''
   exception: true
   output: '[Parser] Missing OPEN_PAR in While'

@@ -4,6 +4,7 @@ aliases:
   - "&RBRA": '}'
   - "&LIBRA": '{'
   - "&RIBRA": '}'
+  - "&REBRA": '}'
   - "&LFBRA": '{'
   - "&RFBRA": '}'
   - "&LWBRA": '{'
