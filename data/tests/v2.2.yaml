@@ -22,7 +22,7 @@
       
       &IF &ELPx_1 &EQ 3&ERP &LIBRA
         x_1 &ASSIGN 2&LF
-      &RIBRA &ELSE &LIBRA
+      &RIBRA &ELSE &LEBRA
         x_1 &ASSIGN 3&LF
       &REBRA
       
@@ -442,7 +442,7 @@
     &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
     &IF &ELP# &EQ 1&ERP &LIBRA
       # &ASSIGN 2&LF
-    &RIBRA &ELSE &LIBRA
+    &RIBRA &ELSE &LEBRA
       # &ASSIGN 3&LF
   input: ''
   exception: true
@@ -492,9 +492,9 @@
     &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
     &IF &ELP# &EQ 1&ERP &LIBRA
       # &ASSIGN 2&LF
-    &RIBRA &ELSE &LIBRA
+    &RIBRA &ELSE &LEBRA
       # &ASSIGN 3&LF
-    &RIBRA &ELSE &LIBRA
+    &RIBRA &ELSE &LEBRA
       # &ASSIGN 4&LF
     &REBRA
   input: ''
@@ -595,7 +595,7 @@
     &COM Unexpected token NEWLINE
     &IF &ELP1 &EQ 1&ERP &LIBRA 
     &RIBRA
-    &ELSE &LIBRA 
+    &ELSE &LEBRA 
     &REBRA
   input: ''
   exception: true
@@ -606,7 +606,7 @@
   code: |-
     &COM Unexpected token CLOSE_BRA
     &IF &ELP1 &EQ 1&ERP &LIBRA 
-    &RIBRA &ELSE &LIBRA &REBRA
+    &RIBRA &ELSE &LEBRA &REBRA
   input: ''
   exception: true
   output: '[Parser] Unexpected token CLOSE_BRA in Else'

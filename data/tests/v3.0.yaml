@@ -32,7 +32,7 @@
       
       &IF &ELPx_1 &EQ 3&ERP &LIBRA
         x_1 &ASSIGN 2&LF
-      &RIBRA &ELSE &LIBRA
+      &RIBRA &ELSE &LEBRA
         x_1 &ASSIGN 3&LF
       &REBRA
       
@@ -42,7 +42,7 @@
         x_1 &ASSIGN x_1 + 1&LF
         &IF &ELPx_1 &EQ 3&ERP &LIBRA
           x_1 &ASSIGN 2&LF
-        &RIBRA &ELSE &LIBRA
+        &RIBRA &ELSE &LEBRA
           x_1 &ASSIGN 3&LF
         &REBRA
       &RWBRA

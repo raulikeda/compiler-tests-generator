@@ -3,6 +3,7 @@ aliases:
   - "&LBRA": 'do'
   - "&RBRA": 'end'
   - "&LIBRA": 'then'
+  - "&LEBRA": ''
   - "&RIBRA": ''
   - "&REBRA": 'end'
   - "&LFBRA": ''
