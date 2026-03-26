@@ -61,4 +61,7 @@ aliases:
   - "&FLOAT": ''
   - "&ISTRUCT": ''
   - "&DOT": '.'
-  - "&QUESTION": ''
+  - "&EIF": 'if '
+  - "&ETHEN": ' then '
+  - "&EELSE": ' else '
+  - "&EEND": ' end'

@@ -61,4 +61,7 @@ aliases:
   - "&FLOAT": ''
   - "&ISTRUCT": 'struct'
   - "&DOT": '.'
-  - "&QUESTION": '?'
+  - "&EIF": 'if '
+  - "&ETHEN": '{'
+  - "&EELSE": '} else {'
+  - "&EEND": ' }'

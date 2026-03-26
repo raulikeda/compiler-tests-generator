@@ -8,8 +8,8 @@
     &LWBRA
       y &ASSIGN y * (i + 1)&LF
     &RWBRA
-    &PRINT&FLPi &EQ n &QUESTION y : n&FRP&LF
-    &PRINT&FLPi &EQ n+1 &QUESTION y : n&FRP&LF
+    &PRINT&FLP&EIFi &EQ n &ETHEN y &EELSE n&EEND&FRP&LF
+    &PRINT&FLP&EIFi &EQ n+1 &ETHEN y &EELSE n&EEND&FRP&LF
   input: ''
   exception: false
   output: |-
@@ -53,7 +53,7 @@
 - description: Incomplete ternary if Expression
   code: |-
     &COM Incomplete ternary if implementation
-    n &ASSIGN 1 &EQ 2 &QUESTION&LF
+    n &ASSIGN &EIF1 &EQ 2 &ETHEN&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token EOL'
@@ -62,7 +62,7 @@
 - description: Incomplete ternary if Expression
   code: |-
     &COM Incomplete ternary if implementation
-    n &ASSIGN 1 &EQ 2 &QUESTION 3&LF
+    n &ASSIGN &EIF1 &EQ 2 &ETHEN 3&EELSE&LF
   input: ''
   exception: true
   output: '[Parser] Unexpected token EOL'
