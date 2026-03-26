@@ -16,7 +16,26 @@
     120
     5
   languages:
-  - All
+  - C
+  - Rust
+- description: Valid Input
+  code: |-
+    &COM For implementation
+    n &ASSIGN 5&LF
+    y &ASSIGN 1&LF
+    i &ASSIGN 0&LF
+    &FOR i &ASSIGN 0, n &LWBRA
+      y &ASSIGN y * (i + 1)&LF
+    &RWBRA
+    &PRINT&FLP&EIFi &EQ n &ETHEN y &EELSE n&EEND&FRP&LF
+    &PRINT&FLP&EIFi &EQ n+1 &ETHEN y &EELSE n&EEND&FRP&LF
+  input: ''
+  exception: false
+  output: |-    
+    6
+    120
+  languages:
+  - Lua
 - description: Incomplete for Statement
   code: |-
     &COM Incomplete For implementation
@@ -27,7 +46,19 @@
   exception: true
   output: '[Parser] Unexpected token CLOSE_PAR'
   languages:
-  - All
+  - C
+  - Rust
+- description: Incomplete for Statement
+  code: |-
+    &COM Incomplete For implementation
+    n &ASSIGN 5&LF
+    i &ASSIGN 0&LF
+    &FOR i &ASSIGN 0, n&LF
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token EOL'
+  languages:
+  - Lua
 - description: Incomplete for Statement
   code: |-
     &COM Incomplete For implementation
@@ -38,7 +69,19 @@
   exception: true
   output: '[Parser] Unexpected token CLOSE_PAR'
   languages:
-  - All
+  - C
+  - Rust
+- description: Incomplete for Statement
+  code: |-
+    &COM Incomplete For implementation
+    n &ASSIGN 5&LF
+    i &ASSIGN 0&LF
+    &FOR i &ASSIGN 0&LF
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token EOL'
+  languages:
+  - Lua
 - description: Wrong for Statement
   code: |-
     &COM Wrong For implementation (expected expression)
@@ -49,7 +92,20 @@
   exception: true
   output: '[Parser] Unexpected token ASSIGN'
   languages:
-  - All
+  - C
+  - Rust
+- description: Wrong for Statement
+  code: |-
+    &COM Wrong For implementation (expected expression)
+    n &ASSIGN 5&LF
+    i &ASSIGN 0&LF
+    &FOR i &ASSIGN 0, n &LWBRA&LF
+       i &ASSIGN i + 1&LF
+  input: ''
+  exception: true
+  output: '[Parser] Unexpected token EOF'
+  languages:
+  - Lua
 - description: Incomplete ternary if Expression
   code: |-
     &COM Incomplete ternary if implementation
