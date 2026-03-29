@@ -32,8 +32,8 @@
   input: ''
   exception: false
   output: |-    
-    6
-    120
+    5
+    720
   languages:
   - Lua
 - description: Incomplete for Statement

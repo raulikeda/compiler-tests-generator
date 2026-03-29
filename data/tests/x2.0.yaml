@@ -1,6 +1,6 @@
 - description: Valid Input
   code: |-
-    &DEFINE N 1
+    &DEFINE N &DASSIGN1&LF
     &CONST x &ASSIGN 3&LF
     &PRINT&FLPx+N&FRP&LF
     y &ASSIGN N&LF
@@ -16,7 +16,7 @@
 - description: Incomplete define Statement
   code: |-
     &COM Incomplete define statement
-    &DEFINE N
+    &DEFINE N&LF
   input: ''
   exception: true
   output: '[PrePro] Invalid define directive'
@@ -25,7 +25,7 @@
 - description: Change Value of Constant
   code: |-
     &COM Variable not found
-    &DEFINE N 1
+    &DEFINE N &DASSIGN1&LF
     N = 3&LF
   input: ''
   exception: true

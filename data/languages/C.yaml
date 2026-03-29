@@ -55,6 +55,7 @@ aliases:
   - "&ARGSEP": ',' 
   - "&WS": ''
   - "&DEFINE": '#define'
+  - "&DASSIGN": ''
   - "&CONST": 'const'
   - "&FOR": 'for'
   - "&LSEP": ';'
