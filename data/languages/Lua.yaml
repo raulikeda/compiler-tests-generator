@@ -11,7 +11,7 @@ aliases:
   - "&LWBRA": 'do'
   - "&RWBRA": 'end'
   - "&ASSIGN": '='
-  - "&CASSIGN": '= '
+  - "&CASSIGN": ''
   - "&PRINT": 'print'
   - "&FLP": '('
   - "&FRP": ')'
