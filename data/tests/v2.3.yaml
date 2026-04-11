@@ -635,7 +635,7 @@
       &PINT&VAR #&TSEP&INT &ASSIGN 1&LF
       &IF &ELP# &EQ 1&ERP &LIBRA
         # &ASSIGN 2&LF
-      &RIBRA &ELSE
+      &REBRA &ELSE
         # &ASSIGN 3&LF
       &REBRA
     &RFBRA
