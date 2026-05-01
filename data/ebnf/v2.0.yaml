@@ -1,0 +1,9 @@
+PROGRAM = { STATEMENT } ;
+STATEMENT = (IDENTIFIER, "&ASSIGN", EXPRESSION | "&PRINT", "&FLP", EXPRESSION, "&FRP" | ε), "&EOL" ;
+EXPRESSION = TERM, { ("+" | "-"), TERM } ;
+TERM = FACTOR, { ("*" | "/"), FACTOR } ;
+FACTOR = NUMBER | IDENTIFIER, { ("+" | "-"), FACTOR } | "&ELP", EXPRESSION, "&ERP" ;
+NUMBER = DIGIT, {DIGIT} ;
+IDENTIFIER = LETTER, {LETTER | DIGIT | "_"} ;
+DIGIT = "0" | "1" | ... | "9" ;
+LETTER = "a" | "b" | ... | "z" | "A" | "B" | ... | "Z" ;
