@@ -4,8 +4,7 @@
     n &ASSIGN 5&LF
     y &ASSIGN 1&LF
     i &ASSIGN 0&LF
-    &FOR (i &ASSIGN 0; i &LT n; i &ASSIGN i + 1)
-    &LWBRA
+    &FOR (i &ASSIGN 0; i &LT n; i &ASSIGN i + 1) &LWBRA
       y &ASSIGN y * (i + 1)&LF
     &RWBRA
     &PRINT&FLP&EIFi &EQ n &ETHEN y &EELSE n&EEND&FRP&LF
@@ -18,6 +17,7 @@
   languages:
   - C
   - Rust
+  - Go
 - description: Valid Input
   code: |-
     &COM For implementation
@@ -48,6 +48,7 @@
   languages:
   - C
   - Rust
+  - Go
 - description: Incomplete for Statement
   code: |-
     &COM Incomplete For implementation
@@ -71,6 +72,7 @@
   languages:
   - C
   - Rust
+  - Go
 - description: Incomplete for Statement
   code: |-
     &COM Incomplete For implementation
@@ -94,6 +96,7 @@
   languages:
   - C
   - Rust
+  - Go
 - description: Wrong for Statement
   code: |-
     &COM Wrong For implementation (expected expression)
